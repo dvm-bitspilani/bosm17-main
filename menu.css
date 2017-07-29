@@ -106,7 +106,7 @@ basic positioning 
 #menu_wrapper .slider-container{
 	width: 100vw; 
 	position: absolute;
-	left: 40vw;
+	left: 50vw;
 	display: flex;	
 	transition: all .4s ease-in-out;
 }
@@ -115,6 +115,9 @@ basic positioning 
 	display: flex;
 	-webkit-align-items: center;
 	        align-items: center;
+	position: relative;
+	left: 0;
+	
 }
 
 #menu_wrapper .item{
@@ -124,6 +127,7 @@ basic positioning 
 	background: url('./football.jpg') 0 0 no-repeat;
 	background-size: cover;
 	filter: saturate(.1);
+	transition: all .4s linear;
 }
 
 #menu_wrapper .selected{
