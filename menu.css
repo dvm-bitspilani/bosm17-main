@@ -62,23 +62,29 @@ basic positioning 
 
 #menu_wrapper .topics nav{
 	display: flex;
+
 }
 
 #menu_wrapper .topics li{
 	list-style: none;
-	margin: 0 20px;
+	margin: 0 10px;
+	min-width: 70px;
 	font-variant : small-caps;
 	font-size: .7em;
+	text-align: center;
+	cursor: pointer;
+	
 }
 
-#menu_wrapper .line{
+#menu_wrapper .nav_line{
 	border: 2px solid #04ffe5;
 	position: absolute;
-	width: 70px;
+	min-width: 70px;
 }
 
 #menu_wrapper .close{
 /*	visibility: hidden; */
+	cursor: pointer;
 }
 
 /*=== main section ===*/
@@ -123,11 +129,18 @@ basic positioning 
 #menu_wrapper .item{
 	width: 250px;
 	height: 50vh;
-	margin: 0 3px;
+	margin: 0 1px;
 	background: url('./football.jpg') 0 0 no-repeat;
 	background-size: cover;
 	filter: saturate(.1);
 	transition: all .4s linear;
+	cursor: pointer;
+}
+
+#menu_wrapper .info{
+	flex-grow: 2;
+	text-align: center;
+	min-width: 500px;
 }
 
 #menu_wrapper .selected{
@@ -176,16 +189,18 @@ responsive 
 	#menu_wrapper .logo{
 		display: none;
 	}
-	#menu_wrapper .slider-container{
-		left: 20vw;
-	}
+	
 
 	#menu_wrapper .item{
 		width: 200px;
 	}
 
-	#menu_wrapper .background{
-		display: none;
+	#menu_wrapper .info{
+		min-width: 300px;
+	}
+
+	#menu_wrapper .bg_text{
+		margin-left: -200px;
 	}
 
 }
