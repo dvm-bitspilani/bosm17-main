@@ -7,7 +7,7 @@ $(document).ready(function(){
 		$('#menu_wrapper .slider').css('left', -offset);
 		$('#menu_wrapper .selected_text').text(names[0])
 		var active = $('#menu_wrapper .active');
-		console.log(active.offset().left)
+		
 		$('#menu_wrapper .nav_line').css({'left': active.offset().left, 'right': active.offset().left + active.width(), 'width': active.width()})
 	}
 	init();
@@ -30,6 +30,7 @@ $(document).ready(function(){
 	$('#menu_wrapper').mousewheel((e, delta)=>{
 		move_slider(delta)
 		highlight_middle_element();
+		update_nav_bar();
 	})
 
 	function move_slider(p){
@@ -95,7 +96,7 @@ $(document).ready(function(){
 
 		if(oldLeft> newLeft){
 			$('#menu_wrapper .nav_line').animate({'left':newLeft, 'width': oldRight-newLeft},500, function(){
-			
+				
 				$('#menu_wrapper .nav_line').animate({'right': newRight, 'width': newRight - newLeft});
 			})
 		}else{
@@ -128,11 +129,33 @@ $(document).ready(function(){
 
 	function update_progress_bar(){
 		var n = $('#menu_wrapper .item').index($('#menu_wrapper .selected'));
-		var l = $('#menu_wrapper .item').length;
-		var width = Math.round(n/(l-1)) * $(window).width * .95;
-		$('#menu_wrapper .line-fill').animate({'width':width});
-		$('#menu_wrapper .selected_text').text(names[n]);
 
+		var l = $('#menu_wrapper .item').length;
+
+		var width = Math.round((n/(l-1))* $(window).width() * .95);
+
+		
+		$('#menu_wrapper .selected_text').text(names[n]);
+		if(n!= -1){
+			$('#menu_wrapper .line-fill').css({'width': width+'px'})
+		}
+
+	}
+
+	function update_nav_bar(){
+	
+		var bar = $(window).width()/2;
+		var n = $('#menu_wrapper .info').filter(function(ind, ele){
+			return $(ele).offset().left + $(ele).width()/2 < bar;
+		}).length
+		
+		
+		if($('#menu_wrapper .topics li').eq(n)[0] != $('.active')[0]){
+			var old = $('#menu_wrapper .active');
+			$('#menu_wrapper .active').removeClass('active');
+			$('#menu_wrapper .topics li').eq(n).addClass('active');
+			position_nav_line(old);
+		}
 	}
 	
 

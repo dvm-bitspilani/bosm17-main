@@ -176,9 +176,9 @@ basic positioning 
 }
 
 #menu_wrapper .line-fill{
-	width: 20vw;
+	width: 0;
 	border: 2px solid #04ffe5;
-	transition: all .4s ease-in-out;
+	transition: all .7s ease-in-out;
 	
 }
 
