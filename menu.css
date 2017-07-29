@@ -80,6 +80,7 @@ basic positioning 
 	border: 2px solid #04ffe5;
 	position: absolute;
 	min-width: 70px;
+	top: 0;
 }
 
 #menu_wrapper .close{
@@ -158,9 +159,15 @@ basic positioning 
 	        justify-content: center;
 }
 
+#menu_wrapper .selected_text{
+	line-height: 18px;
+	font-size: 16px;
+}
+
 #menu_wrapper .progress_line{
 	margin: 10px 0;
 	border: 0;
+	
 }
 
 #menu_wrapper .line-background,
@@ -171,13 +178,13 @@ basic positioning 
 
 #menu_wrapper .line-background{
 	width: 95vw;
-	border: 2px solid #fff;
+	border: 1px solid #fff;
 	opacity: 0.2;
 }
 
 #menu_wrapper .line-fill{
 	width: 0;
-	border: 2px solid #04ffe5;
+	border: 1px solid #04ffe5;
 	transition: all .7s ease-in-out;
 	
 }
