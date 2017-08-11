@@ -1,0 +1,19 @@
+{
+  "name": "bosm17-main",
+  "version": "1.0.0",
+  "description": "BITS Pilani's BOSM 2017 Main Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccpandhare/bosm17-main.git"
+  },
+  "author": "DVM Front End",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccpandhare/bosm17-main/issues"
+  },
+  "homepage": "https://github.com/ccpandhare/bosm17-main#readme"
+}
