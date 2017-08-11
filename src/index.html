@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <!-- Meta Tags -->
     <meta charset="utf-8">
+
     <title>BOSM 2017 | BITS Pilani</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- jQuery -->
     <script src="js/jquery.js" charset="utf-8"></script>
+
+    <!-- GSAP TweenMax - Reduce to TimelineLite if possible -->
+    <script src="js/TweenMax.min.js"></script>
+
+    <!-- ScrollMagic JS Files -->
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/debug.addIndicators.min.js"></script>
+    <script src="js/animation.gsap.js"></script>
+
   </head>
   <body>
-    <div id="scene1">
+
+    <!-- Begin Scenes -->
+
+    <div class="scene" id="sceneOut">
       include "svg/out.svg"
     </div>
+
+    <div class="scene" id="sceneIn">
+      include "svg/in.svg"
+    </div>
+
+    <div class="scene" id="sceneTorch">
+      include "svg/torch.svg"
+    </div>
+
+    <div class="scene" id="sceneFinal">
+      include "svg/final.svg"
+    </div>
+
+    <!-- Main Script -->
+    <script type="text/javascript">
+      $(function(){
+
+        // Start a ScrollMagic controller
+        var controller = new ScrollMagic.Controller();
+
+        // Initiate ScrollMagic sceneOut and add to controller
+        var sceneOut = new ScrollMagic.Scene({
+          triggerElement: "#sceneOut svg",
+          triggerHook: 0,
+          duration: $(window).height() - $("#sceneOut svg").height(),
+          reverse: true,
+          pushFollowers: false
+        }).setPin("#sceneOut").addTo(controller);
+
+        // Initiate ScrollMagic sceneIn and add to controller
+        var sceneIn = new ScrollMagic.Scene({
+          triggerElement: "#sceneIn svg",
+          triggerHook: 0,
+          duration: $(window).height() - $("#sceneIn svg").height(),
+          reverse: true,
+          pushFollowers: false
+        }).setPin("#sceneIn").addTo(controller);
+
+        // Initiate ScrollMagic sceneTorch and add to controller
+        var sceneTorch = new ScrollMagic.Scene({
+          triggerElement: "#sceneTorch svg",
+          triggerHook: 0,
+          duration: $(window).height() - $("#sceneTorch svg").height(),
+          reverse: true,
+          pushFollowers: false
+        }).setPin("#sceneTorch").addTo(controller);
+
+        // Initiate ScrollMagic sceneFinal and add to controller
+        var sceneFinal = new ScrollMagic.Scene({
+          triggerElement: "#sceneFinal svg",
+          triggerHook: 0,
+          duration: $(window).height() - $("#sceneFinal svg").height(),
+          reverse: true,
+          pushFollowers: false
+        }).setPin("#sceneFinal").addTo(controller);
+
+      });
+    </script>
   </body>
 </html>
