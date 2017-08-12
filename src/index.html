@@ -59,10 +59,40 @@
         var sceneOut = new ScrollMagic.Scene({
           triggerElement: "#sceneOut",
           triggerHook: 0,
-          duration: $("#sceneOut").height(),
+          duration: 2000,
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneOut").addTo(controller);
+
+        // timeline for sceneOut
+
+       var sceneOutTimeline = new TimelineLite();
+       var torch = $('#sceneOut g[data-name=Torch]');
+       var buildings = $('#sceneOut .building');
+       var bushTree = $('#sceneOut g[data-name=Bushes_Trees]');
+       var fire = $('#sceneOut g[data-name=Fire]');
+       var lights = $('#sceneOut g[data-name=Shine]');
+       var stadium = $('#sceneOut g[data-name=Stadium]');
+       var skyEle = $('#sceneOut g[data-name=Sky_Elements]');
+       var grass = $('#sceneOut .grass');
+       var background = $('#sceneOut .background');
+       var origin_stadium = stadium.width() - $(window).width()/2;
+
+       var fadeIn = {autoAlpha:1, ease:Power4.easeOut, yPercent: 0};
+       stadium.css('position', 'relative');
+
+
+       sceneOutTimeline.set([skyEle, bushTree, torch, fire, lights, buildings],{autoAlpha:0, yPercent: 10, transformOrigin: '50% 50%'})
+       // .to([grass,background], .01, fadeIn)
+       .to(lights, .01, fadeIn)
+       .to(buildings, .08, fadeIn)
+       .to([skyEle,bushTree], .1, fadeIn)
+       .to(torch, 0.03, fadeIn)
+       .to(fire, 0.01, fadeIn)
+       .to([stadium, bushTree], 0.03, {scale: 2, ease: Power4.easeOut});
+       console.log(lights)
+
+       sceneOut.setTween(sceneOutTimeline)
 
         // Initiate ScrollMagic sceneIn and add to controller
         var sceneIn = new ScrollMagic.Scene({
