@@ -46,6 +46,12 @@
     <script type="text/javascript">
       $(function(){
 
+        // Make SVGs span entire div and a greedy bugfix
+        $('svg').each(function(){
+          this.setAttribute('preserveAspectRatio','xMidYMid slice');
+          $(this).parent().css('margin-bottom','-10px');
+        });
+
         // Start a ScrollMagic controller
         var controller = new ScrollMagic.Controller();
 
@@ -53,7 +59,7 @@
         var sceneOut = new ScrollMagic.Scene({
           triggerElement: "#sceneOut",
           triggerHook: 0,
-          duration: $("#sceneOut svg").height(),
+          duration: $("#sceneOut").height(),
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneOut").addTo(controller);
@@ -62,7 +68,7 @@
         var sceneIn = new ScrollMagic.Scene({
           triggerElement: "#sceneIn",
           triggerHook: 0,
-          duration: $("#sceneIn svg").height(),
+          duration: $("#sceneIn").height(),
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneIn").addTo(controller);
@@ -71,7 +77,7 @@
         var sceneTorch = new ScrollMagic.Scene({
           triggerElement: "#sceneTorch",
           triggerHook: 0,
-          duration:  $("#sceneTorch svg").height(),
+          duration:  $("#sceneTorch").height(),
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneTorch").addTo(controller);
@@ -80,7 +86,7 @@
         var sceneFinal = new ScrollMagic.Scene({
           triggerElement: "#sceneFinal",
           triggerHook: 0,
-          duration:  $("#sceneFinal svg").height(),
+          duration:  $("#sceneFinal").height(),
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneFinal").addTo(controller);
