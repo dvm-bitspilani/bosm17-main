@@ -46,7 +46,7 @@
     <script type="text/javascript">
       $(function(){
 
-        // Make SVGs span entire div and a greedy bugfix
+        // Make SVGs span entire div + a greedy bugfix
         $('svg').each(function(){
           this.setAttribute('preserveAspectRatio','xMidYMid slice');
           $(this).parent().css('margin-bottom','-10px');
@@ -55,41 +55,37 @@
         // Start a ScrollMagic controller
         var controller = new ScrollMagic.Controller();
 
+        // Define a Scene Genrator Function
+        function createScene(selector) {
+          return new ScrollMagic.Scene({
+            triggerElement: selector,
+            triggerHook: 0, // trigger when top of SVG touches top of screen
+            duration: $(selector).height(), // duration in pixels
+            reverse: true, // reverse animation
+            pushFollowers: false // don't push the following elements
+          }).setPin(selector) // pin to screen
+            .on("end",function(e){
+              if(e.scrollDirection == "FORWARD") {
+                // directly scroll to next element
+              }
+              else if(e.scrollDirection == "BACKWARD") {
+                // directly scroll to previous element
+              }
+            })
+            .addTo(controller);
+        }
+
         // Initiate ScrollMagic sceneOut and add to controller
-        var sceneOut = new ScrollMagic.Scene({
-          triggerElement: "#sceneOut",
-          triggerHook: 0,
-          duration: $("#sceneOut").height(),
-          reverse: true,
-          pushFollowers: false
-        }).setPin("#sceneOut").addTo(controller);
+        var sceneOut = createScene("#sceneOut");
 
         // Initiate ScrollMagic sceneIn and add to controller
-        var sceneIn = new ScrollMagic.Scene({
-          triggerElement: "#sceneIn",
-          triggerHook: 0,
-          duration: $("#sceneIn").height(),
-          reverse: true,
-          pushFollowers: false
-        }).setPin("#sceneIn").addTo(controller);
+        var sceneIn = createScene("#sceneIn");
 
         // Initiate ScrollMagic sceneTorch and add to controller
-        var sceneTorch = new ScrollMagic.Scene({
-          triggerElement: "#sceneTorch",
-          triggerHook: 0,
-          duration:  $("#sceneTorch").height(),
-          reverse: true,
-          pushFollowers: false
-        }).setPin("#sceneTorch").addTo(controller);
+        var sceneTorch = createScene("#sceneTorch");
 
         // Initiate ScrollMagic sceneFinal and add to controller
-        var sceneFinal = new ScrollMagic.Scene({
-          triggerElement: "#sceneFinal",
-          triggerHook: 0,
-          duration:  $("#sceneFinal").height(),
-          reverse: true,
-          pushFollowers: false
-        }).setPin("#sceneFinal").addTo(controller);
+        var sceneFinal = createScene("#sceneFinal");
 
       });
     </script>
