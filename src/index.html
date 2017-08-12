@@ -51,36 +51,36 @@
 
         // Initiate ScrollMagic sceneOut and add to controller
         var sceneOut = new ScrollMagic.Scene({
-          triggerElement: "#sceneOut svg",
+          triggerElement: "#sceneOut",
           triggerHook: 0,
-          duration: $(window).height() - $("#sceneOut svg").height(),
+          duration: $("#sceneOut svg").height(),
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneOut").addTo(controller);
 
         // Initiate ScrollMagic sceneIn and add to controller
         var sceneIn = new ScrollMagic.Scene({
-          triggerElement: "#sceneIn svg",
+          triggerElement: "#sceneIn",
           triggerHook: 0,
-          duration: $(window).height() - $("#sceneIn svg").height(),
+          duration: $("#sceneIn svg").height(),
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneIn").addTo(controller);
 
         // Initiate ScrollMagic sceneTorch and add to controller
         var sceneTorch = new ScrollMagic.Scene({
-          triggerElement: "#sceneTorch svg",
+          triggerElement: "#sceneTorch",
           triggerHook: 0,
-          duration: $(window).height() - $("#sceneTorch svg").height(),
+          duration:  $("#sceneTorch svg").height(),
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneTorch").addTo(controller);
 
         // Initiate ScrollMagic sceneFinal and add to controller
         var sceneFinal = new ScrollMagic.Scene({
-          triggerElement: "#sceneFinal svg",
+          triggerElement: "#sceneFinal",
           triggerHook: 0,
-          duration: $(window).height() - $("#sceneFinal svg").height(),
+          duration:  $("#sceneFinal svg").height(),
           reverse: true,
           pushFollowers: false
         }).setPin("#sceneFinal").addTo(controller);
