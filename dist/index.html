@@ -8326,12 +8326,12 @@
       </svg>
 
     </div>
-
+     <script src="js/scene1.js"></script>
     <!-- Main Script -->
     <script type="text/javascript">
       $(function(){
 
-        // Make SVGs span entire div and a greedy bugfix
+        // Make SVGs span entire div + a greedy bugfix
         $('svg').each(function(){
           this.setAttribute('preserveAspectRatio','xMidYMid slice');
           $(this).parent().css('margin-bottom','-10px');
@@ -8340,7 +8340,35 @@
         // Start a ScrollMagic controller
         var controller = new ScrollMagic.Controller();
 
+        // Define a Scene Genrator Function
+        function createScene(selector,tween) {
+          return new ScrollMagic.Scene({
+            triggerElement: selector,
+            triggerHook: 0, // trigger when top of SVG touches top of screen
+            duration: $(selector).height(), // duration in pixels
+            reverse: true, // reverse animation
+            pushFollowers: false // don't push the following elements
+          }).setPin(selector) // pin to screen
+            .on("end",function(e){
+              if(e.scrollDirection == "FORWARD") {
+                // directly scroll to next scene
+                var next = $(selector).parent().next().find('.scene');
+                if (next.length != 0)
+                  window.scrollTo(0,next.offset().top);
+              }
+              else {
+                // directly scroll to previous scene
+                var prev = $(selector).parent().prev().find('.scene');
+                if (prev.length != 0)
+                  window.scrollTo(0,prev.offset().top);
+              }
+            })
+            .setTween(tween)
+            .addTo(controller);
+        }
+
         // Initiate ScrollMagic sceneOut and add to controller
+
         var sceneOut = new ScrollMagic.Scene({
           triggerElement: "#sceneOut",
           triggerHook: 0,
@@ -8349,88 +8377,25 @@
           pushFollowers: false
         }).setPin("#sceneOut").addTo(controller);
 
-        // timeline for sceneOut
+        // var outAnimation = new TimelineMax()
+        //     .add(TweenMax.to("#sceneOut g[data-name='Stadium']",1,
+        //     {transform:"translateY(-30%) scale(1.7)"}));
+        // var sceneOut = createScene("#sceneOut",sceneOutTimeline);
 
-       var sceneOutTimeline = new TimelineLite();
-       var torch = $('#sceneOut g[data-name=Torch]');
-       var buildings = $('#sceneOut .building');
-       var bushTree = $('#sceneOut g[data-name=Bushes_Trees]');
-       var fire = $('#sceneOut g[data-name=Fire]');
-       var lights = $('#sceneOut g[data-name=Shine]');
-       var stadium = $('#sceneOut g[data-name=Stadium]');
-       var skyEle = $('#sceneOut g[data-name=Sky_Elements]');
-       var grass = $('#sceneOut .grass');
-       var background = $('#sceneOut .background');
-       var carpet = $('#sceneOut .carpet');
-       var line_art = $('#sceneOut g[data-name=Line_art] path');
-       var sculpture = $('#sceneOut .sculpture');
-       var origin_stadium_x = $('#sceneOut .middle').offset().left + $('#sceneOut .middle').width()- stadium.offset().left + 100;
-       
-       bushTree.each(function(ind, ele){
-       	  if(!($(ele).hasClass('bush'))){
-       	  	$(ele).addClass('tree');
-       	  }
-       })
+        sceneOut.setTween(sceneOutTimeline)
 
-       $('#sceneOut .cloud').addClass('float');
-
-       var tree = $('#sceneOut .tree');
-       var fadeIn = {autoAlpha:1, ease:Power4.easeOut, yPercent: 0};
-       stadium.css('position', 'relative');
-
-
-       sceneOutTimeline.set([skyEle, bushTree, torch, fire, lights, buildings, carpet, $('#sceneOut g[data-name=Line_art] rect')],{autoAlpha:0, yPercent: 10, transformOrigin:  '50% 50%'})
-       .set(stadium, {transformOrigin: origin_stadium_x+'px 60%'})
-       .set(grass[0], {transformOrigin:'50% 50%'})
-       .set(grass[1], {transformOrigin: '100% 50%'})
-       .set(grass[2], {transformOrigin: '0% 50%'})
-       .set(line_art[0], {transformOrigin: '100% 200%'})
-       .set(line_art[1], {transformOrigin: origin_stadium_x+ stadium.offset().left - 300+'px 230%'})
-       .set(fire, {className:"+=flicker"})
-       .set(torch, {className:"+=walk"})
-       // .to([grass,background], .01, fadeIn)
-       
-       sceneOutTimeline.to(buildings, .3, fadeIn)
-       .to([skyEle,bushTree, carpet, lights], .3, fadeIn)
-       .to(torch, .1, fadeIn)
-       .to(fire, 0.2, fadeIn)
-       .to([stadium, carpet, grass, line_art, bushTree], 4, {scale: 60,yPercent:200, ease: Power4.easeOut})
-       .to(skyEle,2, {ypercent: -200, ease:Power4.easeOut},'-=3.9')
-       .to(lights,2, {autoAlpha:0}, '-=2')
-       .to([tree],.1,{scale: 5, ease: Power4.easeOut}, '-=1');
-       
-      
-      	
-       sceneOut.setTween(sceneOutTimeline)
 
         // Initiate ScrollMagic sceneIn and add to controller
-        var sceneIn = new ScrollMagic.Scene({
-          triggerElement: "#sceneIn",
-          triggerHook: 0,
-          duration: $("#sceneIn").height(),
-          reverse: true,
-          pushFollowers: false
-        }).setPin("#sceneIn").addTo(controller);
+        var sceneIn = createScene("#sceneIn");
 
         // Initiate ScrollMagic sceneTorch and add to controller
-        var sceneTorch = new ScrollMagic.Scene({
-          triggerElement: "#sceneTorch",
-          triggerHook: 0,
-          duration:  $("#sceneTorch").height(),
-          reverse: true,
-          pushFollowers: false
-        }).setPin("#sceneTorch").addTo(controller);
+        var sceneTorch = createScene("#sceneTorch");
 
         // Initiate ScrollMagic sceneFinal and add to controller
-        var sceneFinal = new ScrollMagic.Scene({
-          triggerElement: "#sceneFinal",
-          triggerHook: 0,
-          duration:  $("#sceneFinal").height(),
-          reverse: true,
-          pushFollowers: false
-        }).setPin("#sceneFinal").addTo(controller);
+        var sceneFinal = createScene("#sceneFinal");
 
       });
     </script>
+   
   </body>
 </html>

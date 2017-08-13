@@ -13,7 +13,8 @@
        var carpet = $('#sceneOut .carpet');
        var line_art = $('#sceneOut g[data-name=Line_art] path');
        var sculpture = $('#sceneOut .sculpture');
-       var origin_stadium_x = $('#sceneOut .middle').offset().left + $('#sceneOut .middle').width()- stadium.offset().left + 100;
+       var origin_stadium_x = $(window).width()/2 - stadium.offset().left ;
+       console.log(origin_stadium_x, $(window).width()/2)
        
        bushTree.each(function(ind, ele){
        	  if(!($(ele).hasClass('bush'))){
@@ -29,7 +30,7 @@
 
 
        sceneOutTimeline.set([skyEle, bushTree, torch, fire, lights, buildings, carpet, $('#sceneOut g[data-name=Line_art] rect')],{autoAlpha:0, yPercent: 10, transformOrigin:  '50% 50%'})
-       .set(stadium, {transformOrigin: origin_stadium_x+'px 60%'})
+       .set(stadium, {transformOrigin: '38.75% 60%'})
        .set(grass[0], {transformOrigin:'50% 50%'})
        .set(grass[1], {transformOrigin: '100% 50%'})
        .set(grass[2], {transformOrigin: '0% 50%'})
@@ -49,4 +50,4 @@
        
       
       	
-       sceneOut.setTween(sceneOutTimeline)
+       

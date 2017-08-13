@@ -11,4 +11,6 @@
 /*	overflow: hidden;*/
 }
 
-
+#sceneOut g[data-name="Stadium"] {
+  transform-origin: 52.5% 0%;
+}
