@@ -1,5 +1,5 @@
 // timeline for sceneOut
-
+(function(){
        var sceneOutTimeline = new TimelineLite();
        var torch = $('#sceneOut g[data-name=Torch]');
        var buildings = $('#sceneOut .building');
@@ -47,7 +47,10 @@
        .to([stadium, carpet, grass, line_art, bushTree], 4, {scale: 60,yPercent:200, ease: Power4.easeOut})
        .to(lights,2, {autoAlpha:0}, '-=2')
        .to([tree],.1,{scale: 5, ease: Power4.easeOut}, '-=1');
-       
+
+       window.sceneOutTimeline = sceneOutTimeline;
+
+})(window)      
       
       	
        

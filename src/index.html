@@ -43,6 +43,7 @@
       include "svg/final.svg"
     </div>
      <script src="js/scene1.js"></script>
+     <script src="js/scene2.js"></script>
     <!-- Main Script -->
     <script type="text/javascript">
       $(function(){
@@ -102,7 +103,7 @@
 
 
         // Initiate ScrollMagic sceneIn and add to controller
-        var sceneIn = createScene("#sceneIn");
+        var sceneIn = createScene("#sceneIn",sceneInTimeline, 4000);
 
         // Initiate ScrollMagic sceneTorch and add to controller
         var sceneTorch = createScene("#sceneTorch");

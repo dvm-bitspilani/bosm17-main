@@ -1,4 +1,5 @@
-#sceneOut .flicker{
+#sceneOut .flicker,
+#sceneIn .flicker{
 	animation: flicker 3s linear infinite;
 }
 
@@ -13,7 +14,8 @@
 	}
 }
 
-#sceneOut .walk{
+#sceneOut .walk,
+#sceneIn .walk{
 	animation: walking 2s linear alternate infinite;
 }
 
@@ -35,18 +37,22 @@
 	}
 }
 
-#sceneOut .ele{
+#sceneOut .ele, 
+#sceneIn .ele{
 	animation: float 3s ease-in-out alternate infinite;
 }
 
-#sceneOut .ele:nth-of-type(1){
+#sceneOut .ele:nth-of-type(1),
+#sceneIn .ele:nth-of-type(1){
 	animation-delay: 2s;
 }
 
-#sceneOut .ele:nth-of-type(2){
+#sceneOut .ele:nth-of-type(2),
+#sceneIn .ele:nth-of-type(2){
 	animation-delay: 4s;
 }
 
-#sceneOut .cloud{
+#sceneOut .cloud,
+#sceneIn .cloud{
 	animation: float 5s ease-in-out alternate infinite;
 }
