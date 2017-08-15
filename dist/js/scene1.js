@@ -42,11 +42,11 @@
        
        sceneOutTimeline.to(buildings, .3, fadeIn)
        .to([skyEle,bushTree, carpet, lights], .3, fadeIn)
-       .to(torch, .1, fadeIn)
-       .to(fire, 0.2, fadeIn)
+       .to(torch, .8, fadeIn)
+       .to(fire, 0.7, fadeIn)
        .to([stadium, carpet, grass, line_art, bushTree], 4, {scale: 60,yPercent:200, ease: Power4.easeOut})
-       .to(lights,2, {autoAlpha:0}, '-=2')
-       .to([tree],.1,{scale: 5, ease: Power4.easeOut}, '-=1');
+       .to(lights,.5, {autoAlpha:0}, '-=2')
+       .to([tree],.1,{scale: 5, ease: Power4.easeOut}, '-=3');
 
        window.sceneOutTimeline = sceneOutTimeline;
 

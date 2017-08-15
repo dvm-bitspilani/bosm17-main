@@ -14,3 +14,21 @@
 #sceneOut g[data-name="Stadium"] {
   transform-origin: 52.5% 0%;
 }
+
+#bottom{
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	height: 30px;
+	width: 30px;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	border: 1px solid #fff;
+	z-index: 10;
+	line-height: 30px;
+	font-size: 10px;
+	color: #fff;
+	text-align: center;
+	font-family: arial;
+	cursor: pointer;
+}

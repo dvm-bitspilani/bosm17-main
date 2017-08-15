@@ -24,7 +24,7 @@
 
   </head>
   <body>
-
+    <div id="bottom">V</div>
     <!-- Begin Scenes -->
 
     <div class="scene" id="sceneOut">
@@ -8328,6 +8328,7 @@
     </div>
      <script src="js/scene1.js"></script>
      <script src="js/scene2.js"></script>
+
     <!-- Main Script -->
     <script type="text/javascript">
       $(function(){
@@ -8390,14 +8391,14 @@
         var sceneIn = createScene("#sceneIn",sceneInTimeline, 4000);
 
         // Initiate ScrollMagic sceneTorch and add to controller
-        var sceneTorch = createScene("#sceneTorch");
+        var sceneTorch = createScene("#sceneTorch", null, 4000);
 
         // Initiate ScrollMagic sceneFinal and add to controller
-        var sceneFinal = createScene("#sceneFinal");
+        var sceneFinal = createScene("#sceneFinal", null, 4000);
 
       });
     </script>
-    <script>
+      <script>
           function pathPrepare ($el) {
          var lineLength = $el[0].getTotalLength();
          $el.css("stroke-dashoffset", lineLength);
@@ -8672,5 +8673,6 @@
           // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
           .addTo(controller);
 </script>
+<script src="js/autoSroll.js"></script>
   </body>
 </html>
