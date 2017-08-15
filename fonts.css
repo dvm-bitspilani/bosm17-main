@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "LoveloBlack";
+  src: url("fonts/Lovelo Black.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LoveloLineBold";
+  src: url("fonts/Lovelo Line Bold.otf");
+}
+@font-face {
+  font-family: "LoveloLineLight";
+  src: url("fonts/Lovelo Line Light.otf");
+}
