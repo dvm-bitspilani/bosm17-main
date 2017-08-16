@@ -18,6 +18,9 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #sport-wrapper .basket{
 	background: repeating-linear-gradient(
@@ -56,9 +59,6 @@ body{
 	  rgb(0,227,176) 1px,
 	  rgb(0,227,176) 60px
 	);
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 #sport-wrapper .badminton{
