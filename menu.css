@@ -71,12 +71,13 @@ basic positioning 
 }
 
 #menu_wrapper .logo{
-	font-size: 2.5em;
+	font-size: 2.0em;
+	color: red;
 }
 
 #menu_wrapper .logo span{
 	font-size: inherit;
-	color: #04ffe5;
+	color: red;
 	
 }
 
