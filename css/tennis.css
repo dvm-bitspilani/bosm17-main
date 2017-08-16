@@ -4,7 +4,7 @@ body{
 }
 
 #sport-wrapper {
-	
+
 	top: 0
 	right:0;
 	bottom: 0;
@@ -23,7 +23,7 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(0,183,234) 1px,
 	  rgb(0,183,234) 60px
 	);
@@ -33,7 +33,7 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(255,0,92) 1px,
 	  rgb(255,0,92) 60px
 	);
@@ -43,7 +43,7 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(255,77,123) 1px,
 	  rgb(255,77,123) 60px
 	);
@@ -53,17 +53,19 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
 	  rgb(0,227,176) 1px,
 	  rgb(0,227,176) 60px
 	);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #sport-wrapper .badminton{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(255,42,48) 1px,
 	  rgb(255,42,48) 60px
 	);
@@ -73,7 +75,7 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(163,221,0) 1px,
 	  rgb(163,221,0) 60px
 	);
@@ -83,7 +85,7 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(255,147,97) 1px,
 	  rgb(255,147,97) 60px
 	);
@@ -93,7 +95,7 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(0,255,145) 1px,
 	  rgb(0,255,145) 60px
 	);
@@ -103,7 +105,7 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(235,114,255) 1px,
 	  rgb(235,114,255) 60px
 	);
@@ -113,7 +115,7 @@ body{
 	background: repeating-linear-gradient(
 	  -45deg,
 	  #777,
-	  
+
 	  rgb(235,135,101) 1px,
 	  rgb(235,135,101) 60px
 	);
@@ -122,32 +124,23 @@ body{
 #sport-wrapper .main_div{
 	display: block;
 	position: absolute;
-	z-index: 0;
-	top: 0;
-	left: 25vh;
-	bottom: 0;
-	right: 0;
-	height: 500px;
+	height: auto;
 	width: 65%;
 	background: #fff;
-	margin: auto;
 	vertical-align: middle;
 	border-radius: 50px;
-	
-
 }
 
 #sport-wrapper .details{
 	display: block;
 	float: right;
-	height: 250px;
+	height: auto;
 	width: 70%;
-	background-color: #fff;
 	color: #939393;
 	font-size: 28px;
 	margin-top: 100px;
 	margin-right: 50px;
-	padding: 5px 15px 0 15px; 
+	padding: 0px 25px 30px 25px;
 	text-align: right;
 	font-family: 'Lato', sans-serif;
 }
@@ -155,12 +148,8 @@ body{
 #sport-wrapper .sport{
 	display: block;
 	float: right;
-	height: 100px;
 	width: 50%;
-	margin-top: 5px;
-	margin-right: 50px;
-	text-align: right;
-	padding:10px 15px ; 
+	padding:10px 15px ;
 	font-size: 3.5em;
 	font-weight: 900;
 	font-family: "LoveloBlack";
@@ -182,7 +171,7 @@ body{
 	font-family: 'LoveloBlack';
 	display: flex;
 	flex-direction: column;
-	justify-content: center;	
+	justify-content: center;
 	color: #fff;
 	-webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: rgb(141,13,117);
@@ -223,10 +212,35 @@ body{
 #sport-wrapper img{
 	z-index: 1;
 	position: absolute;
-	height: 250px;
-	width: 40%;
+	height: 200px;
 	bottom: -20px;
 	left: -100px;
+}
+
+@media all and (max-width: 950px) {
+	#sport-wrapper .main_div {
+		width: 90%;
+	}
+	#sport-wrapper img {
+		left: 5px;
+	}
+}
+
+@media all and (max-width: 700px) {
+	#sport-wrapper img {
+		display: none;
+	}
+	#sport-wrapper .main_div {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	#sport-wrapper .details {
+		width: auto;
+		margin: 0;
+		text-align: center;
+		padding-top: 50px;
+	}
 }
 
 #sport-wrapper .chess img{
