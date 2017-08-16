@@ -10,6 +10,18 @@ html, body{
 	overflow: hidden;
 }
 
+@font-face
+{
+	font-family: Lovelo Black;
+	src:url(Lovelo/Lovelo_Black.otf);
+}
+
+.logo
+{
+	font-family: Lovelo Black;
+	font-:red;
+}
+
 #menu_wrapper *{
 	-webkit-backface-visibility: hidden;
 	   -moz-backface-visibility: hidden;
@@ -59,7 +71,7 @@ basic positioning 
 }
 
 #menu_wrapper .logo{
-	font-size: 1.5em;
+	font-size: 2.5em;
 }
 
 #menu_wrapper .logo span{
@@ -79,6 +91,7 @@ basic positioning 
 	min-width: 70px;
 	font-variant : small-caps;
 	font-size: .7em;
+	font-family: Lovelo Black;
 	text-align: center;
 	cursor: pointer;
 	
