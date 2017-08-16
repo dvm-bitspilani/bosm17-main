@@ -27,7 +27,7 @@ basic positioning 
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	background: #0a0a0a;
+	background: #ffc34b;
 	overflow: hidden;
 	color: #fff;
 
@@ -141,13 +141,15 @@ basic positioning 
 	
 }
 
+
+
 #menu_wrapper .item{
 	width: 250px;
-	height: 55vh;
+	height: 61.5vh;
 	margin: 0 1px;
 	
 	background-size: cover;
-	filter: saturate(.1);
+
 	transition: all .4s linear;
 	cursor: pointer;
 }
@@ -241,6 +243,17 @@ basic positioning 
 	filter: none;
 	z-index: 3;
 }
+
+/*@font--face
+{
+	font-family: Lovelo Black;
+	src :url(Lovelo/Lovelo Black.otf);
+}
+
+.logo
+{
+	font-family: Lovelo Black;
+}*/
 
 
 /*== footer ===*/
