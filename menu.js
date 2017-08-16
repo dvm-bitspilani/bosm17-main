@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// names array 
-	var names = "qwe er re er we ttt ytur wr efs gd fg dg ew".split(' ');
+	var names = "Atheletics Badminton Basketball Football Hockey PowerLifting Squash Swimming Table-Tennis Taekwondo Tennis Sumit Rahul".split(' ');
 
 
 	function init(){

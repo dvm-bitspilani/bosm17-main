@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.47 47.47">
+  <defs>
+    <style>
+      .\32 976e257-9fb8-425e-b55f-abaa3bdd4e24 {
+        opacity: 0.25;
+      }
+
+      .\37 9a4fc1f-18f8-4735-878a-99bb9ea2ea0f {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 11px;
+      }
+    </style>
+  </defs>
+  <title>Asset 6</title>
+  <g id="fc23e668-6414-44e7-a6f9-b02cf03d1637" data-name="Layer 2">
+    <g id="82a4cca0-4c7a-4afc-b848-96c4df19b01c" data-name="Layer 1">
+      <g class="2976e257-9fb8-425e-b55f-abaa3bdd4e24">
+        <line class="79a4fc1f-18f8-4735-878a-99bb9ea2ea0f" x1="41.97" y1="16.37" x2="5.5" y2="31.1"/>
+        <line class="79a4fc1f-18f8-4735-878a-99bb9ea2ea0f" x1="31.1" y1="41.97" x2="16.37" y2="5.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

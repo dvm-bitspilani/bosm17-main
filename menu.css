@@ -145,11 +145,76 @@ basic positioning 
 	width: 250px;
 	height: 50vh;
 	margin: 0 1px;
-	background: url('./football.jpg') 0 0 no-repeat;
+	
 	background-size: cover;
 	filter: saturate(.1);
 	transition: all .4s linear;
 	cursor: pointer;
+}
+
+#menu_wrapper .i1
+{
+	background: url('img/Atheletics.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i2
+{
+	background: url('img/Badminton.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i3
+{
+	background: url('img/Basketball.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i4
+{
+	background: url('img/Football.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i5
+{
+	background: url('img/Hockey.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i6
+{
+	background: url('img/PowerLifting.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i7
+{
+	background: url('img/Squash.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i8
+{
+	background: url('img/Swimming.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i9
+{
+	background: url('img/Table-Tennis.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i10
+{
+	background: url('img/Taekwondo.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i11
+{
+	background: url('img/Tennis.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i12
+{
+	background: url('img/Sumit.png') 0 0 no-repeat;
+}
+
+#menu_wrapper .i13
+{
+	background: url('img/Rahul.png') 0 0 no-repeat;
 }
 
 #menu_wrapper .info{
