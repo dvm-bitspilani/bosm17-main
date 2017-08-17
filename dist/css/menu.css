@@ -69,7 +69,7 @@ basic positioning 
 
 .lightbox #menu_wrapper .topics li{
 	list-style: none;
-	margin: 0 10px;
+	margin: 0 30px;
 	min-width: 70px;
 	font-variant : small-caps;
 	font-size: 1.2em;
@@ -80,7 +80,7 @@ basic positioning 
 }
 
 .lightbox #menu_wrapper .nav_line{
-	border: 2px solid #55318a;
+	border: 5px solid #55318a;
 	position: absolute;
 	min-width: 70px;
 	top: 0;
@@ -175,55 +175,73 @@ basic positioning 
 
 .lightbox #menu_wrapper .i5
 {
-	background: url('../img/Hockey.png') 0 0 no-repeat;
+	background: url('../img/Football.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
 .lightbox #menu_wrapper .i6
 {
-	background: url('../img/PowerLifting.png') 0 0 no-repeat;
+	background: url('../img/Hockey.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
 .lightbox #menu_wrapper .i7
 {
-	background: url('../img/Squash.png') 0 0 no-repeat;
+	background: url('../img/Tennis.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
 .lightbox #menu_wrapper .i8
 {
-	background: url('../img/Swimming.png') 0 0 no-repeat;
+	background: url('../img/Table-Tennis.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
 .lightbox #menu_wrapper .i9
 {
-	background: url('../img/Table-Tennis.png') 0 0 no-repeat;
+	background: url('../img/Squash.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
 .lightbox #menu_wrapper .i10
 {
-	background: url('../img/Taekwondo.png') 0 0 no-repeat;
+	background: url('../img/Swimming.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
 .lightbox #menu_wrapper .i11
 {
-	background: url('../img/Tennis.png') 0 0 no-repeat;
+	background: url('../img/Powerlifting.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
 .lightbox #menu_wrapper .i12
 {
-	background: url('../img/Sumit.png') 0 0 no-repeat;
+	background: url('../img/Taekwondo.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
 .lightbox #menu_wrapper .i13
 {
+	background: url('../img/VolleyBall.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.lightbox #menu_wrapper .i14
+{
+	background: url('../img/Chess.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.lightbox #menu_wrapper .i15
+{
 	background: url('../img/Rahul.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.lightbox #menu_wrapper .i16
+{
+	background: url('../img/Sumit.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
@@ -231,6 +249,7 @@ basic positioning 
 	flex-grow: 2;
 	text-align: center;
 	min-width: 500px;
+	font-family: Lovelo Black;
 }
 
 .lightbox #menu_wrapper .selected{

@@ -1,6 +1,6 @@
 function initMenu(){
 	// names array
-	var names = "Atheletics Badminton Basketball Football Hockey PowerLifting Squash Swimming Table-Tennis Taekwondo Tennis Sumit Rahul".split(' ');
+	var names = "Atheletics;Badminton;Basketball;Football;Cricket;Hockey;Tennis;Table-Tennis;Squash;Swimming;PowerLifting;Taekwondo;Volleyball;Chess;Rahul Subramanium;Sumit Anand".split(';');
 
 	function init(){
 		//initial positioning of slider and nav line and adding text-content
