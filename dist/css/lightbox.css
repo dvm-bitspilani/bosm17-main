@@ -1,0 +1,13 @@
+.lightbox {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.lightbox.primary {
+  z-index: 10;
+}
+.lightbox.secondary {
+  z-index: 20;
+}

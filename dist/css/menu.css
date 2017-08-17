@@ -1,22 +1,9 @@
-*{
-/*	border: 1px solid #fff;*/
-	margin:0;
-	padding: 0;
-	font: 22px/26px arial,verdana;
-}
-html, body{
-	width: 100%;
-	height:100%;
-	overflow: hidden;
-}
-
 .logo
 {
 	font-family: Lovelo Black;
-	font-:red;
 }
 
-#menu_wrapper *{
+.lightbox #menu_wrapper *{
 	-webkit-backface-visibility: hidden;
 	   -moz-backface-visibility: hidden;
 	        backface-visibility: hidden;
@@ -27,7 +14,7 @@ html, body{
 /*===
 basic positioning 
 ===*/
-#menu_wrapper{
+.lightbox #menu_wrapper{
 	height: 100vh;
 	width: 100vw;
 	display: flex;
@@ -39,48 +26,48 @@ basic positioning 
 
 }
 
-#menu_wrapper header,
-#menu_wrapper footer,
-#menu_wrapper section{
+.lightbox #menu_wrapper header,
+.lightbox #menu_wrapper footer,
+.lightbox #menu_wrapper section{
 	width: 90vw;
 }
 
-#menu_wrapper header,
-#menu_wrapper footer{
+.lightbox #menu_wrapper header,
+.lightbox #menu_wrapper footer{
 	height: 15vh;
 
 }
 
-#menu_wrapper section,
-#menu_wrapper .slider-container,
-#menu_wrapper .background{
+.lightbox #menu_wrapper section,
+.lightbox #menu_wrapper .slider-container,
+.lightbox #menu_wrapper .background{
 	height: 70vh;
 }
 
 /*== header ===*/
-#menu_wrapper header{
+.lightbox #menu_wrapper header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-#menu_wrapper .logo{
+.lightbox #menu_wrapper .logo{
 	font-size: 2.0em;
 	color: red;
 }
 
-#menu_wrapper .logo span{
+.lightbox #menu_wrapper .logo span{
 	font-size: inherit;
 	color: red;
 
 }
 
-#menu_wrapper .topics nav{
+.lightbox #menu_wrapper .topics nav{
 	display: flex;
 
 }
 
-#menu_wrapper .topics li{
+.lightbox #menu_wrapper .topics li{
 	list-style: none;
 	margin: 0 10px;
 	min-width: 70px;
@@ -92,24 +79,24 @@ basic positioning 
 
 }
 
-#menu_wrapper .nav_line{
+.lightbox #menu_wrapper .nav_line{
 	border: 2px solid #55318a;
 	position: absolute;
 	min-width: 70px;
 	top: 0;
 }
 
-#menu_wrapper .close{
+.lightbox #menu_wrapper .close{
 /*	visibility: hidden; */
 	cursor: pointer;
 }
 
 /*=== main section ===*/
-#menu_wrapper .main_menu{
+.lightbox #menu_wrapper .main_menu{
 	position: relative;
 }
 
-#menu_wrapper .background{
+.lightbox #menu_wrapper .background{
 	position: absolute;
 
 	/*background: #001;*/
@@ -118,7 +105,7 @@ basic positioning 
 
 }
 
-#menu_wrapper .bg_text{
+.lightbox #menu_wrapper .bg_text{
 	position: relative;
 	top: 45%;
 	font-size: 10em;
@@ -126,7 +113,7 @@ basic positioning 
 	opacity: .1;
 }
 
-#menu_wrapper .slider-container{
+.lightbox #menu_wrapper .slider-container{
 	width: 100vw;
 	position: absolute;
 	left: 50vw;
@@ -140,7 +127,7 @@ basic positioning 
 	        transition: all .4s ease-in-out;
 }
 
-#menu_wrapper .slider{
+.lightbox #menu_wrapper .slider{
 	display: flex;
 	-webkit-align-items: center;
 	        align-items: center;
@@ -151,7 +138,7 @@ basic positioning 
 
 
 
-#menu_wrapper .item{
+.lightbox #menu_wrapper .item{
 	width: 250px;
 	height: 378px;
 	margin: 0 1px;
@@ -162,91 +149,91 @@ basic positioning 
 	cursor: pointer;
 }
 
-#menu_wrapper .i1
+.lightbox #menu_wrapper .i1
 {
 	background: url('../img/Atheletics.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i2
+.lightbox #menu_wrapper .i2
 {
 	background: url('../img/Badminton.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i3
+.lightbox #menu_wrapper .i3
 {
 	background: url('../img/Basketball.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i4
+.lightbox #menu_wrapper .i4
 {
 	background: url('../img/Football.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i5
+.lightbox #menu_wrapper .i5
 {
 	background: url('../img/Hockey.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i6
+.lightbox #menu_wrapper .i6
 {
 	background: url('../img/PowerLifting.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i7
+.lightbox #menu_wrapper .i7
 {
 	background: url('../img/Squash.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i8
+.lightbox #menu_wrapper .i8
 {
 	background: url('../img/Swimming.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i9
+.lightbox #menu_wrapper .i9
 {
 	background: url('../img/Table-Tennis.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i10
+.lightbox #menu_wrapper .i10
 {
 	background: url('../img/Taekwondo.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i11
+.lightbox #menu_wrapper .i11
 {
 	background: url('../img/Tennis.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i12
+.lightbox #menu_wrapper .i12
 {
 	background: url('../img/Sumit.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .i13
+.lightbox #menu_wrapper .i13
 {
 	background: url('../img/Rahul.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-#menu_wrapper .info{
+.lightbox #menu_wrapper .info{
 	flex-grow: 2;
 	text-align: center;
 	min-width: 500px;
 }
 
-#menu_wrapper .selected{
+.lightbox #menu_wrapper .selected{
 	transform: scale(1.1);
 	filter: none;
 	z-index: 3;
@@ -265,39 +252,39 @@ basic positioning 
 
 
 /*== footer ===*/
-#menu_wrapper footer{
+.lightbox #menu_wrapper footer{
 	display: flex;
 	flex-direction: column;
 	-webkit-justify-content: center;
 	        justify-content: center;
 }
 
-#menu_wrapper .selected_text{
+.lightbox #menu_wrapper .selected_text{
 	line-height: 18px;
 	font-size: 1.2em;
 	text-transform: uppercase;
 	font-family: "Lovelo Black";
 }
 
-#menu_wrapper .progress_line{
+.lightbox #menu_wrapper .progress_line{
 	margin: 10px 0;
 	border: 0;
 
 }
 
-#menu_wrapper .line-background,
-#menu_wrapper .line-fill{
+.lightbox #menu_wrapper .line-background,
+.lightbox #menu_wrapper .line-fill{
 	position: absolute;
 	border-radius: 1px;
 }
 
-#menu_wrapper .line-background{
+.lightbox #menu_wrapper .line-background{
 	width: 95vw;
 	border: 1px solid #fff;
 	opacity: 0.2;
 }
 
-#menu_wrapper .line-fill{
+.lightbox #menu_wrapper .line-fill{
 	width: 0;
 	border: 1px solid #55318a;
 
@@ -312,20 +299,20 @@ basic positioning 
 responsive 
 ===*/
 @media only screen and (max-width: 758px){
-	#menu_wrapper .logo{
+	.lightbox #menu_wrapper .logo{
 		display: none;
 	}
 
 
-	#menu_wrapper .item{
+	.lightbox #menu_wrapper .item{
 		width: 200px;
 	}
 
-	#menu_wrapper .info{
+	.lightbox #menu_wrapper .info{
 		min-width: 300px;
 	}
 
-	#menu_wrapper .bg_text{
+	.lightbox #menu_wrapper .bg_text{
 		margin-left: -200px;
 	}
 

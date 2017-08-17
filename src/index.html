@@ -7,12 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOSM 2017 | BITS Pilani</title>
 
-    <!-- Stylesheets -->
+    <!-- Component Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/scene1.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/menu.css">
 
     <!-- jQuery -->
     <script src="js/jquery.js" charset="utf-8"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+
+    <!-- Conponent JS Files -->
+    <script src="js/lightbox.js" charset="utf-8"></script>
+    <script src="js/menu.js" charset="utf-8"></script>
 
     <!-- GSAP TweenMax - Reduce to TimelineLite if possible -->
     <script src="js/TweenMax.min.js"></script>
@@ -42,6 +50,56 @@
     <div class="scene" id="sceneFinal">
       include "svg/final.svg"
     </div>
+
+    <div id="menu" style="display: none">
+      <div id="menu_wrapper">
+        <header>
+          <div class="logo">BOSM</div>
+          <div class="topics">
+            <nav>
+              <li class="active">SPORTS</li>
+              <li>EVENTS</li>
+              <li>INFO</li>
+            </nav>
+
+          </div>
+          <div class="close">X</div>
+        </header>
+        <div class="nav_line"></div>
+        <section class="main_menu">
+          <div class="background"><div class="bg_text"></div></div>
+          <div class="slider-container">
+            <div class="slider">
+              <div class="item i1 selected" data="begin"></div>
+              <div class="item i2"></div>
+              <div class="item i3"></div>
+              <div class="item i4"></div>
+              <div class="item i5"></div>
+              <div class="item i6"></div>
+              <div class="item i7"></div>
+              <div class="item i8"></div>
+              <div class="item i9"></div>
+              <div class="item i10"></div>
+              <div class="item i11"></div>
+              <div class="info ">EVENTS</div>
+
+              <div class="item i12" data="begin"></div>
+              <div class="item i13"></div>
+              <div class="info">INFO</div>
+              <div class="item " data="begin"></div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="selected_text" data=""></div>
+          <div class="progress_line">
+            <div class="line-background"></div>
+            <div class="line-fill"></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
      <script src="js/scene1.js"></script>
      <script src="js/scene2.js"></script>
 

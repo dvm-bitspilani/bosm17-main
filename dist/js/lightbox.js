@@ -57,7 +57,7 @@ var lightboxes = {
 function launchPrimary() {
   var lightbox = document.createElement('div');
   lightbox.className = "lightbox primary";
-  body.appendChild(lightbox);
+  document.body.appendChild(lightbox);
   return lightbox;
 }
 
@@ -70,7 +70,7 @@ function closePrimary() {
 function launchSecondary() {
   var lightbox = document.createElement('div');
   lightbox.className = "lightbox secondary";
-  body.appendChild(lightbox);
+  document.body.appendChild(lightbox);
   return lightbox;
 }
 
@@ -80,7 +80,10 @@ function closeSecondary() {
 }
 
 function launchMenu() {
-
+  var menu = launchPrimary();
+  menu.style.background = "#fff";
+  menu.innerHTML = $('#menu')[0].innerHTML;
+  initMenu();
 }
 
 function launchSport(sport) {
@@ -94,3 +97,9 @@ function launchProfShow(artist) {
 function launchInfo() {
 
 }
+
+$(document).on("ready",function(){
+  $('.2c268ad7-e129-4826-9008-fe36bd464225').on("click", function(){
+    launchMenu();
+  });
+});
