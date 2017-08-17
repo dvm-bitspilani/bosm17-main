@@ -8,6 +8,10 @@ var lightboxes = {
       "image": "",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
+    "cricket": {
+      "image": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
     "powerlifting": {
       "image": "",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -28,11 +32,19 @@ var lightboxes = {
       "image": "",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
+    "swimming": {
+      "image": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
     "tabletennis": {
       "image": "",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     "tennis": {
+      "image": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "taekwondo": {
       "image": "",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
@@ -86,11 +98,30 @@ function launchMenu() {
   initMenu();
 }
 
-function launchSport(sport) {
+function launchSport(name) {
   var sport = launchSecondary();
+  var item = lightboxes.sports[name];
   sport.style.background = "transparent";
-  sport.style.display = "none";
-  sport.innerHTML = $('#event')[0].innerHTML;
+  var html = '\
+  <div id="sport-wrapper">\
+    <div class="atheletics">\
+      <div class="main_div">\
+        <div class="col img" style="flex:0.3">\
+        </div>\
+        <div class="col">\
+          <div class="details">'
+          +item.description+
+          '</div>\
+          <div class="sport">'+name.toUpperCase()+'</div>\
+        </div>\
+        <div class="heading">SPORT EVENT</div>\
+        <img src="../images/atheletics.png" alt="ATHELETICS">\
+        <div class="border"></div>\
+      </div>\
+    </div>\
+  </div>\
+  ';
+  sport.innerHTML = html;
   return sport;
 }
 
@@ -106,10 +137,13 @@ $(window).on("load",function(){
   $('g[data-name=menu]').on("click", function(){
     launchMenu();
   });
-  $(document).on("click", ".slider .item",function(){
-    launchSport();
+  $(document).on("click", ".slider .item",function(e){
+    launchSport(e.target.getAttribute('name'));
   });
   $(document).on("click", ".lightbox #sport-wrapper",function(){
     $('.lightbox.secondary').remove();
+  });
+  $(document).on("click", ".lightbox .close",function(){
+    $('.lightbox').remove();
   });
 });
