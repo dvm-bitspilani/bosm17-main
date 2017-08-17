@@ -87,7 +87,11 @@ function launchMenu() {
 }
 
 function launchSport(sport) {
-
+  var sport = launchSecondary();
+  sport.style.background = "transparent";
+  sport.style.display = "none";
+  sport.innerHTML = $('#event')[0].innerHTML;
+  return sport;
 }
 
 function launchProfShow(artist) {
@@ -98,8 +102,14 @@ function launchInfo() {
 
 }
 
-$(document).on("ready",function(){
-  $('.2c268ad7-e129-4826-9008-fe36bd464225').on("click", function(){
+$(window).on("load",function(){
+  $('g[data-name=menu]').on("click", function(){
     launchMenu();
+  });
+  $(document).on("click", ".slider .item",function(){
+    launchSport();
+  });
+  $(document).on("click", ".lightbox #sport-wrapper",function(){
+    $('.lightbox.secondary').remove();
   });
 });
