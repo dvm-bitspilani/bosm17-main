@@ -31,10 +31,10 @@
 		var height = $(window).height();
 		$('html, body').animate({
 		        scrollTop: (bottom - height)
-		    }, 7000);
+		    }, 20000);
 		setTimeout(function(){
 			changeScene(ind, scenes);
-		}, 7000);
+		}, 20000);
 	}
 
 	function changeScene(ind, scenes){
