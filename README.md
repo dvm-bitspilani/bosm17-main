@@ -50,5 +50,3 @@ $ npm install
 ```
 $ grunt
 ```
-
-- [ ] Hello World
