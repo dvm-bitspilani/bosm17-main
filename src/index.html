@@ -23,6 +23,7 @@
     <script src="js/lightbox.js" charset="utf-8"></script>
     <script src="js/menu.js" charset="utf-8"></script>
 
+
     <!-- GSAP TweenMax - Reduce to TimelineLite if possible -->
     <script src="js/TweenMax.min.js"></script>
 
@@ -37,10 +38,10 @@
     <!-- Begin Scenes -->
 
     <div class="scene" id="sceneOut">
-      <div class="banner">
+      <!-- <div class="banner">
         <span>Scroll<br>Down</span>
         <label>v</label>
-      </div>
+      </div> -->
       include "svg/out.svg"
     </div>
 
@@ -111,7 +112,7 @@
 
      <script src="js/scene1.js"></script>
      <script src="js/scene2.js"></script>
-	<script src="js/scene4.js"></script>
+	   <script src="js/scene4.js"></script>
 
     <!-- Main Script -->
     <script type="text/javascript">
@@ -167,7 +168,7 @@
         var sceneIn = createScene("#sceneIn",sceneInTimeline, 8000);
 
         // Initiate ScrollMagic sceneFinal and add to controller
-        var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 4000);
+        // var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 4000);
 
       });
     </script>
@@ -183,6 +184,8 @@
   ga('send', 'pageview');
 
 </script>
+      <!-- Place after instantiating all scroll magic objects -->
+    <script src="js/autoSroll.js"></script>
      
   </body>
 </html>

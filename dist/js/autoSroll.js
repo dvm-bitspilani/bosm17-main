@@ -1,34 +1,30 @@
 (function(){
 	var scrollToBottom = false;
 	var curr = 0;
-	window.onload = function(){
+	$(document).ready(function(){
 		var scenes = $('.scrollmagic-pin-spacer');
-		console.log(scenes)
+		console.log(scenes.length)
 		var length = scenes.length;
-	
-
-		// for(var i = 0; i<length-1; i++){
-		// 	var curr = $(scenes[i]).height();
-		// 	var next = $(scenes[i+1]).offset().top;
-		// 	console.log(next)
-		// 	$('html, body').animate({
-		//         scrollTop: (next - curr)
-		//     }, 10000, function(){
-		//     	$('html, body').css({
-		//         	scrollTop: next
-		//      	})
-		//     });
-		// }
 
 		window.scrollTo(0, 0);
 		scrollScene(curr, scenes);
-	}
+		
+	});
+
 	function scrollScene(ind, scenes){
 		
-		if(scrollToBottom || ind > scenes.length-2)return;
+		if(scrollToBottom || ind > scenes.length-1){console.log("!!!");return;}
 		console.log('scroll', ind);
-		var bottom = $(scenes[ind+1]).offset().top;
+
+		if(ind == 0){
+			window.scrollTo(0, 0);
+		}
+		var n = $(scenes[ind]).parent().children().index($(scenes[ind]))
+		var next = $($(scenes[0]).siblings()[n])
+		var bottom = next.offset().top ;
 		var height = $(window).height();
+
+		console.log($(scenes[ind]).offset().top,$(scenes[ind]).height() ,height)
 		$('html, body').animate({
 		        scrollTop: (bottom - height)
 		    }, 20000);
@@ -39,15 +35,18 @@
 
 	function changeScene(ind, scenes){
 		console.log('change', ind);
-		if(scrollToBottom || ind>(scenes.length-2))return;
+		if(scrollToBottom || ind>(scenes.length-1))return;
 
-		var next = $(scenes[ind+1]).offset().top;
-		
+		var n = $(scenes[ind]).parent().children().index($(scenes[ind]))
+		var next = $($(scenes[0]).siblings()[n])
+		var bottom = next.offset().top;
+		console.log(next)
 		$('html, body').animate({
-		        scrollTop: next
+		        scrollTop: bottom
 		    },1); 
 		    
 		setTimeout(function(){
+					
 		    		scrollScene(ind+1, scenes);
 		    		curr++;
 		    		updateBottom();
@@ -57,11 +56,10 @@
 
 	$('#bottom').click(()=>{
 		scrollToBottom = true;
-		var scenes = $('.scrollmagic-pin-spacer');
-		console.log(curr);
+		var final = $('#sceneFinal');
 		$('html, body').stop(true, false);
-		window.scrollTo(0,$(scenes[scenes.length - 1]).offset().top);
-		curr = scenes.length - 1;
+		window.scrollTo(0,final.offset().top);
+		curr = scenes.length ;
 		updateBottom();
 	})
 

@@ -58,6 +58,7 @@
 }
 
 #sceneOut .banner {
+	display: none;
 	position: absolute;
 	top: 25vh;
 	left: 12.5vw;
