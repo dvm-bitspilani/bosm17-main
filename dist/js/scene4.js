@@ -1,36 +1,35 @@
-           
+
             var scene = new ScrollMagic.Scene({
         							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
         						})
-        						.setTween("g[data-name=jersey]", 1, {opacity:1,scale:1.02,delay:0.5})
+        						.setTween("g[data-name=\"jersey\"]", 1, {opacity:1,scale:1.02,delay:0.5})
                     //.addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
         						.addTo(controller);
             var scene = new ScrollMagic.Scene({
         							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
         						})
-        						.setTween("g[data-name=chess]", 1, {opacity:1,scale:1.02,delay:0.9})
+        						.setTween("g[data-name=\"chess\"]", 1, {opacity:1,scale:1.02,delay:0.9})
                     //.addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
         						.addTo(controller);
                     var scene = new ScrollMagic.Scene({
                 							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
                 						})
-                						.setTween("g[data-name=Basketball]", 1, {opacity:1,scale:1.02,delay:1.2})
+                						.setTween("g[data-name=\"Basketball\"]", 1, {opacity:1,scale:1.02,delay:1.2})
                             //.addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
                 						.addTo(controller);
                     var scene = new ScrollMagic.Scene({
                 							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
                 						})
-                						.setTween("g[data-name=Trophy]", 1, {opacity:1,scale:1.02,delay:1.8})
+                						.setTween("g[data-name=\"Trophy\"]", 1, {opacity:1,scale:1.02,delay:1.8})
                             //.addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
                 						.addTo(controller);
                             var scene = new ScrollMagic.Scene({
                         							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
                         						})
-                        		.setTween("g[data-name=tennis]", 1, {opacity:1,scale:1.02,delay:2.0})
+                        		.setTween("g[data-name=\"tennis\"]", 1, {opacity:1,scale:1.02,delay:2.0})
                             //.addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
                         		.addTo(controller);
           function pathPrepare ($el) {
-            console.log($el[0]);
           var lineLength = $el[0].getTotalLength();
           $el.css("stroke-dashoffset", lineLength);
           $el.css("stroke-dasharray", 100);
@@ -45,7 +44,6 @@
                 .setTween(tween)
                 .addTo(controller);
       function pathPrepare ($el) {
-        console.log($el[0]);
                 var lineLength = $el[0].getTotalLength();
                 $el.css("stroke-dashoffset", lineLength);
                 $el.css("stroke-dasharray", 100);
@@ -60,7 +58,6 @@
                       .setTween(tween)
                       .addTo(controller);
         function pathPrepare ($el) {
-          console.log($el[0]);
                                 var lineLength = $el[0].getTotalLength();
                                 $el.css("stroke-dashoffset", lineLength);
                                 $el.css("stroke-dasharray", 100);
@@ -75,7 +72,6 @@
                                       .setTween(tween)
                                       .addTo(controller);
         function pathPrepare ($el) {
-          console.log($el[0]);
                                 var lineLength = $el[0].getTotalLength();
                                 $el.css("stroke-dashoffset", lineLength);
                                 $el.css("stroke-dasharray", 100);
