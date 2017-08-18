@@ -259,7 +259,6 @@ function launchEvent(name) {
 }
 
 function launchInfo() {
-  console.log("HELLo");
   var info = launchSecondary();
   var html = '\
   <div id="sport-wrapper">\
@@ -280,13 +279,34 @@ function launchInfo() {
     </div>\
   </div>\
   ';
-  info.innerHTML = html;
 
 }
 
+function launchVideo() {
+  var video = launchPrimary();
+  video.style.background = "rgba(0,0,0,0.9)";
+  video.style.display = "flex";
+  video.style.alignItems = "center";
+  video.style.justifyContent = "center";
+  video.innerHTML = $('#iframe')[0].innerHTML;
+  video.className = video.className+" fadein video";
+}
+
 $(window).on("load",function(){
-  $('g[data-name=menu]').on("click", function(){
+  $('#menu_trigger').on("click", function(){
     launchMenu();
+  });
+  $('#video_trigger').on("click", function(){
+    launchVideo();
+  });
+  $('#facebook').on("click", function(){
+    window.open("https://www.facebook.com/bosmbitspilani/");
+  });
+  $('#youtube').on("click", function(){
+    window.open("https://www.youtube.com/user/bitsbosm/");
+  });
+  $('#home_trigger').on("click", function(){
+    $('html,body').animate({scrollTop:0},0);
   });
   $(document).on("click", ".slider .item.event",function(e){
     launchEvent(e.target.getAttribute('name'));
@@ -308,5 +328,12 @@ $(window).on("load",function(){
   $(document).on("mousewheel", ".lightbox.secondary", function(e,d){
     e.target.scrollTop += ( d < 0 ? 1 : -1 ) * 10;
     e.preventDefault();
+  });
+  $(document).on("click", '.primary.video', function(){
+    $('.primary').remove();
+  });
+
+  $('rect.56e797b3-ff7c-4d1b-84dc-5d00f20e79ce').on('click',function(){
+    window.location.href = "https://bits-bosm.org/2017/registrations";
   });
 });

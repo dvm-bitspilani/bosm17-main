@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.48 52.04">
+  <defs>
+    <style>
+      .\37 ad0342a-e670-4976-9fb2-040d9765b2d4 {
+        fill: #f6891f;
+      }
+
+      .\30 3b2d27c-8604-4ab1-ada0-f51b7f24b499 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>Asset 2</title>
+  <g id="d91aa3b7-df31-4497-9591-2ca8150ca507" data-name="Layer 2">
+    <g id="fc2b6344-6c21-4f0d-8889-a27758526773" data-name="Layer 1">
+      <g id="7eedb349-016e-43b3-bfa8-dc7c8988faad" data-name="menu">
+        <path class="7ad0342a-e670-4976-9fb2-040d9765b2d4" d="M2.34,52H75.48V43.91H2.34Zm0-20.31H75.48V23.6H2.34Zm0-28.44v8.13H75.48V3.28Z"/>
+        <path class="03b2d27c-8604-4ab1-ada0-f51b7f24b499" d="M0,48.76H73.13V40.63H0ZM0,28.44H73.13V20.31H0ZM0,0V8.13H73.13V0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

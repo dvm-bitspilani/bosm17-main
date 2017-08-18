@@ -3,31 +3,27 @@
         							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
         						})
         						.setTween("g[data-name=\"jersey\"]", 0.7, {opacity:1,scale:1.02,delay:0.3})
-                    .addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
+
         						.addTo(controller);
             var scene4 = new ScrollMagic.Scene({
         							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
         						})
         						.setTween("g[data-name=\"chess\"]", 0.7, {opacity:1,scale:1.02,delay:0.8})
-                    .addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
-        						.addTo(controller);
+                		.addTo(controller);
                     var scene4 = new ScrollMagic.Scene({
                 							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
                 						})
                 						.setTween("g[data-name=\"Basketball\"]", 0.7, {opacity:1,scale:1.02,delay:1.2})
-                            .addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
                 						.addTo(controller);
                     var scene4 = new ScrollMagic.Scene({
                 							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
                 						})
                 						.setTween("g[data-name=\"Trophy\"]", 0.7, {opacity:1,scale:1.02,delay:1.5})
-                            .addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
                 						.addTo(controller);
                             var scene4 = new ScrollMagic.Scene({
                         							triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68"
                         						})
                         		.setTween("g[data-name=\"tennis\"]", 0.7, {opacity:1,scale:1.02,delay:1.7})
-                            .addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
                         		.addTo(controller);
           function pathPrepare ($el) {
           var lineLength = $el[0].getTotalLength();
@@ -39,7 +35,7 @@
         var controller = new ScrollMagic.Controller();
         var tween = new TimelineMax()
           .add(TweenMax.to($word, 2, {strokeDashoffset: 0.2, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
-          .add(TweenMax.to($word, 2, {strokeDasharray: 0.2, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
+          .add(TweenMax.to($word, 2, {strokeDasharray: 15, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
         var scene4 = new ScrollMagic.Scene({triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68", duration: 400, tweenChanges: true})
                 .setTween(tween)
                 .addTo(controller);
@@ -53,7 +49,7 @@
               var controller = new ScrollMagic.Controller();
               var tween = new TimelineMax()
                 .add(TweenMax.to($word, 2, {strokeDashoffset: 0.2, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
-                .add(TweenMax.to($word, 2, {strokeDasharray: 0.2, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
+                .add(TweenMax.to($word, 2, {strokeDasharray: 15, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
               var scene4 = new ScrollMagic.Scene({triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68", duration: 400, tweenChanges: true})
                       .setTween(tween)
                       .addTo(controller);
@@ -67,7 +63,7 @@
                               var controller = new ScrollMagic.Controller();
                               var tween = new TimelineMax()
                                 .add(TweenMax.to($word, 2, {strokeDashoffset: 0.2, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
-                                .add(TweenMax.to($word, 2, {strokeDasharray: 0.2, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
+                                .add(TweenMax.to($word, 2, {strokeDasharray: 15, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
                               var scene4 = new ScrollMagic.Scene({triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68", duration: 400, tweenChanges: true})
                                       .setTween(tween)
                                       .addTo(controller);
@@ -80,8 +76,8 @@
                               pathPrepare($word);
                               var controller = new ScrollMagic.Controller();
                               var tween = new TimelineMax()
-                                .add(TweenMax.to($word, 2, {strokeDashoffset: 0.2, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
-                                .add(TweenMax.to($word, 2, {strokeDasharray: 0.2, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
+                                .add(TweenMax.to($word, 2, {strokeDashoffset: 20, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
+                                .add(TweenMax.to($word, 2, {strokeDasharray: 15, ease:Linear.easeNone,delay:0})) // draw word for 0.9g
                               var scene4 = new ScrollMagic.Scene({triggerElement: "rect.ae0b048c-edbd-44c7-b68e-dbcddf09ba68", duration: 400, tweenChanges: true})
                                       .setTween(tween)
                                       .addTo(controller);

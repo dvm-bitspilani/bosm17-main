@@ -51,13 +51,20 @@
     </div>
 
     <div class="scene" id="sceneFinal">
+      <div id="menu_trigger"></div>
+      <div id="video_trigger"></div>
+      <div id="home_trigger"></div>
+      <div id="social">
+        <div id="youtube"></div>
+        <div id="facebook"></div>
+      </div>
       include "svg/final.svg"
     </div>
 
     <div id="menu" style="display: none">
       <div id="menu_wrapper">
         <header>
-          <div class="logo"><img src="../dist/img/Group_30.png">></div>
+          <div class="logo"><img src="../dist/img/Group_30.png"></div>
           <div class="topics">
             <nav>
               <li class="active">SPORTS</li>
@@ -106,7 +113,8 @@
       </div>
     </div>
 
-    <div id="event" style="display:none">
+    <div id="iframe" style="display:none">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-RcTmH_vdTw?ecver=1" frameborder="0" allowfullscreen=""></iframe>
     </div>
 
      <script src="js/scene1.js"></script>
@@ -161,13 +169,13 @@
         }
 
         // Initiate ScrollMagic sceneOut and add to controller
-        var sceneOut = createScene("#sceneOut",sceneOutTimeline, 4000);
+        var sceneOut = createScene("#sceneOut",sceneOutTimeline, 2000);
 
         // Initiate ScrollMagic sceneIn and add to controller
-        var sceneIn = createScene("#sceneIn",sceneInTimeline, 8000);
+        var sceneIn = createScene("#sceneIn",sceneInTimeline, 4000);
 
         // Initiate ScrollMagic sceneFinal and add to controller
-        var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 4000);
+        var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 2000);
 
       });
     </script>
