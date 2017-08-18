@@ -18,7 +18,7 @@
        var background = $('#sceneOut .background');
        var carpet = $('#sceneOut g[data-name=Pathway]');
        var line_art = $('#sceneOut g[data-name=Line_art]'); // data-name Line art
-       var lines = $('#sceneOut g[data-name=Line_art] path')
+       var lines = $('#sceneOut g[data-name=Line_art] path');
        var sculpture = $('#sceneOut g[data-name=BOSM]');
        // console.log(sculpture);
        var sun = $('#sceneOut g[data-name=Sun]');
@@ -60,11 +60,12 @@
        .set(clouds.slice(-2), {autoAlpha:0, xPercent: 100, transformOrigin:  '50% 50%'})
        .set(clouds[0], {autoAlpha:0, xPercent: -100, transformOrigin:  '50% 50%'})
        .set([ buildings[0], buildings[1], buildings[2], buildings[3],buildings[4], buildings[5],buildings[6],clockTower], {autoAlpha:0, yPercent: 100, transformOrigin:  '50% 50%'})
-       .set(stadium, {transformOrigin: '48% 60%'})
+       // .set(stadium, {transformOrigin: '48% 60%'})
+       .set(stadium.parent(), {transformOrigin: "38.5% 50%"})
        .set(fire, {className:"+=flicker"})
        .set(torch, {className:"+=walk"})
        .set(tree, {transformOrigin: "100% 50%"})
-       .set(scene, {transformOrigin: "50% 50%"})
+       // .set(scene, {transformOrigin: "50% 50%"})
        .set(grass[0], {transformOrigin: "50% 50%"})
        .set(grass[1], {transformOrigin: "100% 50%"})
        .set(grass[2], {transformOrigin: "0% 50%"})
@@ -72,8 +73,8 @@
        .set(lines[0], {transformOrigin: "100% 200%"})
        .set(lines[1], {transformOrigin: "0% 400%"})
        
-       .set(bushTree, {transformOrigin: "50% 50%"})
-       .set(sculpture,{transformOrigin:"-500% 50%"})
+       .set(bushTree, {transformOrigin: "50% 0%"})
+       // .set(sculpture,{transformOrigin:"-500% 50%"})
        
        sceneOutTimeline
        .to([grass[0], grass[1], grass[2], line_art, stadium, tree, bush], 1, fadeIn)
@@ -82,21 +83,24 @@
        .set(clouds, {className: "+=cloud"})
        
        // .to(sculpture, 1, fadeIn)
-       .to(re, 1, fadeIn)
-       .to([buildings[0], buildings[4]], 1, fadeInBuildings)
-       .to([buildings[6], buildings[3]], 1, fadeInBuildings)
-       .to(buildings[2], 1, fadeInBuildings)
-       .to(lights, 1,fadeIn)
+       .to(re, 2, fadeIn, "-=1")
+       .to([buildings[0], buildings[4],  buildings[3]], 1, fadeInBuildings)
+       .to([buildings[6],buildings[5], buildings[1]], 1, fadeInBuildings)
        .to(sculpture, 1, fadeIn)
-       .to([buildings[5], buildings[1]], 1, fadeInBuildings)
-       .to(clockTower,1, fadeInBuildings)
-
-       .to([torch, fire], 1, fadeIn)
-       .to(carpet, 1, fadeIn)
-       .to([stadium, grass[0], grass[1], grass[2], lines[0], lines[1],carpet, bushTree, sculpture], 2, {scale: 70,yPercent:100, xPercent: 0, ease: Expo.easeIn})
-       .to(lights, 1,{autoAlpha: 0}, "-=2")
+       .to(buildings[2], 1, fadeInBuildings)
        
-      
+       .to(clockTower,1, fadeInBuildings)
+       .to(lights, 1,fadeIn)
+       
+       .to([torch, fire], 2, fadeIn)
+       .to(carpet, 1, fadeIn)
+       .to([stadium.parent(), grass[0], grass[1], grass[2], lines[0], lines[1],carpet, sculpture], 2, {scale: 90,yPercent:10, xPercent: 0, ease: Power4.easeIn})
+       .to(lights, 1,{autoAlpha: 0}, "-=2")
+       .to([bushTree],1, {scale: 90,yPercent:20, xPercent: 0, ease:  Power4.easeIn}, "-=1.7")
+       .to(tree, 2, {xPercent: -50,yPercent: -1000,  ease: Power4.easeIn},"-=2")
+       .to(sculpture, 2, {xPercent: 180}, "-=1.5")
+       
+      	console.log(stadium)
       
 
 
