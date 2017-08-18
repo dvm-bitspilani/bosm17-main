@@ -20,7 +20,8 @@ basic positioning 
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	background: #ffc34b;
+	background: #ffc34b url('../icons/menu-back.png');
+	background-size: 170px;
 	overflow: hidden;
 	color: #fff;
 
@@ -250,7 +251,11 @@ basic positioning 
 	background: url('../img/Sumit.png') 0 0 no-repeat;
 	background-size: cover;
 }
-
+.lightbox #menu_wrapper .i17
+{
+	background: url('../img/contact.png') 0 0 no-repeat;
+	background-size: cover;
+}
 .lightbox #menu_wrapper .info{
 	flex-grow: 2;
 	text-align: center;

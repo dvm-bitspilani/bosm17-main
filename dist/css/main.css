@@ -49,7 +49,6 @@ body{
 g[data-name="jersey"],  g[data-name="Basketball"],  g[data-name="chess"],  g[data-name="Trophy"],g[data-name="tennis"]
 {
   opacity: 0;
-  transition: all 0.3s linear;
 }
 g[data-name="jersey"]:hover,  g[data-name="Basketball"]:hover,  g[data-name="chess"]:hover,  g[data-name="Trophy"]:hover,g[data-name="tennis"]:hover
 {
