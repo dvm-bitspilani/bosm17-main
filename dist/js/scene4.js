@@ -30,6 +30,7 @@
                             //.addIndicators({name: "1 (duration: 800)"}) // add indicators (requires plugin)
                         		.addTo(controller);
           function pathPrepare ($el) {
+            console.log($el[0]);
           var lineLength = $el[0].getTotalLength();
           $el.css("stroke-dashoffset", lineLength);
           $el.css("stroke-dasharray", 100);
@@ -44,6 +45,7 @@
                 .setTween(tween)
                 .addTo(controller);
       function pathPrepare ($el) {
+        console.log($el[0]);
                 var lineLength = $el[0].getTotalLength();
                 $el.css("stroke-dashoffset", lineLength);
                 $el.css("stroke-dasharray", 100);
@@ -58,6 +60,7 @@
                       .setTween(tween)
                       .addTo(controller);
         function pathPrepare ($el) {
+          console.log($el[0]);
                                 var lineLength = $el[0].getTotalLength();
                                 $el.css("stroke-dashoffset", lineLength);
                                 $el.css("stroke-dasharray", 100);
@@ -72,6 +75,7 @@
                                       .setTween(tween)
                                       .addTo(controller);
         function pathPrepare ($el) {
+          console.log($el[0]);
                                 var lineLength = $el[0].getTotalLength();
                                 $el.css("stroke-dashoffset", lineLength);
                                 $el.css("stroke-dasharray", 100);
