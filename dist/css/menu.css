@@ -251,7 +251,11 @@ basic positioning 
 	background: url('../img/Sumit.png') 0 0 no-repeat;
 	background-size: cover;
 }
-
+.lightbox #menu_wrapper .i17
+{
+	background: url('../img/contact.png') 0 0 no-repeat;
+	background-size: cover;
+}
 .lightbox #menu_wrapper .info{
 	flex-grow: 2;
 	text-align: center;
