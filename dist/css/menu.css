@@ -139,6 +139,7 @@ basic positioning 
 	position: relative;
 	left: 0;
 
+	transition: 0.4s opacity;
 }
 
 
@@ -150,7 +151,7 @@ basic positioning 
 
 	background-size: cover;
 
-	transition: all .4s linear;
+	transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
 	cursor: pointer;
 }
 
