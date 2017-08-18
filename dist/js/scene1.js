@@ -1,6 +1,7 @@
 // timeline for sceneOut
 (function(){
        var sceneOutTimeline = new TimelineLite();
+       var banner = $('#sceneOut .banner');
        var scene = $('#sceneOut');
        var torch = $('#sceneOut g[data-name=Torch]');
        var buildings = [$('#sceneOut rect[data-name=left4]'),$('#sceneOut rect[data-name=left3]'), $('#sceneOut rect[data-name=left2]'), $('#sceneOut polygon[data-name=left1]'), $('#sceneOut rect[data-name=right3]'), $('#sceneOut rect[data-name=right2]'), $('#sceneOut polygon[data-name=right1]')];
@@ -10,9 +11,9 @@
        var bushTree = $('#sceneOut g[data-name=Tree]').parent();
        var tree = $('#sceneOut g[data-name=Tree]');
        var fire = $('#sceneOut g[data-name=Fire]');
-       var lights = $('#sceneOut .b64b253f-3619-4469-90ac-8ac64780de59').parent();  // data_name Shine? 
+       var lights = $('#sceneOut .b64b253f-3619-4469-90ac-8ac64780de59').parent();  // data_name Shine?
        var stadium = $($('#sceneOut g[data-name=Stadium]')[1]);
-     
+
        var skyEle = $('#sceneOut g[data-name=Sky_Elements]');
        var grass = [$('#sceneOut .afc15315-5189-4aae-b657-d4b7606c6ad7'),$('#sceneOut .a676a66d-0142-4a90-8606-74fdb30f0426'), $('#sceneOut .63bdab31-2532-4581-a223-5c5c2963c73f')];
        var background = $('#sceneOut .background');
@@ -34,7 +35,7 @@
        // 	$(ele).addClass('cloud');
 
        // });
-       
+
 
        // bushTree.each(function(ind, ele){
        // 	  if($(ele)!= tree){
@@ -43,14 +44,15 @@
        // })
 
        var bush = $(bushTree).children().not(tree);
-       
+
 
        // $('#sceneOut .cloud').addClass('float');
        $('#sceneOut').css('backgroundColor','#b0e9ff');
 
        // var tree = $('#sceneOut .tree');
        var fadeIn = {autoAlpha:1, ease:Power4.easeOut, yPercent: 0};
-      
+       var fadeOut = {autoAlpha:0, ease:Power4.easeOut, yPercent: 0};
+
        var fadeInBuildings = {autoAlpha:.25, ease: Back.easeOut.config(1.7), yPercent: 0};
        var fadeInHorizontal = {autoAlpha:1, ease:Expo.easeOut, xPercent: 0};
        stadium.css('position', 'relative');
@@ -72,26 +74,27 @@
        .set(re, {className: "+=ele"})
        .set(lines[0], {transformOrigin: "100% 200%"})
        .set(lines[1], {transformOrigin: "0% 400%"})
-       
+
        .set(bushTree, {transformOrigin: "50% 0%"})
        // .set(sculpture,{transformOrigin:"-500% 50%"})
-       
+
        sceneOutTimeline
+       .to(banner, 0.3, fadeOut)
        .to([grass[0], grass[1], grass[2], line_art, stadium, tree, bush], 1, fadeIn)
        .to(sun, 1, fadeIn)
        .to(clouds, 1, fadeInHorizontal)
        .set(clouds, {className: "+=cloud"})
-       
+
        // .to(sculpture, 1, fadeIn)
        .to(re, 2, fadeIn, "-=1")
        .to([buildings[0], buildings[4],  buildings[3]], 1, fadeInBuildings)
        .to([buildings[6],buildings[5], buildings[1]], 1, fadeInBuildings)
        .to(sculpture, 1, fadeIn)
        .to(buildings[2], 1, fadeInBuildings)
-       
+
        .to(clockTower,1, fadeInBuildings)
        .to(lights, 1,fadeIn)
-       
+
        .to([torch, fire], 2, fadeIn)
        .to(carpet, 1, fadeIn)
        .to([stadium.parent(), grass[0], grass[1], grass[2], lines[0], lines[1],carpet, sculpture], 2, {scale: 90,yPercent:10, xPercent: 0, ease: Power4.easeIn})
@@ -99,14 +102,11 @@
        .to([bushTree],1, {scale: 90,yPercent:20, xPercent: 0, ease:  Power4.easeIn}, "-=1.7")
        .to(tree, 2, {xPercent: -50,yPercent: -1000,  ease: Power4.easeIn},"-=2")
        .to(sculpture, 2, {xPercent: 180}, "-=1.5")
-       
+
       	console.log(stadium)
-      
+
 
 
        window.sceneOutTimeline = sceneOutTimeline;
 
-})(window)      
-      
-      	
-       
+})(window)
