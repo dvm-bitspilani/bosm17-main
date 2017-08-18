@@ -20,7 +20,8 @@ basic positioning 
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	background: #ffc34b;
+	background: #ffc34b url('../icons/menu-back.png');
+	background-size: 170px;
 	overflow: hidden;
 	color: #fff;
 
