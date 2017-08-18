@@ -41,10 +41,8 @@
 
     <div class="scene" id="sceneIn">
       include "svg/in.svg"
-    </div>
-
-    <div class="scene" id="sceneTorch">
-      include "svg/torch.svg"
+      <img id="gif_fire" src="fire.gif">
+      <div class="wrapper"></div>
     </div>
 
     <div class="scene" id="sceneFinal">
@@ -172,10 +170,7 @@
 
 
         // Initiate ScrollMagic sceneIn and add to controller
-        var sceneIn = createScene("#sceneIn",sceneInTimeline, 4000);
-
-        // Initiate ScrollMagic sceneTorch and add to controller
-        var sceneTorch = createScene("#sceneTorch", null, 4000);
+        var sceneIn = createScene("#sceneIn",sceneInTimeline, 8000);
 
         // Initiate ScrollMagic sceneFinal and add to controller
         var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 4000);
@@ -457,6 +452,6 @@
           // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
           .addTo(controller);
 </script>
-<script src="js/autoSroll.js"></script>
+<!-- <script src="js/autoSroll.js"></script> -->
   </body>
 </html>
