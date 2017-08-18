@@ -100,8 +100,8 @@
        .to([stadium.parent(), grass[0], grass[1], grass[2], lines[0], lines[1],carpet, sculpture], 2, {scale: 90,yPercent:10, xPercent: 0, ease: Power4.easeIn})
        .to(lights, 1,{autoAlpha: 0}, "-=2")
        .to([bushTree],1, {scale: 90,yPercent:20, xPercent: 0, ease:  Power4.easeIn}, "-=1.7")
-       .to(tree, 2, {xPercent: -50,yPercent: -1000,  ease: Power4.easeIn},"-=2")
-       .to(sculpture, 2, {xPercent: 180}, "-=1.5")
+       .to(tree, 2, {xPercent: -100,yPercent: 0,  ease: Power4.easeIn},"-=2.7")
+       .to(sculpture, 2, {xPercent: 300}, "-=1.5")
 
       	console.log(stadium)
 
