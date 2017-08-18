@@ -5,6 +5,9 @@
 body{
 	overflow-x: hidden;
 }
+body > div {
+  position: relative;
+}
 #sceneOut{
 	height: 100vh;
 	overflow: hidden;
@@ -46,6 +49,7 @@ body{
 	width: 100vw;
 	z-index: 50;
 }
+
 g[data-name="jersey"],  g[data-name="Basketball"],  g[data-name="chess"],  g[data-name="Trophy"],g[data-name="tennis"]
 {
   opacity: 0;
@@ -90,4 +94,76 @@ circle#6153582a-49d2-4a24-b8da-162e531da632
   {
     transform: translateX(40px);
   }
+}
+#menu_trigger {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: url("../icons/menu.svg") no-repeat center;
+  background-size: contain;
+  z-index: 1;
+  transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
+  cursor: pointer;
+}
+#social {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 125px;
+  height: 60px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#facebook {
+  background: url("../icons/facebook.svg") no-repeat center;
+  background-size: contain;
+  width: 45px;
+  height: 45px;
+  transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
+  z-index: 2;
+}
+#youtube {
+  background: url("../icons/youtube.svg") no-repeat center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
+  z-index: 2;
+}
+#home_trigger {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background: url("../icons/home.svg") no-repeat center;
+  background-size: contain;
+  z-index: 1;
+  transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
+}
+#video_trigger {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 120px;
+  height: 60px;
+  background: url("../icons/videos.svg") no-repeat center;
+  background-size: contain;
+  z-index: 1;
+  transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
+}
+#menu_trigger:hover, #video_trigger:hover, #home_trigger:hover, #facebook:hover, #youtube:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+#bottom {
+  display: none;
+}
+iframe {
+  width: 75vw;
+  height: calc(315 / 560 * (75vw));
 }

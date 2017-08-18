@@ -225,8 +225,8 @@ function launchEvent(name) {
               </li>\
             </ul>\
             <br><strong>Max. no. of players: </strong>'+item.mplayers;
-  else if(item.hasOwnProperty('bcapt') && !item.hasOwnProperty('gcapt'))            
-    html+= 
+  else if(item.hasOwnProperty('bcapt') && !item.hasOwnProperty('gcapt'))
+    html+=
           '<ul>\
               <li>Boys:<br>\
               Name: '+item.bcapt+'<br>\
@@ -259,22 +259,66 @@ function launchEvent(name) {
 }
 
 function launchInfo() {
+  var info = launchSecondary();
+  var html = '\
+  <div id="sport-wrapper">\
+    <div class="atheletics">\
+      <div class="main_div">\
+        <div class="col img" style="flex:0.3">\
+        </div>\
+        <div class="col">\
+          <div class="details">'
+          +""+
+          '</div>\
+          <div class="sport">'+""+'</div>\
+        </div>\
+        <div class="heading">'+""+'</div>\
+        <img src="'+""+'" alt="'+""+'">\
+        <div class="border"></div>\
+      </div>\
+    </div>\
+  </div>\
+  ';
 
 }
 
+function launchVideo() {
+  var video = launchPrimary();
+  video.style.background = "rgba(0,0,0,0.9)";
+  video.style.display = "flex";
+  video.style.alignItems = "center";
+  video.style.justifyContent = "center";
+  video.innerHTML = $('#iframe')[0].innerHTML;
+  video.className = video.className+" fadein video";
+}
+
 $(window).on("load",function(){
-  $('g[data-name=menu]').on("click", function(){
+  $('#menu_trigger').on("click", function(){
     launchMenu();
   });
-  $(document).on("click", ".slider .item",function(e){
+  $('#video_trigger').on("click", function(){
+    launchVideo();
+  });
+  $('#facebook').on("click", function(){
+    window.open("https://www.facebook.com/bosmbitspilani/");
+  });
+  $('#youtube').on("click", function(){
+    window.open("https://www.youtube.com/user/bitsbosm/");
+  });
+  $('#home_trigger').on("click", function(){
+    $('html,body').animate({scrollTop:0},0);
+  });
+  $(document).on("click", ".slider .item.event",function(e){
     launchEvent(e.target.getAttribute('name'));
     $('.lightbox.primary .slider').addClass('fadeout');
-    // $('.lightbox.primary .slider').toggleClass('fadein');
+  });
+  $(document).on("click", ".slider .item.contact",function(e){
+    launchInfo();
+    $('.lightbox.primary .slider').addClass('fadeout');
   });
   $(document).on("click", ".lightbox #sport-wrapper",function(){
     $('.lightbox.secondary').remove();
     $('.lightbox.primary .slider').removeClass('fadeout');
-    // $('.lightbox.primary .slider').toggleClass('fadein');
   });
   $(document).on("click", ".lightbox .close",function(){
     if($('.lightbox.secondary').length == 0)
@@ -284,5 +328,12 @@ $(window).on("load",function(){
   $(document).on("mousewheel", ".lightbox.secondary", function(e,d){
     e.target.scrollTop += ( d < 0 ? 1 : -1 ) * 10;
     e.preventDefault();
+  });
+  $(document).on("click", '.primary.video', function(){
+    $('.primary').remove();
+  });
+
+  $('rect.56e797b3-ff7c-4d1b-84dc-5d00f20e79ce').on('click',function(){
+    window.location.href = "https://bits-bosm.org/2017/registrations";
   });
 });

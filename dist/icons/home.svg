@@ -1,0 +1,25 @@
+<svg id="Group_33" data-name="Group 33" xmlns="http://www.w3.org/2000/svg" viewBox="3555 1137 98.7 100.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc34b;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="ic_home_black_24px" transform="translate(3557 1141)">
+    <path id="Path_146" data-name="Path 146" class="cls-1" d="M34.233,71.5V47.321H50.35V71.5H70.5V39.263H82.583L42.292,3,2,39.263H14.088V71.5Z" transform="translate(6.058 9.088)"/>
+    <path id="Path_147" data-name="Path 147" class="cls-2" d="M0,0H96.7V96.7H0Z"/>
+  </g>
+  <g id="ic_home_black_24px-2" data-name="ic_home_black_24px" transform="translate(3555 1137)">
+    <path id="Path_146-2" data-name="Path 146" class="cls-3" d="M34.233,71.5V47.321H50.35V71.5H70.5V39.263H82.583L42.292,3,2,39.263H14.088V71.5Z" transform="translate(6.058 9.088)"/>
+    <path id="Path_147-2" data-name="Path 147" class="cls-2" d="M0,0H96.7V96.7H0Z"/>
+  </g>
+</svg>

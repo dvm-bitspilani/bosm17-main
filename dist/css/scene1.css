@@ -54,7 +54,8 @@
 
 #sceneOut .cloud,
 #sceneIn .cloud{
-	animation: float 5s ease-in-out alternate infinite;
+	animation: float 4s ease-in-out alternate infinite;
+}
 }
 
 #sceneOut .banner {
@@ -112,3 +113,4 @@
 		background-position: center;
 	}
 }
+>>>>>>> a5a03ebe4e7bd17a3d15f31650a45ecf5295898d
