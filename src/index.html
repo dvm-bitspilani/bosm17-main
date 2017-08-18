@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/events.css">
 
     <!-- jQuery -->
     <script src="js/jquery.js" charset="utf-8"></script>
@@ -36,6 +37,10 @@
     <!-- Begin Scenes -->
 
     <div class="scene" id="sceneOut">
+      <div class="banner">
+        <span>Scroll<br>Down</span>
+        <label>v</label>
+      </div>
       include "svg/out.svg"
     </div>
 
@@ -52,7 +57,7 @@
     <div id="menu" style="display: none">
       <div id="menu_wrapper">
         <header>
-          <div class="logo"><img src="../dist/img/Group_30.png">></div>
+          <div class="logo"><img src="../dist/img/Group_30.png"></div>
           <div class="topics">
             <nav>
               <li class="active">SPORTS</li>
@@ -61,31 +66,32 @@
             </nav>
 
           </div>
-          <div class="close">&#10060</div>
+          <div class="close">&#10060;</div>
         </header>
         <div class="nav_line"></div>
         <section class="main_menu">
           <div class="background"><div class="bg_text"></div></div>
           <div class="slider-container">
             <div class="slider">
-              <div class="item i1 selected" data="begin"></div>
-              <div class="item i2"></div>
-              <div class="item i3"></div>
-              <div class="item i4"></div>
-              <div class="item i5"></div>
-              <div class="item i6"></div>
-              <div class="item i7"></div>
-              <div class="item i8"></div>
-              <div class="item i9"></div>
-              <div class="item i10"></div>
-              <div class="item i11"></div>
-              <div class="item i12"></div>
-              <div class="item i13"></div>
-              <div class="item i14"></div>
+              <div class="item i1 selected" data="begin" name="athletics"></div>
+              <div class="item i2" name="badminton"></div>
+              <div class="item i3" name="basketball"></div>
+              <div class="item i4" name="football"></div>
+              <div class="item i5" name="cricket"></div>
+              <div class="item i6" name="hockey"></div>
+              <div class="item i7" name="tennis"></div>
+              <div class="item i8" name="tabletennis"></div>
+              <div class="item i9" name="squash"></div>
+              <div class="item i10" name="swimming"></div>
+              <div class="item i11" name="powerlifting"></div>
+              <div class="item i12" name="taekwondo"></div>
+              <div class="item i13" name="volleyball"></div>
+              <div class="item i14" name="chess"></div>
               <div class="info">EVENTS</div>
-              <div class="item i15" data="begin"></div>
-              <div class="item i16"></div>
+              <div class="item i15" data="begin" name="rahul"></div>
+              <div class="item i16" name="sumit"></div>
               <div class="info">CONTACT US</div>
+              <div class="item i17" name="contact"></div>
               <div class="item " data="begin"></div>
             </div>
           </div>
@@ -100,9 +106,12 @@
       </div>
     </div>
 
+    <div id="event" style="display:none">
+    </div>
+
      <script src="js/scene1.js"></script>
-       <script src="js/scene4.js"></script>
      <script src="js/scene2.js"></script>
+	<script src="js/scene4.js"></script>
 
     <!-- Main Script -->
     <script type="text/javascript">
@@ -152,22 +161,7 @@
         }
 
         // Initiate ScrollMagic sceneOut and add to controller
-
-        // var sceneOut = new ScrollMagic.Scene({
-        //   triggerElement: "#sceneOut",
-        //   triggerHook: 0,
-        //   duration: 4000,
-        //   reverse: true,
-        //   pushFollowers: false
-        // }).setPin("#sceneOut").addTo(controller);
-
-        // var outAnimation = new TimelineMax()
-        //     .add(TweenMax.to("#sceneOut g[data-name='Stadium']",1,
-        //     {transform:"translateY(-30%) scale(1.7)"}));
         var sceneOut = createScene("#sceneOut",sceneOutTimeline, 4000);
-
-        // sceneOut.setTween(sceneOutTimeline)
-
 
         // Initiate ScrollMagic sceneIn and add to controller
         var sceneIn = createScene("#sceneIn",sceneInTimeline, 8000);
@@ -177,280 +171,17 @@
 
       });
     </script>
-      <script>
-          function pathPrepare ($el) {
-         var lineLength = $el[0].getTotalLength();
-         $el.css("stroke-dashoffset", lineLength);
-          $el.css("stroke-dasharray", 100);
+     <script src="js/scene4.js"></script>
+     
+       <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       }
+  ga('create', 'UA-102775261-2', 'auto');
+  ga('send', 'pageview');
 
-       var $word = $(".cd6b3d92-74d0-4176-8198-1e0b8de9683f");
-
-
-
-       // prepare SVG
-       pathPrepare($word);
-
-       // init controller
-       var controller = new ScrollMagic.Controller();
-
-       // build tween
-       var tween = new TimelineMax()
-         .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9g
-          .add(TweenMax.to($word, 2, {strokeDasharray: 10, ease:Linear.easeNone})) // draw word for 0.9g
-       // build scene
-        var scene = new ScrollMagic.Scene({triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d", duration: 400, tweenChanges: true})
-               .setTween(tween)
-               // .addIndicators() // add indicators (requires plugin)
-               .addTo(controller);
-    </script>
-    <script>
-          function pathPrepare ($el) {
-         var lineLength = $el[0].getTotalLength();
-         $el.css("stroke-dashoffset", lineLength);
-          $el.css("stroke-dasharray", 100);
-
-       }
-
-       var $word = $("line.ed01d2ae-9bef-4afa-97e4-7880a783fe22");
-
-
-
-       // prepare SVG
-       pathPrepare($word);
-
-       // init controller
-       var controller = new ScrollMagic.Controller();
-
-       // build tween
-       var tween = new TimelineMax()
-         .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9g
-          .add(TweenMax.to($word, 2, {strokeDasharray: 10, ease:Linear.easeNone})) // draw word for 0.9g
-       // build scene
-        var scene = new ScrollMagic.Scene({triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d", duration: 400, tweenChanges: true})
-               .setTween(tween)
-               // .addIndicators() // add indicators (requires plugin)
-               .addTo(controller);
-      </script>
-      <script>
-            function pathPrepare ($el) {
-           var lineLength = $el[0].getTotalLength();
-           $el.css("stroke-dashoffset", lineLength);
-            $el.css("stroke-dasharray", 100);
-
-         }
-
-         var $word = $("line.c7444cee-3d27-4f72-91c7-4eece072cafa");
-         // prepare SVG
-         pathPrepare($word);
-
-         // init controller
-         var controller = new ScrollMagic.Controller();
-
-         // build tween
-         var tween = new TimelineMax()
-           .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9g
-            .add(TweenMax.to($word, 2, {strokeDasharray: 10, ease:Linear.easeNone})) // draw word for 0.9g
-         // build scene
-          var scene = new ScrollMagic.Scene({triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d", duration: 400, tweenChanges: true})
-                 .setTween(tween)
-                 // .addIndicators() // add indicators (requires plugin)
-                 .addTo(controller);
-        </script>
-        <script>
-              function pathPrepare ($el) {
-             var lineLength = $el[0].getTotalLength();
-             $el.css("stroke-dashoffset", lineLength);
-              $el.css("stroke-dasharray", 100);
-
-           }
-
-           var $word = $("line.c7444cee-3d27-4f72-91c7-4eece072cafa");
-            var $word = $("path.56cd197e-c3e7-40ca-b9c2-129de8b8458f");
-           // prepare SVG
-           pathPrepare($word);
-
-           // init controller
-           var controller = new ScrollMagic.Controller();
-
-           // build tween
-           var tween = new TimelineMax()
-             .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9g
-              .add(TweenMax.to($word, 2, {strokeDasharray: 10, ease:Linear.easeNone})) // draw word for 0.9g
-           // build scene
-            var scene = new ScrollMagic.Scene({triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d", duration: 400, tweenChanges: true})
-                   .setTween(tween)
-                   // .addIndicators() // add indicators (requires plugin)
-                   .addTo(controller);
-          </script>
-    <script>
-          function pathPrepare ($el) {
-         var lineLength = $el[0].getTotalLength();
-         $el.css("stroke-dashoffset", lineLength);
-          $el.css("stroke-dasharray", 100);
-
-       }
-
-       var $word = $("path.ed01d2ae-9bef-4afa-97e4-7880a783fe22");
-
-
-
-       // prepare SVG
-       pathPrepare($word);
-
-       // init controller
-       var controller = new ScrollMagic.Controller();
-
-       // build tween
-       var tween = new TimelineMax()
-         .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9g
-          .add(TweenMax.to($word, 2, {strokeDasharray: 10, ease:Linear.easeNone})) // draw word for 0.9g
-       // build scene
-        var scene = new ScrollMagic.Scene({triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d", duration: 400, tweenChanges: true})
-               .setTween(tween)
-               // .addIndicators() // add indicators (requires plugin)
-               .addTo(controller);
-      </script>
-      <script>
-       // build scene
-        var $x=$("circle.d0577629-fc16-4153-b5e0-72753a378216");
-        // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-          // $y.css("opacity",0);
-        $x.css("opacity",0);
-       var scene = new ScrollMagic.Scene({
-                 triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-               })
-               .setTween("circle.d0577629-fc16-4153-b5e0-72753a378216", 3, {opacity:1,delay:1}) // trigger a TweenMax.to tween
-                   // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-               // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-               .addTo(controller);
-   </script>
-    <script>
-      // build scene
-      var $x=$("path.550af0d9-8fe1-434b-8913-80c3381cccc2");
-      // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-        // $y.css("opacity",0);
-      $x.css("opacity",0);
-      var scene = new ScrollMagic.Scene({
-                triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-              })
-              .setTween("path.550af0d9-8fe1-434b-8913-80c3381cccc2", 3, {opacity:1,delay:1}) // trigger a TweenMax.to tween
-                  // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-              // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-              .addTo(controller);
-  </script>
-  <script>
-    // build scene
-    var $x=$("g#2f10eb83-a3e3-4060-9752-fbde95df2be6");
-    // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-      // $y.css("opacity",0);
-    $x.css("opacity",0);
-    var scene = new ScrollMagic.Scene({
-              triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-            })
-            .setTween("g#2f10eb83-a3e3-4060-9752-fbde95df2be6", 3, {opacity:1,delay:1}) // trigger a TweenMax.to tween
-                // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-            // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-            .addTo(controller);
-</script>
-<script>
-  // build scene
-  var $x=$("circle.b0de67e4-ba68-42ca-a11f-a9294b70101b");
-  // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-    // $y.css("opacity",0);
-  $x.css("opacity",0);
-  var scene = new ScrollMagic.Scene({
-            triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-          })
-          .setTween("circle.b0de67e4-ba68-42ca-a11f-a9294b70101b", 3, {opacity:1,delay:1}) // trigger a TweenMax.to tween
-              // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-          // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-          .addTo(controller);
-</script>
-<script>
-  // build scene
-  var $x=$("path.2f10eb83-a3e3-4060-9752-fbde95df2be6");
-  // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-    // $y.css("opacity",0);
-  $x.css("stroke-opacity",0);
-  var scene = new ScrollMagic.Scene({
-            triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-          })
-          .setTween("path.2f10eb83-a3e3-4060-9752-fbde95df2be6", 3, {strokeopacity:1,delay:1}) // trigger a TweenMax.to tween
-              // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-          // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-          .addTo(controller);
-</script>
-<script>
-  // build scene
-  var $x=$("circle.b6907022-d9bd-48a8-9292-f68a0f782879");
-  // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-    // $y.css("opacity",0);
-  $x.css("stroke-opacity",0);
-  var scene = new ScrollMagic.Scene({
-            triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-          })
-          .setTween("circle.b6907022-d9bd-48a8-9292-f68a0f782879", 3, {strokeopacity:1,delay:1}) // trigger a TweenMax.to tween
-              // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-          // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-          .addTo(controller);
-</script>
-<script>
-  // build scene
-  var $x=$("path.b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-  // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-    // $y.css("opacity",0);
-  $x.css("stroke-opacity",0);
-  var scene = new ScrollMagic.Scene({
-            triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-          })
-          .setTween("path.b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {strokeopacity:1,delay:1}) // trigger a TweenMax.to tween
-              // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-          // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-          .addTo(controller);
-</script>
-<script>
-  // build scene
-  var $x=$(".b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-  // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-    // $y.css("opacity",0);
-  $x.css("opacity",0);
-  var scene = new ScrollMagic.Scene({
-            triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-          })
-          .setTween(".b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:1}) // trigger a TweenMax.to tween
-              // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-          // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-          .addTo(controller);
-</script>
-<script>
-  // build scene
-  var $x=$("#check");
-  // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-    // $y.css("opacity",0);
-  $x.css("opacity",0);
-  var scene = new ScrollMagic.Scene({
-            triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-          })
-          .setTween("#check", 3, {opacity:1,delay:1}) // trigger a TweenMax.to tween
-              // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-          // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-          .addTo(controller);
-</script>
-<script>
-  // build scene
-  var $x=$("#ball");
-  // var $y=$("b6fa6418-6a0d-42f3-adc7-320d12a8e71b");
-    // $y.css("opacity",0);
-  $x.css("opacity",0);
-  var scene = new ScrollMagic.Scene({
-            triggerElement: "#ce84c224-c229-40da-95d2-bceb27213e6d"
-          })
-          .setTween("#ball", 3, {opacity:1,delay:1}) // trigger a TweenMax.to tween
-              // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
-          // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
-          .addTo(controller);
 </script>
 <script>
   function sprite (canvasId, spriteimg, frameWidth, frameHeight, totalFrames, invspeed) {
