@@ -225,8 +225,8 @@ function launchEvent(name) {
               </li>\
             </ul>\
             <br><strong>Max. no. of players: </strong>'+item.mplayers;
-  else if(item.hasOwnProperty('bcapt') && !item.hasOwnProperty('gcapt'))            
-    html+= 
+  else if(item.hasOwnProperty('bcapt') && !item.hasOwnProperty('gcapt'))
+    html+=
           '<ul>\
               <li>Boys:<br>\
               Name: '+item.bcapt+'<br>\
@@ -259,6 +259,28 @@ function launchEvent(name) {
 }
 
 function launchInfo() {
+  console.log("HELLo");
+  var info = launchSecondary();
+  var html = '\
+  <div id="sport-wrapper">\
+    <div class="atheletics">\
+      <div class="main_div">\
+        <div class="col img" style="flex:0.3">\
+        </div>\
+        <div class="col">\
+          <div class="details">'
+          +""+
+          '</div>\
+          <div class="sport">'+""+'</div>\
+        </div>\
+        <div class="heading">'+""+'</div>\
+        <img src="'+""+'" alt="'+""+'">\
+        <div class="border"></div>\
+      </div>\
+    </div>\
+  </div>\
+  ';
+  info.innerHTML = html;
 
 }
 
@@ -266,15 +288,17 @@ $(window).on("load",function(){
   $('g[data-name=menu]').on("click", function(){
     launchMenu();
   });
-  $(document).on("click", ".slider .item",function(e){
+  $(document).on("click", ".slider .item.event",function(e){
     launchEvent(e.target.getAttribute('name'));
     $('.lightbox.primary .slider').addClass('fadeout');
-    // $('.lightbox.primary .slider').toggleClass('fadein');
+  });
+  $(document).on("click", ".slider .item.contact",function(e){
+    launchInfo();
+    $('.lightbox.primary .slider').addClass('fadeout');
   });
   $(document).on("click", ".lightbox #sport-wrapper",function(){
     $('.lightbox.secondary').remove();
     $('.lightbox.primary .slider').removeClass('fadeout');
-    // $('.lightbox.primary .slider').toggleClass('fadein');
   });
   $(document).on("click", ".lightbox .close",function(){
     if($('.lightbox.secondary').length == 0)
