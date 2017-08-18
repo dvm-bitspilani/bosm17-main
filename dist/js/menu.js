@@ -34,6 +34,7 @@ function initMenu(){
 		move_slider(delta)
 		highlight_middle_element();
 		update_nav_bar();
+		e.preventDefault();
 	})
 
 	// moving slider's left attribute

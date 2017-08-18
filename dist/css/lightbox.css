@@ -1,13 +1,30 @@
+@keyframes fadeinbounce {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .lightbox {
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  animation: 0.4s fadeinbounce cubic-bezier(.68,-0.55,.27,1.55);
 }
 .lightbox.primary {
   z-index: 10;
 }
 .lightbox.secondary {
   z-index: 20;
+}
+.fadeout {
+  opacity: 0;
+}
+.fadein {
+  opacity: 1;
 }

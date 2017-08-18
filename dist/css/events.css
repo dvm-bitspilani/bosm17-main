@@ -1,0 +1,180 @@
+.lightbox #sport-wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lightbox #sport-wrapper > div {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50vh;
+	width: 65%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lightbox #sport-wrapper .main_div{
+	display: flex;
+	position: absolute;
+	height: calc(100% + 10px);
+	width: calc(100% + 10px);
+	background: #fff;
+	vertical-align: middle;
+	border-radius: 50px;
+}
+
+.lightbox #sport-wrapper .details{
+	display: block;
+	float: right;
+	height: auto;
+	color: #939393;
+	font-size: 28px;
+	text-align: right;
+	font-family: 'Lato', sans-serif;
+	margin-top: 60px;
+	margin-right: 60px;
+	max-height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.lightbox #sport-wrapper .sport{
+	display: block;
+	float: right;
+	padding: 20px;
+  padding-right: 40px;
+	font-size: 3.5em;
+	font-weight: 900;
+	font-family: "LoveloBlack";
+	color: #3D3D3D;
+}
+
+.lightbox #sport-wrapper .heading{
+	z-index: 1;
+	background-color: rgb(255,141,201);
+	height: 80px;
+	width: 40%;
+	position: absolute;
+	right: 15px;
+	top: -45px;
+	font-size: 3em;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'LoveloBlack';
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	-webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(141,13,117);
+}
+
+.lightbox #sport-wrapper .heading::before{
+	position: absolute;
+	content:'';
+	width: 45px;
+	height: 80px;
+	background-color: rgb(255,141,201);
+  	border-radius: 0 90px 90px 0;
+ 	 right: -44px;
+}
+.lightbox #sport-wrapper .heading::after{
+	position: absolute;
+	content:'';
+	width: 45px;
+	height: 80px;
+	background-color: rgb(255,141,201);
+  	border-radius: 90px 0 0 90px;
+ 	left:-44px;
+ 	top: 0;
+}
+
+
+.lightbox #sport-wrapper .main_div .border{
+	position: absolute;
+	width: calc(100% - 7px);
+	height: calc(100% - 7px);
+	border: 6px solid rgb(141,13,117);
+	top: -10px;
+	z-index: 0;
+	left: -10px;
+	border-radius: 60px 60px 50px 60px;
+	pointer-events: none;
+}
+
+.lightbox #sport-wrapper img{
+	z-index: 1;
+	position: absolute;
+	height: 200px;
+	bottom: -20px;
+	left: -100px;
+}
+
+@media all and (max-width: 950px) {
+	.lightbox #sport-wrapper > div {
+		width: 90%;
+	}
+	.lightbox #sport-wrapper img {
+		left: 5px;
+	}
+}
+
+@media all and (max-width: 700px) {
+	.lightbox #sport-wrapper img {
+		display: none;
+	}
+	.lightbox #sport-wrapper .main_div {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.lightbox #sport-wrapper .details {
+		width: auto;
+		text-align: center;
+	}
+}
+
+.lightbox #sport-wrapper .chess img{
+	z-index: 1;
+	position: absolute;
+	height: 300px;
+	width: 30%;
+	bottom: -20px;
+	left: -100px;
+}
+
+.lightbox #sport-wrapper .power-lift img{
+	z-index: 1;
+	position: absolute;
+	height: 200px;
+	width: 35%;
+	bottom: -20px;
+	left: -100px;
+}
+
+.lightbox #sport-wrapper .main_div .col {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+@media all and (max-width: 700px) {
+	.lightbox #sport-wrapper .main_div .col:first-of-type{
+		display: none;
+	}
+	.lightbox #sport-wrapper .details {
+		margin-right: 20px;
+		padding-right: 10px;
+		padding-left: 20px;
+	}
+}

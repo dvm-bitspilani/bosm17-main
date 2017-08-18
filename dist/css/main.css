@@ -2,7 +2,9 @@
   padding: 0;
   margin: 0;
 }
-
+body{
+	overflow-x: hidden;
+}
 #sceneOut{
 	height: 100vh;
 	overflow: hidden;
@@ -34,4 +36,13 @@
 	text-align: center;
 	font-family: arial;
 	cursor: pointer;
+}
+.wrapper{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #ffc34b;
+	height: 100vh;
+	width: 100vw;
+	z-index: 50;
 }

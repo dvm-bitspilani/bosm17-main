@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/events.css">
 
     <!-- jQuery -->
     <script src="js/jquery.js" charset="utf-8"></script>
@@ -41,10 +42,8 @@
 
     <div class="scene" id="sceneIn">
       include "svg/in.svg"
-    </div>
-
-    <div class="scene" id="sceneTorch">
-      include "svg/torch.svg"
+      <img id="gif_fire" src="fire.gif">
+      <div class="wrapper"></div>
     </div>
 
     <div class="scene" id="sceneFinal">
@@ -63,30 +62,30 @@
             </nav>
 
           </div>
-          <div class="close">&#10060</div>
+          <div class="close">&#10060;</div>
         </header>
         <div class="nav_line"></div>
         <section class="main_menu">
           <div class="background"><div class="bg_text"></div></div>
           <div class="slider-container">
             <div class="slider">
-              <div class="item i1 selected" data="begin"></div>
-              <div class="item i2"></div>
-              <div class="item i3"></div>
-              <div class="item i4"></div>
-              <div class="item i5"></div>
-              <div class="item i6"></div>
-              <div class="item i7"></div>
-              <div class="item i8"></div>
-              <div class="item i9"></div>
-              <div class="item i10"></div>
-              <div class="item i11"></div>
-              <div class="item i12"></div>
-              <div class="item i13"></div>
-              <div class="item i14"></div>
+              <div class="item i1 selected" data="begin" name="athletics"></div>
+              <div class="item i2" name="badminton"></div>
+              <div class="item i3" name="basketball"></div>
+              <div class="item i4" name="football"></div>
+              <div class="item i5" name="cricket"></div>
+              <div class="item i6" name="hockey"></div>
+              <div class="item i7" name="tennis"></div>
+              <div class="item i8" name="tabletennis"></div>
+              <div class="item i9" name="squash"></div>
+              <div class="item i10" name="swimming"></div>
+              <div class="item i11" name="powerlifting"></div>
+              <div class="item i12" name="taekwondo"></div>
+              <div class="item i13" name="volleyball"></div>
+              <div class="item i14" name="chess"></div>
               <div class="info">EVENTS</div>
-              <div class="item i15" data="begin"></div>
-              <div class="item i16"></div>
+              <div class="item i15" data="begin" name="rahul"></div>
+              <div class="item i16" name="sumit"></div>
               <div class="info">CONTACT US</div>
               <div class="item " data="begin"></div>
             </div>
@@ -100,6 +99,9 @@
           </div>
         </footer>
       </div>
+    </div>
+
+    <div id="event" style="display:none">
     </div>
 
      <script src="js/scene1.js"></script>
@@ -154,28 +156,10 @@
         }
 
         // Initiate ScrollMagic sceneOut and add to controller
-
-        // var sceneOut = new ScrollMagic.Scene({
-        //   triggerElement: "#sceneOut",
-        //   triggerHook: 0,
-        //   duration: 4000,
-        //   reverse: true,
-        //   pushFollowers: false
-        // }).setPin("#sceneOut").addTo(controller);
-
-        // var outAnimation = new TimelineMax()
-        //     .add(TweenMax.to("#sceneOut g[data-name='Stadium']",1,
-        //     {transform:"translateY(-30%) scale(1.7)"}));
         var sceneOut = createScene("#sceneOut",sceneOutTimeline, 4000);
 
-        // sceneOut.setTween(sceneOutTimeline)
-
-
         // Initiate ScrollMagic sceneIn and add to controller
-        var sceneIn = createScene("#sceneIn",sceneInTimeline, 4000);
-
-        // Initiate ScrollMagic sceneTorch and add to controller
-        var sceneTorch = createScene("#sceneTorch", null, 4000);
+        var sceneIn = createScene("#sceneIn",sceneInTimeline, 8000);
 
         // Initiate ScrollMagic sceneFinal and add to controller
         var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 4000);
@@ -457,6 +441,6 @@
           // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
           .addTo(controller);
 </script>
-<script src="js/autoSroll.js"></script>
+<!-- <script src="js/autoSroll.js"></script> -->
   </body>
 </html>
