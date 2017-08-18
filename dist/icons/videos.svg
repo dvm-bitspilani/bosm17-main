@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142.84 65.79">
+  <defs>
+    <style>
+      .d8b79468-46a7-44e4-ac69-60591e1ef1eb {
+        fill: #f6891f;
+      }
+
+      .\35 4f5f539-87f6-4610-bba8-bfc715288ab4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>Asset 6</title>
+  <g id="4d787f3c-88ea-4527-ae82-fb61602c2ce1" data-name="Layer 2">
+    <g id="a343e100-d9f7-4daf-95a7-4f1f4bb07fe9" data-name="Layer 1">
+      <g id="779993fd-fd40-46f1-ba71-cc21e39589c5" data-name="video-icon">
+        <g>
+          <path class="d8b79468-46a7-44e4-ac69-60591e1ef1eb" d="M53.3,5.41H17.07A12.11,12.11,0,0,0,5,17.49V53.71A12.11,12.11,0,0,0,17.07,65.79H53.3A12.11,12.11,0,0,0,65.37,53.71V17.49A12.11,12.11,0,0,0,53.3,5.41ZM25.1,47.65V23.55L47.9,35.6Z"/>
+          <rect class="d8b79468-46a7-44e4-ac69-60591e1ef1eb" x="76.92" y="9.27" width="65.92" height="10.83"/>
+          <rect class="d8b79468-46a7-44e4-ac69-60591e1ef1eb" x="76.92" y="30.19" width="56.4" height="10.83"/>
+          <rect class="d8b79468-46a7-44e4-ac69-60591e1ef1eb" x="76.92" y="51.11" width="65.92" height="10.83"/>
+        </g>
+        <g>
+          <path class="54f5f539-87f6-4610-bba8-bfc715288ab4" d="M48.3,0H12.07A12.11,12.11,0,0,0,0,12.07V48.3A12.11,12.11,0,0,0,12.07,60.37H48.3A12.11,12.11,0,0,0,60.37,48.3V12.07A12.11,12.11,0,0,0,48.3,0ZM20.1,42.24V18.13L42.9,30.19Z"/>
+          <rect class="54f5f539-87f6-4610-bba8-bfc715288ab4" x="71.92" y="3.85" width="65.92" height="10.83"/>
+          <rect class="54f5f539-87f6-4610-bba8-bfc715288ab4" x="71.92" y="24.77" width="56.4" height="10.83"/>
+          <rect class="54f5f539-87f6-4610-bba8-bfc715288ab4" x="71.92" y="45.69" width="65.92" height="10.83"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

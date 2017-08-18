@@ -51,6 +51,13 @@
     </div>
 
     <div class="scene" id="sceneFinal">
+      <div id="menu_trigger"></div>
+      <div id="video_trigger"></div>
+      <div id="home_trigger"></div>
+      <div id="social">
+        <div id="youtube"></div>
+        <div id="facebook"></div>
+      </div>
       include "svg/final.svg"
     </div>
 
@@ -73,26 +80,26 @@
           <div class="background"><div class="bg_text"></div></div>
           <div class="slider-container">
             <div class="slider">
-              <div class="item i1 selected" data="begin" name="athletics"></div>
-              <div class="item i2" name="badminton"></div>
-              <div class="item i3" name="basketball"></div>
-              <div class="item i4" name="football"></div>
-              <div class="item i5" name="cricket"></div>
-              <div class="item i6" name="hockey"></div>
-              <div class="item i7" name="tennis"></div>
-              <div class="item i8" name="tabletennis"></div>
-              <div class="item i9" name="squash"></div>
-              <div class="item i10" name="swimming"></div>
-              <div class="item i11" name="powerlifting"></div>
-              <div class="item i12" name="taekwondo"></div>
-              <div class="item i13" name="volleyball"></div>
-              <div class="item i14" name="chess"></div>
+              <div class="event item i1 selected" data="begin" name="athletics"></div>
+              <div class="event item i2" name="badminton"></div>
+              <div class="event item i3" name="basketball"></div>
+              <div class="event item i4" name="football"></div>
+              <div class="event item i5" name="cricket"></div>
+              <div class="event item i6" name="hockey"></div>
+              <div class="event item i7" name="tennis"></div>
+              <div class="event item i8" name="tabletennis"></div>
+              <div class="event item i9" name="squash"></div>
+              <div class="event item i10" name="swimming"></div>
+              <div class="event item i11" name="powerlifting"></div>
+              <div class="event item i12" name="taekwondo"></div>
+              <div class="event item i13" name="volleyball"></div>
+              <div class="event item i14" name="chess"></div>
               <div class="info">EVENTS</div>
-              <div class="item i15" data="begin" name="rahul"></div>
-              <div class="item i16" name="sumit"></div>
+              <div class="event item i15" data="begin" name="rahul"></div>
+              <div class="event item i16" name="sumit"></div>
               <div class="info">CONTACT US</div>
-              <div class="item i17" name="contact"></div>
-              <div class="item " data="begin"></div>
+              <div class="contact item i17" name="contact"></div>
+              <div class="item" data="begin" name="contact"></div>
             </div>
           </div>
         </section>
@@ -106,7 +113,8 @@
       </div>
     </div>
 
-    <div id="event" style="display:none">
+    <div id="iframe" style="display:none">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-RcTmH_vdTw?ecver=1" frameborder="0" allowfullscreen=""></iframe>
     </div>
 
      <script src="js/scene1.js"></script>
@@ -161,13 +169,13 @@
         }
 
         // Initiate ScrollMagic sceneOut and add to controller
-        var sceneOut = createScene("#sceneOut",sceneOutTimeline, 4000);
+        var sceneOut = createScene("#sceneOut",sceneOutTimeline, 2000);
 
         // Initiate ScrollMagic sceneIn and add to controller
-        var sceneIn = createScene("#sceneIn",sceneInTimeline, 8000);
+        var sceneIn = createScene("#sceneIn",sceneInTimeline, 4000);
 
         // Initiate ScrollMagic sceneFinal and add to controller
-        var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 4000);
+        var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 2000);
 
       });
     </script>
