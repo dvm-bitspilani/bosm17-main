@@ -54,5 +54,5 @@
 
 #sceneOut .cloud,
 #sceneIn .cloud{
-	animation: float 5s ease-in-out alternate infinite;
+	animation: float 4s ease-in-out alternate infinite;
 }

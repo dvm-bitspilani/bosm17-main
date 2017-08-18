@@ -41,7 +41,7 @@
 
     <div class="scene" id="sceneIn">
       include "svg/in.svg"
-      <img id="gif_fire" src="fire.gif">
+      <canvas id="gif_fire" class="fire f1" width="500" height="500"></canvas>
       <div class="wrapper"></div>
     </div>
 
@@ -451,6 +451,39 @@
               // .setTween("b6fa6418-6a0d-42f3-adc7-320d12a8e71b", 3, {opacity:1,delay:0.5}) // trigger a TweenMax.to tween
           // .addIndicators({name: "1 (duration:500)"}) // add indicators (requires plugin)
           .addTo(controller);
+</script>
+<script>
+  function sprite (canvasId, spriteimg, frameWidth, frameHeight, totalFrames, invspeed) {
+  var canvas = document.getElementById(canvasId);
+  var context = canvas.getContext("2d");
+  var myImage = new Image();
+  myImage.src = spriteimg;
+  myImage.addEventListener("load", loadImage, false);
+  function loadImage(e) {
+    animate();
+  }
+  var shift = 0;
+  var currentFrame = 0;
+  var speedvar=0;
+  function animate() {
+    context.clearRect(0, 0, frameWidth, frameHeight);
+    context.drawImage(myImage, shift, 0, frameWidth, frameHeight, 0, 0, frameWidth, frameHeight);
+    if (speedvar==invspeed){
+      shift += frameWidth;
+      speedvar=0;
+    }
+    if (currentFrame == totalFrames*invspeed) {
+      shift = 0;
+      currentFrame = 0;
+    }
+    requestAnimationFrame(animate);
+    currentFrame++;
+    speedvar++;
+  }
+}
+$(document).ready(function(){
+  sprite('gif_fire', 'img/fire.png', 500, 500, 99, 4);
+})
 </script>
 <!-- <script src="js/autoSroll.js"></script> -->
   </body>
