@@ -208,3 +208,12 @@ iframe {
 		background-position: center;
 	}
 }
+
+#date {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background: url("../icons/Date.svg") no-repeat center;
+  background-size: contain;
+  z-index: 1;
+}
