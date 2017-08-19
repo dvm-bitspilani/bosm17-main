@@ -84,7 +84,7 @@ circle#6153582a-49d2-4a24-b8da-162e531da632
   }
 }
 #menu_trigger {
-  position: absolute;
+  position: fixed;
   top: 30px;
   right: 30px;
   width: 60px;
@@ -211,15 +211,14 @@ iframe {
 }
 
 #date {
-  position: absolute;
-  width: 200px;
+  position: relative;
+  margin: auto;
   height: 50px;
+  width: auto;
   background: url("../icons/Date.svg") no-repeat center;
   background-size: contain;
   z-index: 1;
-  left: 50%;
-  top: 81%;
-  transform: translate(-50%,-50%);
+  transform: translateY(81vh) scale(0.6)
 }
 
 #register {
