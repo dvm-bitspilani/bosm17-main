@@ -45,7 +45,7 @@
        .set(flags,{transformOrigin:'0 top'})
        .set(cloudLeft,{xPercent:-150})
        .set(cloudRight,{xPercent:150})
-       .set(fireGif,{autoAlpha:0,zIndex:2,left:ellipse.position().left-100,top:"7vh",position:"absolute"})
+       .set(fireGif,{autoAlpha:0,zIndex:2,left:ellipse.position().left-100,top:"8vh",position:"absolute"})
        .set($('.wrapper'),{scale:0})
 
        sceneInTimeline.to([ground, border],.2,  {autoAlpha:1, yPercent: 0,  ease:Elastic.easeOut.config(1, 0.3)})
