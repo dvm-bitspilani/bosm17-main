@@ -30,7 +30,30 @@
 	vertical-align: middle;
 	border-radius: 50px;
 }
-
+.lightbox #sport-wrapper .button{
+	z-index: 1;
+	background-color: rgb(255,141,201);
+	height: 50px;
+	width: 30%;
+	position: absolute;
+	left: 140px;
+	bottom: 30px;
+	
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'LoveloBlack';
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+}
+.lightbox #sport-wrapper .button a{
+	color: #fff;
+	-webkit-text-stroke-width: 3px;
+	font-size: 2em;
+	text-decoration: none;
+    -webkit-text-stroke-color: rgb(141,13,117);
+}
 .lightbox #sport-wrapper .details{
 	display: block;
 	float: right;

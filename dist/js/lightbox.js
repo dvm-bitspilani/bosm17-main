@@ -37,7 +37,8 @@ var lightboxes = {
       "gcapt": "Harshita Verma",
       "gcno": "7891055201",
       "mplayers": " - ",
-      "pdf": ""
+      "pdf": "",
+      "link":"https://www.google.com"
     },
     "badminton": {
       "image": "icons/badminton.png",
@@ -141,6 +142,9 @@ var lightboxes = {
 \"You were funnier last week\" - Repeat Audience Member<br><br>;)"
     }
   }
+  // "contact":{
+
+  // }
 }
 
 // Launch primary lightbox
@@ -208,6 +212,8 @@ function launchEvent(name) {
   <div id="sport-wrapper">\
     <div class="atheletics">\
       <div class="main_div">\
+        <div class = "button"><a href='+item.link+'>Download PDF</a>\
+        </div>\
         <div class="col img" style="flex:0.3">\
         </div>\
         <div class="col">\
