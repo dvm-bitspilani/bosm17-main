@@ -256,6 +256,16 @@ basic positioning 
 	background: url('../img/contact.png') 0 0 no-repeat;
 	background-size: cover;
 }
+.lightbox #menu_wrapper .i18
+{
+	background: url('../img/carrom-card.png') 0 0 no-repeat;
+	background-size: cover;
+}
+.lightbox #menu_wrapper .i19
+{
+	background: url('../img/snooker-card.png') 0 0 no-repeat;
+	background-size: cover;
+}
 .lightbox #menu_wrapper .info{
 	flex-grow: 2;
 	text-align: center;

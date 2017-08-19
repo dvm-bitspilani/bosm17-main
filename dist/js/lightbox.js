@@ -212,7 +212,7 @@ function launchEvent(name) {
   <div id="sport-wrapper">\
     <div class="atheletics">\
       <div class="main_div">\
-        <div class = "button"><a href='+item.link+'>Download PDF</a>\
+        <div class = "button"><a href='+item.pdf+'>Download PDF</a>\
         </div>\
         <div class="col img" style="flex:0.3">\
         </div>\
@@ -332,8 +332,8 @@ $(window).on("load",function(){
     else $('.lightbox.secondary').remove();
   });
   $(document).on("mousewheel", ".lightbox.secondary", function(e,d){
-    // $('.lightbox.secondary .details').scrollTop += ( d < 0 ? 1 : -1 ) * 10;
-    // e.preventDefault();
+    e.target.scrollTop += ( d < 0 ? 1 : -1 ) * 10;
+    e.preventDefault();
   });
   $(document).on("click", '.primary.video', function(){
     $('.primary').remove();
