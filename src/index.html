@@ -14,7 +14,34 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/loader.css">
 
+    <!-- Loader JS -->
+    <script type="text/javascript">
+      var words = ["LOADING","BOSM","BITS","CRICKET","FOOTBALL","TENNIS","HOCKEY","SPORTS","GITS","GUTS","GLORY"];
+
+        window.addEventListener("load", function() {
+            var randoms = window.document.getElementsByClassName("randoms");
+            for (i = 0; i < randoms.length; i++)
+                changeWord(randoms[i]);
+        }, false);
+
+        function changeWord(a) {
+            a.style.opacity = '0.1';
+            a.innerHTML = words[getRandomInt(0, words.length - 1)];
+            setTimeout(function() {
+                a.style.opacity = '1';
+            }, 625);
+            setTimeout(function() {
+                changeWord(a);
+            }, getRandomInt(600, 900));
+        }
+
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
     <!-- jQuery -->
     <script src="js/jquery.js" charset="utf-8"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
@@ -34,6 +61,20 @@
 
   </head>
   <body>
+  <div class="loader">
+    <div class="container">
+      <div class="right">
+        <h4 class="randoms"></h4>
+        <h1 class="randoms"></h1>
+        <h4 class="randoms"></h4>
+      </div>
+      <div class="left">
+        <h4 class="randoms"></h4>
+        <h1 class="randoms"></h1>
+        <h4 class="randoms"></h4>
+      </div>
+    </div>
+  </div>
     <div id="bottom">V</div>
     <!-- Begin Scenes -->
 
@@ -65,7 +106,7 @@
     <div id="menu" style="display: none">
       <div id="menu_wrapper">
         <header>
-          <div class="logo"><img src="../dist/img/Group_30.png"></div>
+          <div class="logo"><img style="width:5em;height:auto" src="../dist/img/Group_30.png"></div>
           <div class="topics">
             <nav>
               <li class="active">SPORTS</li>
@@ -232,7 +273,11 @@ $(document).ready(function(){
   sprite('gif_fire', 'img/fire.png', 500, 500, 99, 4);
 })
 </script>
-
+  <script type="text/javascript">
+    $(window).load(function(){
+          $('.loader').fadeOut(100);
+    })
+  </script>
 
   </body>
 </html>
