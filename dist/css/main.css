@@ -220,3 +220,13 @@ iframe {
   top: 81%;
   transform: translate(-50%,-50%);
 }
+
+#register {
+  position: absolute;
+  width: 250px;
+  height: 75px;
+  z-index: 1;
+  left: 50%;
+  top: calc(81% + 75px);
+  transform: translate(-50%,-50%);
+}

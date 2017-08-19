@@ -37,8 +37,7 @@ var lightboxes = {
       "gcapt": "Harshita Verma",
       "gcno": "7891055201",
       "mplayers": " - ",
-      "pdf": "",
-      "link":"https://www.google.com"
+      "pdf": ""
     },
     "badminton": {
       "image": "icons/badminton.png",
@@ -390,6 +389,9 @@ $(window).on("load",function(){
   });
 
   $('rect.56e797b3-ff7c-4d1b-84dc-5d00f20e79ce').on('click',function(){
+    window.location.href = "https://bits-bosm.org/2017/registrations";
+  });
+  $('#register').on('click',function(){
     window.location.href = "https://bits-bosm.org/2017/registrations";
   });
 });

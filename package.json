@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ccpandhare/bosm17-main#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-includes": "^1.0.0"
+    "grunt-includes": "^1.0.0",
+    "grunt-minify-html": "^3.0.0"
   }
 }
