@@ -216,7 +216,7 @@ iframe {
   background: url("../icons/Date.svg") no-repeat center;
   background-size: contain;
   z-index: 1;
-  left: 48.5%;
-  top: 74%;
+  left: 50%;
+  top: 81%;
   transform: translate(-50%,-50%);
 }
