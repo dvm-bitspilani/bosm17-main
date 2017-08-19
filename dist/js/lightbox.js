@@ -332,8 +332,8 @@ $(window).on("load",function(){
     else $('.lightbox.secondary').remove();
   });
   $(document).on("mousewheel", ".lightbox.secondary", function(e,d){
-    e.target.scrollTop += ( d < 0 ? 1 : -1 ) * 10;
-    e.preventDefault();
+    // $('.lightbox.secondary .details').scrollTop += ( d < 0 ? 1 : -1 ) * 10;
+    // e.preventDefault();
   });
   $(document).on("click", '.primary.video', function(){
     $('.primary').remove();
