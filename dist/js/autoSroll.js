@@ -1,20 +1,37 @@
-(function(){
 	var scrollToBottom = false;
 	var curr = 0;
-	$(document).ready(function(){
+	$(window).on("load",function(){
 		var scenes = $('.scrollmagic-pin-spacer');
-		console.log(scenes.length)
 		var length = scenes.length;
-
 		window.scrollTo(0, 0);
 		scrollScene(curr, scenes);
-		
+		$("#bottom").on("click", function(){
+			stopScroll();
+			window.scrollTo(0,$('#sceneFinal').offset().top);
+			setTimeout(function(){
+				stopScroll();
+				window.scrollTo(0,$('#sceneFinal').offset().top);
+			},75);
+		});
+		$("body").on("mousewheel",function(){
+			stopScroll();
+		});
 	});
 
+	function stopScroll() {
+		if(typeof(timeout1)!="undefined")clearTimeout(timeout1);
+		if(typeof(timeout2)!="undefined")clearTimeout(timeout2);
+		$('html,body').stop(true);
+	}
+
+	var timeout1, timeout2;
+
 	function scrollScene(ind, scenes){
-		
+
+		$('body').addClass('scrolling');
+
 		if(scrollToBottom || ind > scenes.length-1){console.log("!!!");return;}
-		console.log('scroll', ind);
+		// console.log('scroll', ind);
 
 		if(ind == 0){
 			window.scrollTo(0, 0);
@@ -24,52 +41,49 @@
 		var bottom = next.offset().top ;
 		var height = $(window).height();
 
-		console.log($(scenes[ind]).offset().top,$(scenes[ind]).height() ,height)
+		// console.log($(scenes[ind]).offset().top,$(scenes[ind]).height() ,height)
 		$('html, body').animate({
 		        scrollTop: (bottom - height)
-		    }, 20000);
-		setTimeout(function(){
+		    }, 15000);
+		timeout1 = setTimeout(function(){
 			changeScene(ind, scenes);
-		}, 20000);
+		}, 15000);
 	}
 
 	function changeScene(ind, scenes){
-		console.log('change', ind);
+		// console.log('change', ind);
 		if(scrollToBottom || ind>(scenes.length-1))return;
 
 		var n = $(scenes[ind]).parent().children().index($(scenes[ind]))
 		var next = $($(scenes[0]).siblings()[n])
 		var bottom = next.offset().top;
-		console.log(next)
+		// console.log(next)
 		$('html, body').animate({
 		        scrollTop: bottom
-		    },1); 
-		    
-		setTimeout(function(){
-					
+		    },1);
+
+		timeout2 = setTimeout(function(){
+
 		    		scrollScene(ind+1, scenes);
 		    		curr++;
 		    		updateBottom();
 		    	},1);
-		
+
 	}
 
-	$('#bottom').click(()=>{
-		scrollToBottom = true;
-		var final = $('#sceneFinal');
-		$('html, body').stop(true, false);
-		window.scrollTo(0,final.offset().top);
-		curr = scenes.length ;
-		updateBottom();
-	})
+	// $('#bottom').click(()=>{
+	// 	scrollToBottom = true;
+	// 	var final = $('#sceneFinal');
+	// 	$('html, body').stop(true, false);
+	// 	window.scrollTo(0,final.offset().top);
+	// 	curr = scenes.length ;
+	// 	updateBottom();
+	// })
 
-	function updateBottom(){
-		if(curr == $('.scrollmagic-pin-spacer').length - 1){
-			$('#bottom').hide();
-		}else{
-			$('#bottom').show();
-		}
-	}
-
-	
-})();
+	// function updateBottom(){
+	// 	if(curr == $('.scrollmagic-pin-spacer').length - 1){
+	// 		$('#bottom').hide();
+	// 	}else{
+	// 		$('#bottom').show();
+	// 	}
+	// }
