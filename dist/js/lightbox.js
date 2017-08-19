@@ -212,7 +212,7 @@ function launchEvent(name) {
   <div id="sport-wrapper">\
     <div class="atheletics">\
       <div class="main_div">\
-        <div class = "button"><a href='+item.link+'>Download PDF</a>\
+        <div class = "button"><a href="pdfs/'+name+'.pdf">Download PDF</a>\
         </div>\
         <div class="col img" style="flex:0.3">\
         </div>\
