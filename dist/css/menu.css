@@ -182,7 +182,7 @@ basic positioning 
 
 .lightbox #menu_wrapper .i5
 {
-	background: url('../img/Football.png') 0 0 no-repeat;
+	background: url('../img/Cricket.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
@@ -254,6 +254,16 @@ basic positioning 
 .lightbox #menu_wrapper .i17
 {
 	background: url('../img/contact.png') 0 0 no-repeat;
+	background-size: cover;
+}
+.lightbox #menu_wrapper .i18
+{
+	background: url('../img/carrom-card.png') 0 0 no-repeat;
+	background-size: cover;
+}
+.lightbox #menu_wrapper .i19
+{
+	background: url('../img/snooker-card.png') 0 0 no-repeat;
 	background-size: cover;
 }
 .lightbox #menu_wrapper .info{

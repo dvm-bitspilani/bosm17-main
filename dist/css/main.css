@@ -24,21 +24,8 @@ body > div {
 }
 
 #bottom{
-	position: fixed;
-	right: 20px;
-	top: 20px;
-	height: 30px;
-	width: 30px;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
-	border: 1px solid #fff;
-	z-index: 10;
-	line-height: 30px;
-	font-size: 10px;
-	color: #fff;
-	text-align: center;
-	font-family: arial;
 	cursor: pointer;
+  color: transparent;
 }
 .wrapper{
 	position: absolute;
@@ -134,8 +121,8 @@ circle#6153582a-49d2-4a24-b8da-162e531da632
   transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
   z-index: 2;
 }
-#home_trigger {
-  position: absolute;
+#bottom {
+  position: fixed;
   top: 30px;
   left: 30px;
   width: 60px;
@@ -156,12 +143,9 @@ circle#6153582a-49d2-4a24-b8da-162e531da632
   z-index: 1;
   transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
 }
-#menu_trigger:hover, #video_trigger:hover, #home_trigger:hover, #facebook:hover, #youtube:hover {
+#bottom:hover, #video_trigger:hover, #home_trigger:hover, #facebook:hover, #youtube:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
-#bottom {
-  display: none;
 }
 iframe {
   width: 75vw;
@@ -223,4 +207,16 @@ iframe {
 		background-size: 90% 90%;
 		background-position: center;
 	}
+}
+
+#date {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background: url("../icons/Date.svg") no-repeat center;
+  background-size: contain;
+  z-index: 1;
+  left: 50%;
+  top: 81%;
+  transform: translate(-50%,-50%);
 }

@@ -212,7 +212,7 @@ function launchEvent(name) {
   <div id="sport-wrapper">\
     <div class="atheletics">\
       <div class="main_div">\
-        <div class = "button"><a href='+item.link+'>Download PDF</a>\
+        <div class = "button"><a href='+item.pdf+'>Download PDF</a>\
         </div>\
         <div class="col img" style="flex:0.3">\
         </div>\
@@ -267,25 +267,75 @@ function launchEvent(name) {
 function launchInfo() {
   var info = launchSecondary();
   var html = '\
-  <div id="sport-wrapper">\
-    <div class="atheletics">\
-      <div class="main_div">\
-        <div class="col img" style="flex:0.3">\
-        </div>\
-        <div class="col">\
-          <div class="details">'
-          +""+
-          '</div>\
-          <div class="sport">'+""+'</div>\
-        </div>\
-        <div class="heading">'+""+'</div>\
-        <img src="'+""+'" alt="'+""+'">\
-        <div class="border"></div>\
-      </div>\
-    </div>\
-  </div>\
-  ';
-
+  <div class="lightbox secondary" style="background:cyan">\
+     <div id="sport-wrapper">\
+      <div class="atheletics" style="top:25% !important">\
+        <div class="main_div">\
+     <div class="contact_details">\
+                         <div  id="details">\
+                           <div class="item">\
+                             <p>Jayshil</p>\
+                             <p>Sports Secretary</p>\
+                             <p>+91-9828623535</p>\
+                             <p id="email">sportssecretary@bits-bosm.org</p>\
+                           </div>\
+                           <div class="item">\
+                             <p>Ashay</p>\
+                             <p>Publications and Correspondence</p>\
+                             <p>+91-9929022741</p>\
+                             <p id="email">pcr@bits-bosm.org</p>\
+                           </div>\
+                           <div class="item">\
+                             <p>Gautham</p>\
+                             <p>Reception and Accomodation</p>\
+                             <p>+91-9444637124</p>\
+                             <p id="email">recnacc@bits-bosm.org</p>\
+                           </div>\
+                           <div class="item">\
+                             <p>Siddharth</p>\
+                             <p>Joint Sports Secretary</p>\
+                             <p>+91-7733974342</p>\
+                             <p id="email">siddharth@bits-bosm.org</p>\
+                           </div>\
+                           <div class="item">\
+                             <p>Jayesh</p>\
+                             <p>Sponsorship and Marketing</p>\
+                             <p>+91-8897716880</p>\
+                             <p id="email">sponsorship@bits-bosm.org</p>\
+                           </div>\
+                           <div class="item">\
+                             <p>Pavan</p>\
+                             <p>BOSM Controls</p>\
+                             <p>+91-9828629266</p>\
+                             <p id="email">controls@bits-bosm.org</p>\
+                           </div>\
+                           <div class="item">\
+                             <p>Aman</p>\
+                             <p>Joint Sports Secretary</p>\
+                             <p>+91-9714540571</p>\
+                             <p id="email">aman@bits-bosm.org</p>\
+                           </div>\
+                           <div class="item">\
+                             <p>Shreshtha</p>\
+                             <p>Joint Sports Secretary</p>\
+                             <p>+91-9873240714</p>\
+                             <p id="email">shreshtha@bits-bosm.org</p>\
+                           </div>\
+                           <div class="item">\
+                             <p>Vihang</p>\
+                             <p>Core Website</p>\
+                             <p>+91-9828630490</p>\
+                             <p id="email">webmaster@bits-bosm.org</p>\
+                           </div>\
+                  </div><div class="heading change">Contact Us</div>\
+         <div class="border"></div>\
+         </div>\
+       </div>\
+   </div>\
+  <div class="border"></div>\
+   </div>\
+';
+info.innerHTML=html;
 }
 
 function launchVideo() {

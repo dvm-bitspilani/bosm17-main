@@ -38,7 +38,7 @@
 	position: absolute;
 	left: 140px;
 	bottom: 30px;
-	
+
 	text-align: center;
 	vertical-align: middle;
 	font-family: 'LoveloBlack';
@@ -160,6 +160,8 @@
 		flex-direction: column;
 	}
 	.lightbox #sport-wrapper .details {
+		display: flex;
+		flex-direction: row;
 		width: auto;
 		text-align: center;
 	}
@@ -190,7 +192,57 @@
 	justify-content: space-between;
 	align-items: flex-end;
 }
+.contact_details
+{
+		flex: 1;
+		display: flex;
+		flex-direction:row;
+}
+.heading
+{
+	background-color: rgb(319,169,224)
+}
+.contact_details #details
+{
+display: flex;
+flex-wrap: wrap;
+height: auto;
+color: #939393;
+font-size: 28px;
+font-family: 'Lato', sans-serif;
+margin-top: 60px;
+margin-right: 60px;
+max-height: 100%;
+width: 100%;
+}
+.item
+{	width: 33%;
+	height: 33%;
+	margin: auto;
+	font-size: 0.6em;
+	text-align: center;
+	color: rgb(141,13,117);
+}
+#email
+{
+	font-size: 0.8em;
+}
+@media all and (max-width: 900px)
+{	.contact_details
+	{
+		flex-direction: column;
+	}
+	.main_div,#details
+	{
+		overflow-y: scroll;
+	}
+	.item
+	{
+		width: 60;
+		height: 50%;
 
+	}
+}
 @media all and (max-width: 700px) {
 	.lightbox #sport-wrapper .main_div .col:first-of-type{
 		display: none;
@@ -201,3 +253,4 @@
 		padding-left: 20px;
 	}
 }
+/*contact*/
