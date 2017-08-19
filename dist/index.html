@@ -34,7 +34,7 @@
 
   </head>
   <body>
-    <div id="bottom">V</div>
+    <div id="bottom"></div>
     <!-- Begin Scenes -->
 
     <div class="scene" id="sceneOut">
@@ -8083,7 +8083,6 @@
     <div class="scene" id="sceneFinal">
       <div id="menu_trigger"></div>
       <div id="video_trigger"></div>
-      <div id="home_trigger"></div>
       <div id="social">
         <div id="youtube"></div>
         <div id="facebook"></div>
@@ -8356,6 +8355,7 @@
           <circle id="21604b29-68f4-4d60-be21-128c822520f0" data-name="re1" class="d3114450-fe9d-4573-b91a-812464841fda" cx="1594.06" cy="210" r="17"/>
         </g>
         </svg>
+<<<<<<< HEAD
 
     </div>
 
@@ -8535,3 +8535,182 @@ $(document).ready(function(){
 
   </body>
 </html>
+=======
+
+    </div>
+
+    <div id="menu" style="display: none">
+      <div id="menu_wrapper">
+        <header>
+          <div class="logo"><img src="../dist/img/Group_30.png"></div>
+          <div class="topics">
+            <nav>
+              <li class="active">SPORTS</li>
+              <li>EVENTS</li>
+              <li>CONTACT US</li>
+            </nav>
+
+          </div>
+          <div class="close">&#10060;</div>
+        </header>
+        <div class="nav_line"></div>
+        <section class="main_menu">
+          <div class="background"><div class="bg_text"></div></div>
+          <div class="slider-container">
+            <div class="slider">
+              <div class="event item i1 selected" data="begin" name="athletics"></div>
+              <div class="event item i2" name="badminton"></div>
+              <div class="event item i3" name="basketball"></div>
+              <div class="event item i4" name="football"></div>
+              <div class="event item i5" name="cricket"></div>
+              <div class="event item i6" name="hockey"></div>
+              <div class="event item i7" name="tennis"></div>
+              <div class="event item i8" name="tabletennis"></div>
+              <div class="event item i9" name="squash"></div>
+              <div class="event item i10" name="swimming"></div>
+              <div class="event item i11" name="powerlifting"></div>
+              <div class="event item i12" name="taekwondo"></div>
+              <div class="event item i13" name="volleyball"></div>
+              <div class="event item i14" name="chess"></div>
+              <div class="info">EVENTS</div>
+              <div class="event item i15" data="begin" name="rahul"></div>
+              <div class="event item i16" name="sumit"></div>
+              <div class="info">CONTACT US</div>
+              <div class="contact item i17" name="contact"></div>
+              <div class="item" data="begin" name="contact"></div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="selected_text" data=""></div>
+          <div class="progress_line">
+            <div class="line-background"></div>
+            <div class="line-fill"></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <div id="iframe" style="display:none">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-RcTmH_vdTw?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+
+     <script src="js/scene1.js"></script>
+     <script src="js/scene2.js"></script>
+	   <script src="js/scene4.js"></script>
+
+    <!-- Main Script -->
+    <script type="text/javascript">
+      $(function(){
+
+        // Make SVGs span entire div + a greedy bugfix
+        $('svg').each(function(){
+          this.setAttribute('preserveAspectRatio','xMidYMid slice');
+          $(this).parent().css('margin-bottom','-10px');
+        });
+
+        // Start a ScrollMagic controller
+        var controller = new ScrollMagic.Controller();
+
+        // Define a Scene Genrator Function
+        function createScene(selector,tween, time) {
+          return new ScrollMagic.Scene({
+            triggerElement: selector,
+            triggerHook: 0, // trigger when top of SVG touches top of screen
+            duration: time, // duration in pixels
+            reverse: true, // reverse animation
+            pushFollowers: false // don't push the following elements
+          }).setPin(selector) // pin to screen
+            .on("end",function(e){
+              if(e.scrollDirection == "FORWARD") {
+                // directly scroll to next scene
+                var next = $(selector).parent().next().find('.scene');
+                if (next.length != 0)
+                  window.scrollTo(0,next.offset().top);
+              }
+              // else {
+              //   // directly scroll to previous scene
+              //   var prev = $(selector).parent().prev().find('.scene');
+              //   if (prev.length != 0)
+              //     window.scrollTo(0,prev.offset().top);
+              // }
+            }).on('start', function(e){
+              if(e.scrollDirection == "REVERSE") {
+                // directly scroll to next scene
+                var prev = $(selector).parent().prev().find('.scene');
+                if (prev.length != 0)
+                  window.scrollTo(0,prev.offset().top);
+              }
+            })
+            .setTween(tween)
+            .addTo(controller);
+        }
+
+        // Initiate ScrollMagic sceneOut and add to controller
+        var sceneOut = createScene("#sceneOut",sceneOutTimeline, 2000);
+
+        // Initiate ScrollMagic sceneIn and add to controller
+        var sceneIn = createScene("#sceneIn",sceneInTimeline, 4000);
+
+        // Initiate ScrollMagic sceneFinal and add to controller
+
+        // var sceneFinal = createScene("#sceneFinal", sceneFinalTimeline, 4000);
+
+
+      });
+    </script>
+     <script src="js/scene4.js"></script>
+
+       <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102775261-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+      <!-- Place after instantiating all scroll magic objects -->
+    <script src="js/autoSroll.js"></script>
+
+
+<script>
+  function sprite (canvasId, spriteimg, frameWidth, frameHeight, totalFrames, invspeed) {
+  var canvas = document.getElementById(canvasId);
+  var context = canvas.getContext("2d");
+  var myImage = new Image();
+  myImage.src = spriteimg;
+  myImage.addEventListener("load", loadImage, false);
+  function loadImage(e) {
+    animate();
+  }
+  var shift = 0;
+  var currentFrame = 0;
+  var speedvar=0;
+  function animate() {
+    context.clearRect(0, 0, frameWidth, frameHeight);
+    context.drawImage(myImage, shift, 0, frameWidth, frameHeight, 0, 0, frameWidth, frameHeight);
+    if (speedvar==invspeed){
+      shift += frameWidth;
+      speedvar=0;
+    }
+    if (currentFrame == totalFrames*invspeed) {
+      shift = 0;
+      currentFrame = 0;
+    }
+    requestAnimationFrame(animate);
+    currentFrame++;
+    speedvar++;
+  }
+}
+$(document).ready(function(){
+  sprite('gif_fire', 'img/fire.png', 500, 500, 99, 4);
+})
+</script>
+
+
+  </body>
+</html>
+>>>>>>> 8db2df8dbd378f44aa846bf5f157324a07389362
