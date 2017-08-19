@@ -211,7 +211,7 @@ function launchEvent(name) {
   <div id="sport-wrapper">\
     <div class="atheletics">\
       <div class="main_div">\
-        <div class = "button"><a href='+item.pdf+'>Download PDF</a>\
+        <div class = "button"><a href="pdfs/'+name+'.pdf">Download PDF</a>\
         </div>\
         <div class="col img" style="flex:0.3">\
         </div>\
@@ -266,7 +266,7 @@ function launchEvent(name) {
 function launchInfo() {
   var info = launchSecondary();
   var html = '\
-  <div class="lightbox secondary" style="background:cyan">\
+  <div class="lightbox secondary">\
      <div id="sport-wrapper">\
       <div class="atheletics" style="top:25% !important">\
         <div class="main_div">\
