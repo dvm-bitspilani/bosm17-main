@@ -24,7 +24,7 @@
   	<meta name="revisit-after" content="2 days">
     <meta property="og:title" content="BOSM 2017 | International Sports Festival | BITS Pilani">
 		<meta property="og:site_name" content="BOSM Intro">
-		<meta property="og:url" content="http://www.bits-bosm.org/2017">
+		<meta property="og:url" content="http://www.bits-bosm.org/">
 		<meta property="og:description" content="With the last year's edition
 				witnessing phenomenal participation from colleges both from India and abroad,
 				the 32nd edition guarantees excitement well supplemented by floodlit matches
@@ -33,7 +33,7 @@
 				and camaraderie. 21th September - 25th September. BOSM 2017. Come, battle it
 				out, with grit and guts, in pursuit of glory.">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="http://bits-bosm.org/2017/img/thumb.jpg">
+		<meta property="og:image" content="http://bits-bosm.org/img/thumb.jpg">
     <link rel="SHORTCUT ICON" href="images/favicon.ico">
     <title>BOSM 2017 | BITS Pilani</title>
 
@@ -47,31 +47,7 @@
     <link rel="stylesheet" href="css/loader.css">
 
     <!-- Loader JS -->
-    <script type="text/javascript">
-      var words = ["LOADING","BOSM","BITS","CRICKET","FOOTBALL","TENNIS","HOCKEY","SPORTS","GITS","GUTS","GLORY"];
-
-        window.addEventListener("load", function() {
-            var randoms = window.document.getElementsByClassName("randoms");
-            for (i = 0; i < randoms.length; i++)
-                changeWord(randoms[i]);
-        }, false);
-
-        function changeWord(a) {
-            a.style.opacity = '0.1';
-            a.innerHTML = words[getRandomInt(0, words.length - 1)];
-            setTimeout(function() {
-                a.style.opacity = '1';
-            }, 625);
-            setTimeout(function() {
-                changeWord(a);
-            }, getRandomInt(600, 900));
-        }
-
-
-        function getRandomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-    </script>
+    
     <!-- jQuery -->
     <script src="js/jquery.js" charset="utf-8"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
@@ -105,6 +81,7 @@
       </div>
     </div>
   </div>
+  <div id="wrapper">
     <div id="bottom">V</div>
 
     <!-- Begin Scenes -->
@@ -174,8 +151,8 @@
               <div class="event item i15" data="begin" name="rahul"></div>
               <div class="event item i16" name="sumit"></div>
               <div class="info">CONTACT US</div>
-              <div class="contact item i17" name="contact"></div>
-              <div class="item" data="begin" name="contact"></div>
+              <div class="contact item i17" name="contact" data="begin"></div>
+              <!-- <div class="item" data="begin" name="contact"></div> -->
             </div>
           </div>
         </section>
@@ -188,11 +165,10 @@
         </footer>
       </div>
     </div>
-
     <div id="iframe" style="display:none">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/-RcTmH_vdTw?ecver=1" frameborder="0" allowfullscreen=""></iframe>
     </div>
-
+</div>
      <script src="js/scene1.js"></script>
      <script src="js/scene2.js"></script>
 	   <script src="js/scene4.js"></script>
@@ -307,6 +283,29 @@ $(document).ready(function(){
   sprite('gif_fire', 'img/fire.png', 500, 500, 99, 4);
 })
 </script>
+<script type="text/javascript">
+      var words = ["LOADING","BOSM","BITS","CRICKET","FOOTBALL","TENNIS","HOCKEY","SPORTS","GITS","GUTS","GLORY"];
+
+            var randoms = window.document.getElementsByClassName("randoms");
+            for (i = 0; i < randoms.length; i++)
+                changeWord(randoms[i]);
+
+        function changeWord(a) {
+            a.style.opacity = '0.1';
+            a.innerHTML = words[getRandomInt(0, words.length - 1)];
+            setTimeout(function() {
+                a.style.opacity = '1';
+            }, 225);
+            setTimeout(function() {
+                changeWord(a);
+            }, getRandomInt(600, 900));
+        }
+
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
   <script type="text/javascript">
     $(window).load(function(){
           $('.loader').fadeOut(100);
