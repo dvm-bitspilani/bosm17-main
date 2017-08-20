@@ -1,6 +1,6 @@
 function initMenu(){
 	// names array
-	var names = "Atheletics;Badminton;Basketball;Football;Cricket;Hockey;Tennis;Table-Tennis;Squash;Swimming;PowerLifting;Taekwondo;Volleyball;Chess;Rahul Subramanium;Sumit Anand".split(';');
+	var names = "Atheletics;Badminton;Basketball;Football;Cricket;Hockey;Tennis;Table-Tennis;Squash;Swimming;PowerLifting;Taekwondo;Volleyball;Chess;Carrom;Snooker;Rahul Subramanium;Sumit Anand;Contact Us".split(';');
 
 	function init(){
 		//initial positioning of slider and nav line and adding text-content
@@ -92,15 +92,17 @@ function initMenu(){
 		}
 		update_progress_bar();
 	}
-
+	var old = $('#menu_wrapper .active');
+	var active = $('#menu_wrapper .active');
 	//positioning of top line
 	function position_nav_line(old){
 		var currEle = old;
-		var newEle = $('.lightbox #menu_wrapper .active');
+		var newEle = active;
 		var oldLeft = currEle.offset().left;
 		var newLeft = newEle.offset().left;
 		var oldRight = currEle.offset().left + currEle.width();
 		var newRight = newEle.offset().left + newEle.width();
+		console.log(old[0], active[0])
 
 		if(oldLeft> newLeft){
 			$('.lightbox #menu_wrapper .nav_line').animate({'left':newLeft, 'width': oldRight-newLeft},500, function(){
@@ -124,9 +126,10 @@ function initMenu(){
 
 	$('.lightbox #menu_wrapper .topics li').click((e)=>{
 
-		var old = $('.lightbox #menu_wrapper .active');
+		old = $('.lightbox #menu_wrapper .active');
 		$('.lightbox #menu_wrapper .active').removeClass('active');
 		$(e.target).addClass('active');
+		active = $(e.target);
 		position_nav_line(old);
 		var n = ($('.lightbox #menu_wrapper .topics li').index($(e.target)));
 		var item = ($('.lightbox #menu_wrapper .slider div[data="begin"]').eq(n))
@@ -171,12 +174,13 @@ function initMenu(){
 		var n = $('.lightbox #menu_wrapper .info').filter(function(ind, ele){
 			return $(ele).offset().left + $(ele).width()/2 < bar;
 		}).length;
-
-
-		if($('.lightbox #menu_wrapper .topics li').eq(n)[0] != $('.active')[0]){
-			var old = $('.lightbox #menu_wrapper .active');
-			$('.lightbox #menu_wrapper .active').removeClass('active');
-			$('.lightbox #menu_wrapper .topics li').eq(n).addClass('active');
+		// console.log(n + " info");
+		
+		if($($('.lightbox #menu_wrapper .topics li').eq(n)[0]).text() != active.text()){
+			old = active;
+			$('.lightbox #menu_wrapper .active').attr("class", "");
+			$('.lightbox #menu_wrapper .topics li').eq(n).attr("class",'active');
+			active = $('.lightbox #menu_wrapper .topics li').eq(n);
 			position_nav_line(old);
 		}
 	}
