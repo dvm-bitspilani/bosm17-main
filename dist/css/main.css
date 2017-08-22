@@ -95,6 +95,12 @@ circle#6153582a-49d2-4a24-b8da-162e531da632
   transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
   cursor: pointer;
 }
+#menu_trigger:hover{
+  transform: scale(1.1);
+}
+#menu_trigger:active{
+  transform: scale(1.2);
+}
 #social {
   position: absolute;
   bottom: 30px;

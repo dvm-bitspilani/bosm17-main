@@ -1,4 +1,4 @@
-	var scrollToBottom = false;
+	var stop = false;
 	var curr = 0;
 	$(window).on("load",function(){
 		var scenes = $('.scrollmagic-pin-spacer');
@@ -30,7 +30,7 @@
 
 		$('body').addClass('scrolling');
 
-		if(scrollToBottom || ind > scenes.length-1){console.log("!!!");return;}
+		if(stop|| ind > scenes.length-1){console.log("!!!");return;}
 		// console.log('scroll', ind);
 
 		if(ind == 0){
@@ -46,18 +46,19 @@
 		        scrollTop: (bottom - height)
 		    }, 15000);
 		timeout1 = setTimeout(function(){
+			console.log('scrolling over', ind)
 			changeScene(ind, scenes);
 		}, 15000);
 	}
 
 	function changeScene(ind, scenes){
-		// console.log('change', ind);
-		if(scrollToBottom || ind>(scenes.length-1))return;
+		console.log('change', ind);
+		if(stop || ind>(scenes.length-1))return;
 
 		var n = $(scenes[ind]).parent().children().index($(scenes[ind]))
 		var next = $($(scenes[0]).siblings()[n])
 		var bottom = next.offset().top;
-		// console.log(next)
+		console.log(next, bottom)
 		$('html, body').animate({
 		        scrollTop: bottom
 		    },1);
@@ -66,10 +67,16 @@
 
 		    		scrollScene(ind+1, scenes);
 		    		curr++;
-		    		updateBottom();
+		    		// updateBottom();
 		    	},1);
 
 	}
+
+	function stopScroll(){
+		$('html, body').stop(true, false);
+		stop = true;
+	}
+	window.stopScroll = stopScroll;
 
 	// $('#bottom').click(()=>{
 	// 	scrollToBottom = true;

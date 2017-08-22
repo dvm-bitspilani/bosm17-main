@@ -173,6 +173,7 @@ function closeSecondary() {
 }
 
 function launchMenu() {
+  window.stopScroll();
   var menu = launchPrimary();
   menu.style.background = "#fff";
   menu.innerHTML = $('#menu')[0].innerHTML;
