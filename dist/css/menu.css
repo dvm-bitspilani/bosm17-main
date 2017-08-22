@@ -346,15 +346,45 @@ responsive 
 
 
 	.lightbox #menu_wrapper .item{
-		width: 200px;
+		width: 100px;
+		height: 150px;
+		margin: 10px;
 	}
 
 	.lightbox #menu_wrapper .info{
-		min-width: 300px;
+		min-width: 100%;
+		margin: 50px 0;
 	}
 
 	.lightbox #menu_wrapper .bg_text{
 		margin-left: -200px;
 	}
+	.lightbox #menu_wrapper .topics li{
+		font-size: 18px;
+	}
 
+	.lightbox #menu_wrapper footer{
+		display: none !important;
+	}
+
+
+	.lightbox #menu_wrapper section,
+	.lightbox #menu_wrapper .slider-container,
+	.lightbox #menu_wrapper .background{
+		height: 85vh;
+	}
+
+	.lightbox #menu_wrapper .slider-container{
+		left: 0;
+		padding: 0;
+		
+	}
+	.lightbox #menu_wrapper .slider{
+		justify-content: center;
+		flex-wrap: wrap;
+		overflow: auto;
+		width: 80vw;
+		margin: 0 auto;
+	} 
 }
+

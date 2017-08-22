@@ -1,20 +1,27 @@
 function initMenu(){
 	// names array
 	var names = "Atheletics;Badminton;Basketball;Football;Cricket;Hockey;Tennis;Table-Tennis;Squash;Swimming;PowerLifting;Taekwondo;Volleyball;Chess;Carrom;Snooker;Rahul Subramanium;Sumit Anand;Contact Us".split(';');
-
+	var large = ($(window).width()>800)
 	function init(){
 		//initial positioning of slider and nav line and adding text-content
 		var offset = $('.lightbox #menu_wrapper .item').width()/2;
-		$('.lightbox #menu_wrapper .slider').css('left', -offset);
+		if(large)
+			$('.lightbox #menu_wrapper .slider').css('left', -offset);
+		
 		$('.lightbox #menu_wrapper .selected_text').attr('data', names[0])
 		$('.lightbox #menu_wrapper .selected_text').text(names[0])
 		var active = $('.lightbox #menu_wrapper .active');
+		if(!large){
+			$('.lightbox #menu_wrapper .slider').prepend("<div class='info'>SPORTS</div>");
+			$('.lightbox #menu_wrapper .selected').removeClass('selected')
+		}
 
 		$('.lightbox #menu_wrapper .nav_line').css({'left': active.offset().left, 'right': active.offset().left + active.width(), 'width': active.width()})
 	}
 	init();
 
 
+	if(large){
 	// hover effect
 	$('.lightbox #menu_wrapper .item').mouseenter((e)=>{
 
@@ -37,6 +44,7 @@ function initMenu(){
 		e.preventDefault();
 	})
 
+	}
 	// moving slider's left attribute
 	function move_slider(p){
 
@@ -133,9 +141,17 @@ function initMenu(){
 		position_nav_line(old);
 		var n = ($('.lightbox #menu_wrapper .topics li').index($(e.target)));
 		var item = ($('.lightbox #menu_wrapper .slider div[data="begin"]').eq(n))
-		position_item_at_center(item);
-		update_progress_bar();
-
+		if(large){
+			position_item_at_center(item);
+			update_progress_bar();
+		}else{
+			var info = $($('.lightbox #menu_wrapper .info')[n]);
+			var start = $($('.lightbox #menu_wrapper .info')[0])
+			// console.log(info)
+			 $('.lightbox #menu_wrapper .slider').animate({
+       			 scrollTop: info.offset().top - start.offset().top
+   			 }, 2000)
+		}
 
 	})
 
@@ -184,5 +200,6 @@ function initMenu(){
 			position_nav_line(old);
 		}
 	}
+
 
 }
