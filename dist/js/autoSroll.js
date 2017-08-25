@@ -22,6 +22,7 @@
 		if(typeof(timeout1)!="undefined")clearTimeout(timeout1);
 		if(typeof(timeout2)!="undefined")clearTimeout(timeout2);
 		$('html,body').stop(true);
+		stop = true;
 	}
 
 	var timeout1, timeout2;
@@ -72,11 +73,7 @@
 
 	}
 
-	function stopScroll(){
-		$('html, body').stop(true, false);
-		stop = true;
-	}
-	window.stopScroll = stopScroll;
+
 
 	// $('#bottom').click(()=>{
 	// 	scrollToBottom = true;
