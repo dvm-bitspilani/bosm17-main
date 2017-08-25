@@ -1,10 +1,9 @@
 	var stop = false;
 	var curr = 0;
+	var small = true;
 	$(window).on("load",function(){
-		var scenes = $('.scrollmagic-pin-spacer');
-		var length = scenes.length;
 		window.scrollTo(0, 0);
-		scrollScene(curr, scenes);
+		startScroll();
 		$("#bottom").on("click", function(){
 			stopScroll();
 			window.scrollTo(0,$('#sceneFinal').offset().top);
@@ -17,6 +16,22 @@
 			stopScroll();
 		});
 	});
+
+	$(window).on("resize",function(){
+		startScroll();
+	})
+
+	function startScroll(){
+		if($(window).width() > 375 && small){
+			var scenes = $('.scrollmagic-pin-spacer');
+			var length = scenes.length;
+			
+			scrollScene(curr, scenes);
+			small = true;
+
+		}
+	}
+
 
 	function stopScroll() {
 		if(typeof(timeout1)!="undefined")clearTimeout(timeout1);
