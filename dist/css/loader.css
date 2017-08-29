@@ -1,6 +1,5 @@
 
 .loader {
-		background: #053d4e;
 		overflow: hidden;
 		position: fixed;
 		top: 0;
@@ -8,7 +7,7 @@
 		z-index: 100;
 		width: 100vw;
 		height: 100vh;
-		background-color:rgba(38, 2, 145,1);
+		background-color:rgba(250, 112, 154,1);
 /* 		background: linear-gradient( to bottom right, rgb(18, 2, 68), rgb(51, 9, 183)); */
 }
 
@@ -30,7 +29,7 @@
 
 .left {
 		float: left;
-		color: #7a7a7a;
+		color: #FEE140;
 		width: 50%;
 		text-align: right;
 		-moz-transform: scale(-1, 1);

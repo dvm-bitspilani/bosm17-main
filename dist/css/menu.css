@@ -339,6 +339,13 @@ basic positioning 
 /*===
 responsive 
 ===*/
+
+@media all and (max-width: 975px) {
+	header .topics, div.nav_line {
+		display: none;
+	}
+}
+
 @media only screen and (max-width: 758px){
 	.lightbox #menu_wrapper .logo{
 		display: none;

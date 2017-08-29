@@ -205,16 +205,16 @@ iframe {
 @media all and (max-aspect-ratio: 1/1) {
 	* {
 		pointer-events: none !important;
-		overflow: hidden;
-	}
+    overflow: hidden;
+  }
 	#sceneOut .banner > * {
 		display: none !important;
 	}
 	#sceneOut .banner {
 		background: url("../icons/rotate.svg") no-repeat;
 		background-size: 90% 90%;
-		background-position: center;
-	}
+    background-position: center;
+  }
 }
 
 #date {

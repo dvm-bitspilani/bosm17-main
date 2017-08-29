@@ -5,11 +5,12 @@
 		window.scrollTo(0, 0);
 		startScroll();
 		$("#bottom").on("click", function(){
+			var final = $('body').height() - $(window).height()
 			stopScroll();
-			window.scrollTo(0,$('#sceneFinal').offset().top);
+			window.scrollTo(0,final);
 			setTimeout(function(){
 				stopScroll();
-				window.scrollTo(0,$('#sceneFinal').offset().top);
+				window.scrollTo(0,final);
 			},75);
 		});
 		$("body").on("mousewheel",function(){
