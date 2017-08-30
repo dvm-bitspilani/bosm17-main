@@ -151,8 +151,24 @@ circle#6153582a-49d2-4a24-b8da-162e531da632
   z-index: 1;
   transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
 }
+#register {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 250px;
+  height: 100px;
+  transform: translateX(-50%);
+  background: url("../img/RegisterButton.png") no-repeat center;
+  background-size: contain;
+  z-index: 1;
+  transition: 0.2s transform cubic-bezier(.68,-0.55,.27,1.55);
+}
 #bottom:hover, #video_trigger:hover, #home_trigger:hover, #facebook:hover, #youtube:hover {
   transform: scale(1.2);
+  cursor: pointer;
+}
+#register:hover {
+  transform: translateX(-50%) scale(1.2);
   cursor: pointer;
 }
 iframe {
@@ -228,7 +244,7 @@ iframe {
   transform: translateY(81vh) scale(0.6)
 }
 
-#register {
+/* #register {
   position: absolute;
   width: 250px;
   height: 75px;
@@ -236,7 +252,7 @@ iframe {
   left: 50%;
   top: calc(81% + 75px);
   transform: translate(-50%,-50%);
-}
+} */
 
 .scrollmagic-pin-spacer {
     overflow: hidden;

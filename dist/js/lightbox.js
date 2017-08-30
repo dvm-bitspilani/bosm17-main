@@ -42,7 +42,7 @@ var lightboxes = {
     "badminton": {
       "image": "icons/badminton.png",
       "bcapt": "Aman Agarwal",
-      "bcno": "9928066227",
+      "bcno": "9713540571",
       "gcapt": "M Mahitha",
       "gcno": "7073606977",
       "mplayers": " 4 ",
