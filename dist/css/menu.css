@@ -113,10 +113,14 @@ basic positioning 
 
 .lightbox #menu_wrapper .bg_text{
 	position: relative;
-	top: 45%;
-	font-size: 10em;
-	letter-spacing: .2em;
-	opacity: .1;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 2em;
+	letter-spacing: .15em;
+	opacity: 1;
+	font-family: "Lovelo Black";
+	max-width: 40%;
+	text-align: center;
 }
 
 .lightbox #menu_wrapper .slider-container{

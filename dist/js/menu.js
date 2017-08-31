@@ -1,3 +1,11 @@
+$(window).keydown(function(e){
+	if(typeof(move_by_key) != "undefined")
+		if(e.keyCode == 37)
+			move_by_key(-1);
+		else if(e.keyCode == 39)
+			move_by_key(1);
+});
+
 function initMenu(){
 	// names array
 	var names = "Atheletics;Badminton;Basketball;Football;Cricket;Hockey;Tennis;Table-Tennis;Squash;Swimming;PowerLifting;Taekwondo;Volleyball;Chess;Carrom;Snooker;Rahul Subramanium;Sumit Anand;Contact Us".split(';');
@@ -23,7 +31,7 @@ function initMenu(){
 
 	if(large){
 	// hover effect
-	$('.lightbox #menu_wrapper .item').mouseenter((e)=>{
+	$('.lightbox #menu_wrapper .item').mouseenter(function (e){
 
 		if($(e.target)!=$('.lightbox #menu_wrapper .selected')){
 			$('.lightbox #menu_wrapper .selected').removeClass('selected');
@@ -32,17 +40,37 @@ function initMenu(){
 		}
 
 
-	}).mouseleave(()=>{
+	}).mouseleave(function (){
 		highlight_middle_element();
 	})
 
 	// scroll effect
-	$('.lightbox #menu_wrapper').mousewheel((e, delta)=>{
+	$('.lightbox #menu_wrapper').mousewheel(function(e, delta) {
 		move_slider(delta)
 		highlight_middle_element();
 		update_nav_bar();
 		e.preventDefault();
 	})
+	
+	window.move_by_key = function (e) {
+		var width = parseInt($('.lightbox #menu_wrapper .item').width());
+		var minLeft = -1 * parseInt($('.lightbox #menu_wrapper .slider').width());
+		var move = -1*e*width;
+		var currentLeft = parseInt($('.lightbox #menu_wrapper .slider').css('left'));
+		var newLeft = currentLeft + move;
+
+		if(newLeft < minLeft) newLeft = minLeft;
+		else if(newLeft > 0) newLeft = 0;
+
+		$('.lightbox #menu_wrapper .slider').animate(
+			{'left': newLeft},
+			100,
+			function(){
+				highlight_middle_element();
+				update_nav_bar();
+			}
+		);
+	}
 
 	}
 	// moving slider's left attribute
@@ -132,7 +160,7 @@ function initMenu(){
 		$('.lightbox #menu_wrapper .slider').animate({'left': left-offset}, 500, highlight_middle_element);
 	}
 
-	$('.lightbox #menu_wrapper .topics li').click((e)=>{
+	$('.lightbox #menu_wrapper .topics li').click(function (e) {
 
 		old = $('.lightbox #menu_wrapper .active');
 		$('.lightbox #menu_wrapper .active').removeClass('active');
