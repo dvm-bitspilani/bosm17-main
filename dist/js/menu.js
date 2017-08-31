@@ -62,6 +62,11 @@ function initMenu(){
 		if(newLeft < minLeft) newLeft = minLeft;
 		else if(newLeft > 0) newLeft = 0;
 
+		if(newLeft < -1.5*width)
+			$('.bg_text').fadeOut();
+		else if(newLeft > -1.5*width)
+			$('.bg_text').fadeIn();
+
 		$('.lightbox #menu_wrapper .slider').animate(
 			{'left': newLeft},
 			100,
@@ -91,6 +96,11 @@ function initMenu(){
 			newLeft = max_left;
 		}
 
+		if(newLeft < -3*offset)
+			$('.bg_text').fadeOut();
+		else if(newLeft > -3*offset)
+			$('.bg_text').fadeIn();
+
 		$('.lightbox #menu_wrapper .slider').css('left', newLeft);
 
 
@@ -102,7 +112,7 @@ function initMenu(){
 		var offset_bar = $('.lightbox #menu_wrapper .slider-container').offset().left;
 
 		//serching among items
-		var middle = $('.lightbox #menu_wrapper .item').filter((ind, ele)=>{
+		var middle = $('.lightbox #menu_wrapper .item').filter(function(ind, ele){
 
 			var left_cond = (offset_bar> $(ele).offset().left);
 			var right_cond = (offset_bar < $(ele).offset().left + $(ele).width());
@@ -112,6 +122,7 @@ function initMenu(){
 			if($(middle)!=$('.lightbox #menu_wrapper .selected')){
 				$('.lightbox #menu_wrapper .selected').removeClass('selected');
 				$(middle).addClass('selected');
+				// $(middle).parent('.item').addClass('selected');
 			}
 		}else{
 			//serching among info bars

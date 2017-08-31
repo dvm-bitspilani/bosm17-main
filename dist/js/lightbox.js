@@ -218,7 +218,7 @@ function launchEvent(name) {
         </div>\
         <div class="col">\
           <div class="details">\
-            <strong><h2>Team captain details:</h2></strong>';
+            <strong><h3>Team captain details:</h3></strong>';
   if(item.hasOwnProperty('bcapt') && item.hasOwnProperty('gcapt'))
     html +=
             '<ul>\
@@ -365,10 +365,12 @@ $(window).on("load",function(){
     $('html,body').animate({scrollTop:0},0);
   });
   $(document).on("click", ".slider .item.event",function(e){
-    launchEvent(e.target.getAttribute('name'));
+    $('.bg_text').fadeOut();
+    launchEvent($(e.target).parent('.item')[0].getAttribute('name'));
     $('.lightbox.primary .slider').addClass('fadeout');
   });
   $(document).on("click", ".slider .item.contact",function(e){
+    $('.bg_text').fadeOut();
     launchInfo();
     $('.lightbox.primary .slider').addClass('fadeout');
   });

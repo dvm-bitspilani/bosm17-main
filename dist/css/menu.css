@@ -160,112 +160,133 @@ basic positioning 
 	cursor: pointer;
 }
 
-.lightbox #menu_wrapper .i1
+.lightbox #menu_wrapper .item div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+}
+
+.lightbox #menu_wrapper .item.selected::after {
+	content: '';
+    width: 85%;
+    height: 4px;
+    background: transparent;
+    border-bottom: 8px solid black;
+    position: absolute;
+    top: calc(100% + -10px);
+    left: 7.5%;
+    filter: blur(13px);
+    z-index: -1;
+    margin-top: 5px;
+}
+
+.lightbox #menu_wrapper .i1 div
 {
 	background: url('../img/Atheletics.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i2
+.lightbox #menu_wrapper .i2 div
 {
 	background: url('../img/Badminton.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i3
+.lightbox #menu_wrapper .i3 div
 {
 	background: url('../img/Basketball.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i4
+.lightbox #menu_wrapper .i4 div
 {
 	background: url('../img/Football.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i5
+.lightbox #menu_wrapper .i5 div
 {
 	background: url('../img/Cricket.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i6
+.lightbox #menu_wrapper .i6 div
 {
 	background: url('../img/Hockey.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i7
+.lightbox #menu_wrapper .i7 div
 {
 	background: url('../img/Tennis.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i8
+.lightbox #menu_wrapper .i8 div
 {
 	background: url('../img/Table-Tennis.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i9
+.lightbox #menu_wrapper .i9 div
 {
 	background: url('../img/Squash.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i10
+.lightbox #menu_wrapper .i10 div
 {
 	background: url('../img/Swimming.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i11
+.lightbox #menu_wrapper .i11 div
 {
 	background: url('../img/PowerLifting.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i12
+.lightbox #menu_wrapper .i12 div
 {
 	background: url('../img/Taekwondo.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i13
+.lightbox #menu_wrapper .i13 div
 {
 	background: url('../img/Volleyball.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i14
+.lightbox #menu_wrapper .i14 div
 {
 	background: url('../img/Chess.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i15
+.lightbox #menu_wrapper .i15 div
 {
 	background: url('../img/Rahul.png') 0 0 no-repeat;
 	background-size: cover;
 }
 
-.lightbox #menu_wrapper .i16
+.lightbox #menu_wrapper .i16 div
 {
 	background: url('../img/Sumit.png') 0 0 no-repeat;
 	background-size: cover;
 }
-.lightbox #menu_wrapper .i17
+.lightbox #menu_wrapper .i17 div
 {
 	background: url('../img/contact.png') 0 0 no-repeat;
 	background-size: cover;
 }
-.lightbox #menu_wrapper .i18
+.lightbox #menu_wrapper .i18 div
 {
 	background: url('../img/carrom-card.png') 0 0 no-repeat;
 	background-size: cover;
 }
-.lightbox #menu_wrapper .i19
+.lightbox #menu_wrapper .i19 div
 {
 	background: url('../img/snooker-card.png') 0 0 no-repeat;
 	background-size: cover;
