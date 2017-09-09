@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 618.9 620.2">
+  <defs>
+    <style>
+      .\33 055d40a-65b9-4382-a261-76a113d5cc2b, .\35 2183b07-1701-4d21-83af-94e9c31d64f6, .\35 83e62a0-8e80-4682-a8a2-7e5343d96485, .\35 af31c3d-f5c7-499d-b311-dd20d5dccc0d, .\36 fd4ccf6-2ae8-4b44-8f48-72cbe6e9283a, .\37 2b333b1-2fb9-4953-85b8-6cb2a2de7eb9, .\37 fd58a92-1f28-44da-a0a2-c261c1842549, .\38 6482e72-203f-477a-a460-98756238a1fd, .\38 8988af5-aca7-44be-b244-21922ea1b643, .bf9d5091-b0bd-48b8-aefc-1fd109cf122e, .ead33c7c-9672-43c6-8c2b-00befdf360be {
+        fill: none;
+      }
+
+      .f5bde85a-3236-4dde-9f3a-8d86b5bd3089 {
+        fill: #40b3e0;
+      }
+
+      .\35 af31c3d-f5c7-499d-b311-dd20d5dccc0d, .\36 fd4ccf6-2ae8-4b44-8f48-72cbe6e9283a, .\37 2b333b1-2fb9-4953-85b8-6cb2a2de7eb9, .\38 6482e72-203f-477a-a460-98756238a1fd {
+        stroke: #011319;
+      }
+
+      .\35 83e62a0-8e80-4682-a8a2-7e5343d96485, .\35 af31c3d-f5c7-499d-b311-dd20d5dccc0d, .\36 fd4ccf6-2ae8-4b44-8f48-72cbe6e9283a, .\37 2b333b1-2fb9-4953-85b8-6cb2a2de7eb9, .\37 fd58a92-1f28-44da-a0a2-c261c1842549, .\38 6482e72-203f-477a-a460-98756238a1fd, .\38 8988af5-aca7-44be-b244-21922ea1b643 {
+        stroke-linecap: round;
+      }
+
+      .\35 2183b07-1701-4d21-83af-94e9c31d64f6, .\35 83e62a0-8e80-4682-a8a2-7e5343d96485, .\35 af31c3d-f5c7-499d-b311-dd20d5dccc0d, .\37 2b333b1-2fb9-4953-85b8-6cb2a2de7eb9, .\38 6482e72-203f-477a-a460-98756238a1fd, .\38 8988af5-aca7-44be-b244-21922ea1b643, .bf9d5091-b0bd-48b8-aefc-1fd109cf122e, .ead33c7c-9672-43c6-8c2b-00befdf360be {
+        stroke-miterlimit: 10;
+      }
+
+      .\35 83e62a0-8e80-4682-a8a2-7e5343d96485, .\35 af31c3d-f5c7-499d-b311-dd20d5dccc0d {
+        stroke-width: 5.68px;
+      }
+
+      .\35 65b64ff-f822-46e6-bc6d-5b782033384a, .\35 af31c3d-f5c7-499d-b311-dd20d5dccc0d, .\36 fd4ccf6-2ae8-4b44-8f48-72cbe6e9283a, .\38 6482e72-203f-477a-a460-98756238a1fd {
+        opacity: 0.26;
+      }
+
+      .\35 2183b07-1701-4d21-83af-94e9c31d64f6, .\35 83e62a0-8e80-4682-a8a2-7e5343d96485, .\38 8988af5-aca7-44be-b244-21922ea1b643, .ead33c7c-9672-43c6-8c2b-00befdf360be {
+        stroke: #fff;
+      }
+
+      .\35 2183b07-1701-4d21-83af-94e9c31d64f6, .\38 6482e72-203f-477a-a460-98756238a1fd {
+        stroke-width: 3px;
+      }
+
+      .\37 2b333b1-2fb9-4953-85b8-6cb2a2de7eb9 {
+        stroke-width: 7.18px;
+      }
+
+      .\38 8988af5-aca7-44be-b244-21922ea1b643 {
+        stroke-width: 4.78px;
+      }
+
+      .\36 fd4ccf6-2ae8-4b44-8f48-72cbe6e9283a, .\37 fd58a92-1f28-44da-a0a2-c261c1842549 {
+        stroke-linejoin: round;
+        stroke-width: 4.93px;
+      }
+
+      .\37 fd58a92-1f28-44da-a0a2-c261c1842549 {
+        stroke: #f7f9f9;
+      }
+
+      .db210633-7216-48f1-a2c3-c82ccfb845bd {
+        clip-path: url(#ded06701-ad76-4e0b-915d-ddd205147abd);
+      }
+
+      .\35 ed37ef5-c520-4528-b3e0-d216c386f1e3, .a8c08efe-8935-4511-8188-cdae352e6bb3, .ccd47230-71be-4efe-b2a7-53caf133a440 {
+        fill: #fff;
+      }
+
+      .ead33c7c-9672-43c6-8c2b-00befdf360be {
+        stroke-width: 9px;
+      }
+
+      .\35 ed37ef5-c520-4528-b3e0-d216c386f1e3, .ccd47230-71be-4efe-b2a7-53caf133a440 {
+        font-size: 25.43px;
+        font-family: Raleway-Bold, Raleway;
+        font-weight: 700;
+      }
+
+      .\35 ed37ef5-c520-4528-b3e0-d216c386f1e3 {
+        letter-spacing: 0.15em;
+      }
+
+      .\30 04c33b2-0635-4c98-8791-3954376cd806 {
+        letter-spacing: 0.13em;
+      }
+
+      .ccd47230-71be-4efe-b2a7-53caf133a440 {
+        letter-spacing: 0.09em;
+      }
+
+      .b2cdcc01-926c-4b45-abf1-8ac4cfca4880 {
+        letter-spacing: 0.15em;
+      }
+
+      .e498a4c8-b5e7-4aa7-a392-5df3811703e5 {
+        letter-spacing: 0.09em;
+      }
+
+      .\32 c5ad4ca-d242-4563-bd74-aae34d39c5e8 {
+        letter-spacing: 0.12em;
+      }
+
+      .bf9d5091-b0bd-48b8-aefc-1fd109cf122e {
+        stroke: #2e0666;
+        stroke-width: 7.37px;
+      }
+
+      .\37 8e43d84-23de-483d-a8fd-12475d67547e {
+        clip-path: url(#166a3c8d-35b4-43c1-b136-c26a7d2e40f1);
+      }
+
+      .c63ea89c-7423-44e4-aa59-d679992144b1 {
+        opacity: 0.02;
+      }
+
+      @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+      *{
+      font-family: Raleway, sans-serif
+      }
+    </style>
+    <clipPath id="ded06701-ad76-4e0b-915d-ddd205147abd" transform="translate(0 0)">
+      <ellipse class="3055d40a-65b9-4382-a261-76a113d5cc2b" cx="292.96" cy="311.34" rx="87.72" ry="88.66"/>
+    </clipPath>
+    <clipPath id="166a3c8d-35b4-43c1-b136-c26a7d2e40f1" transform="translate(0 0)">
+      <rect class="3055d40a-65b9-4382-a261-76a113d5cc2b" x="126" y="61" width="333" height="500"/>
+    </clipPath>
+  </defs>
+  <title>dev1</title>
+  <g id="df0480f3-3ca3-4a3c-8bb1-24c82f01bdf4" data-name="Layer 2">
+    <g id="dcb64c26-abb6-47e8-9ab0-9fa3be7de9bb" data-name="Layer 3">
+      <rect class="f5bde85a-3236-4dde-9f3a-8d86b5bd3089" x="126" y="60" width="333" height="500"/>
+    </g>
+    <g class="78e43d84-23de-483d-a8fd-12475d67547e">
+        <image class="c63ea89c-7423-44e4-aa59-d679992144b1" width="1957" height="1962" transform="matrix(0.29, 0.03, -0.03, 0.29, 55.55, 0)" xlink:href="rhom.png"/>
+      </g>
+    <g id="9138bcdc-5440-4836-8f9d-4140f485954e" data-name="Layer 2">
+      <circle class="5af31c3d-f5c7-499d-b311-dd20d5dccc0d" cx="330" cy="251" r="9"/>
+      <circle class="583e62a0-8e80-4682-a8a2-7e5343d96485" cx="239" cy="179" r="9"/>
+      <circle class="86482e72-203f-477a-a460-98756238a1fd" cx="292.5" cy="527.5" r="5.5"/>
+      <g class="565b64ff-f822-46e6-bc6d-5b782033384a">
+        <line class="72b333b1-2fb9-4953-85b8-6cb2a2de7eb9" x1="375.99" y1="378" x2="393.9" y2="399.11"/>
+        <line class="72b333b1-2fb9-4953-85b8-6cb2a2de7eb9" x1="374.39" y1="397.51" x2="395.5" y2="379.6"/>
+      </g>
+      <g>
+        <line class="88988af5-aca7-44be-b244-21922ea1b643" x1="181.69" y1="379.5" x2="178.21" y2="397.61"/>
+        <line class="88988af5-aca7-44be-b244-21922ea1b643" x1="170.89" y1="386.81" x2="189" y2="390.29"/>
+      </g>
+      <polyline class="6fd4ccf6-2ae8-4b44-8f48-72cbe6e9283a" points="180.41 259.77 180.96 251.73 188.74 252.26 189.29 244.21 197.87 244.8"/>
+      <polyline class="6fd4ccf6-2ae8-4b44-8f48-72cbe6e9283a" points="349.44 141.44 355.82 136.5 360.59 142.67 366.97 137.74 372.23 144.54"/>
+      <polyline class="7fd58a92-1f28-44da-a0a2-c261c1842549" points="384.9 472.99 377.41 475.98 374.52 468.73 367.03 471.72 363.84 463.73"/>
+    </g>
+    <g id="652a467f-801c-45e1-bea1-331897b0218f" data-name="Layer 1">
+      <g class="db210633-7216-48f1-a2c3-c82ccfb845bd">
+        <image width="2448" height="3264" transform="translate(160.25 170.13) scale(0.1)" xlink:href="gujju.png"/>
+      </g>
+      <rect class="a8c08efe-8935-4511-8188-cdae352e6bb3" x="419" y="94" width="40" height="134"/>
+      <rect class="ead33c7c-9672-43c6-8c2b-00befdf360be" x="126" y="61" width="333" height="500"/>
+      <text class="5ed37ef5-c520-4528-b3e0-d216c386f1e3" transform="translate(160.35 485.74)">MEGH</text>
+      <text class="5ed37ef5-c520-4528-b3e0-d216c386f1e3" transform="translate(160.35 133.74)">BACKEND<tspan class="004c33b2-0635-4c98-8791-3954376cd806" x="22.02" y="0"></tspan><tspan x="40.73" y="0"></tspan></text>
+      <text class="ccd47230-71be-4efe-b2a7-53caf133a440" transform="translate(160.35 509.6)">THAKKAR<tspan class="b2cdcc01-926c-4b45-abf1-8ac4cfca4880" x="29.04" y="0"></tspan><tspan class="e498a4c8-b5e7-4aa7-a392-5df3811703e5" x="94.72" y="0"></tspan><tspan class="2c5ad4ca-d242-4563-bd74-aae34d39c5e8" x="123.75" y="0"></tspan></text>
+      <line class="52183b07-1701-4d21-83af-94e9c31d64f6" x1="162" y1="518.5" x2="180" y2="518.5"/>
+      <line class="52183b07-1701-4d21-83af-94e9c31d64f6" x1="162" y1="460.5" x2="180" y2="460.5"/>
+      <line class="52183b07-1701-4d21-83af-94e9c31d64f6" x1="162" y1="105.5" x2="180" y2="105.5"/>
+      <line class="52183b07-1701-4d21-83af-94e9c31d64f6" x1="162" y1="144.5" x2="180" y2="144.5"/>
+      <ellipse class="bf9d5091-b0bd-48b8-aefc-1fd109cf122e" cx="288.04" cy="307.66" rx="87.72" ry="88.66"/>
+      
+    </g>
+  </g>
+</svg>

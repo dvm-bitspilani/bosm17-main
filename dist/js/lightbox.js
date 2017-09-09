@@ -1,3 +1,61 @@
+var developers = {
+  "chinmay": {
+    "svg": "dev/chinmay.svg",
+    "github": "ccpandhare",
+    "gmail": "pandharechinmay882@gmail.com",
+    "linkedin": "ccpandhare",
+    "color": "#dc88ff"
+  },
+  "neethu": {
+    "svg": "dev/neethu.svg",
+    "github": "roboneet",
+    "gmail": "f2016119@pilani.bits-pilani.ac.in",
+    "linkedin": "neethu-maria-joy-653655128",
+    "color": "#ff6382"
+  },
+  "nilay": {
+    "svg": "dev/nilay.svg",
+    "github": "nilay117",
+    "gmail": "f2016117@pilani.bits-pilani.ac.in",
+    "linkedin": "nilayarora117",
+    "color": "#fe4a49"
+  },
+  "navjot": {
+    "svg": "dev/navjot.svg",
+    "github": "navjotbansal",
+    "gmail": "f2016070@pilani.bits-pilani.ac.in",
+    "linkedin": "navjot-bansal-a67b87137",
+    "color": "#b0d52b"
+  },
+  "tushar": {
+    "svg": "dev/tushar.svg",
+    "github": "tushargoel1",
+    "gmail": "f2016023@pilani.bits-pilani.ac.in",
+    "linkedin": "tushar-goel-254a66147",
+    "color": "#f90853"
+  },
+  "megh": {
+    "svg": "dev/megh.svg",
+    "github": "meghthakkar",
+    "gmail": "f2016036@pilani.bits-pilani.ac.in",
+    "linkedin": "megh-thakkar-b0531295",
+    "color": "#40b3e0"
+  },
+  "mihir": {
+    "svg": "dev/mihir.svg",
+    "gmail": "f2016143@pilani.bits-pilani.ac.in",
+    "linkedin": "mihir-dharap-b7309b95",
+    "color": "#ff9b71"
+  },
+  "madhur": {
+    "svg": "dev/madhur.svg",
+    "behance": "madhurw7",
+    "dribbble": "madhurw7",
+    "linkedin": "madhurw7",
+    "gmail": "madhurw7official@gmail.com",
+    "color": "#44e09c"
+  }
+}
 var lightboxes = {
   "sports": {
     "basketball": {
@@ -174,9 +232,9 @@ function closeSecondary() {
 
 function launchMenu() {
   window.stopScroll();
-  var menu = launchPrimary();
-  menu.style.background = "#fff";
-  menu.innerHTML = $('#menu')[0].innerHTML;
+  var dev = launchPrimary();
+  dev.style.background = "#fff";
+  dev.innerHTML = $('#menu')[0].innerHTML;
   initMenu();
 }
 
@@ -346,6 +404,142 @@ function launchVideo() {
   video.style.justifyContent = "center";
   video.innerHTML = $('#iframe')[0].innerHTML;
   video.className = video.className+" fadein video";
+}
+
+function makegithub(id,color,cb) {
+  var url = "https://github.com/" + id;
+  var icon = '\
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.81 17.37">\
+  <defs>\
+    <style>\
+      .ca6770a4-50a7-4b53-a89f-1a9d15b1f312 {\
+        fill: '+color+';\
+        fill-rule: evenodd;\
+      }\
+    </style>\
+  </defs>\
+  <g id="c6faf4d7-dffc-4c7c-b339-f63deea1d59a" data-name="Layer 2">\
+    <g id="917e2d8a-5f5c-49d9-b114-11acb8905bef" data-name="Layer 1">\
+      <path class="ca6770a4-50a7-4b53-a89f-1a9d15b1f312" d="M8.91,0A8.91,8.91,0,0,0,6.09,17.36c.45.08.61-.19.61-.43s0-.77,0-1.51c-2.48.54-3-1.19-3-1.19a2.36,2.36,0,0,0-1-1.3c-.81-.55.06-.54.06-.54a1.87,1.87,0,0,1,1.36.92A1.9,1.9,0,0,0,6.72,14a1.9,1.9,0,0,1,.57-1.19c-2-.22-4.06-1-4.06-4.4a3.44,3.44,0,0,1,.92-2.39,3.2,3.2,0,0,1,.09-2.36s.75-.24,2.45.91a8.44,8.44,0,0,1,4.46,0c1.7-1.15,2.45-.91,2.45-.91a3.2,3.2,0,0,1,.09,2.36,3.44,3.44,0,0,1,.92,2.39c0,3.42-2.08,4.17-4.07,4.4a2.13,2.13,0,0,1,.6,1.65c0,1.19,0,2.15,0,2.44s.16.52.61.43A8.91,8.91,0,0,0,8.91,0Z"/>\
+    </g>\
+  </g>\
+</svg>\
+';
+  cb(url,icon);
+}
+
+function makegmail(id,color,cb) {
+  var url = "mailto:" + id;
+  var icon = '\
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.05 14.44">\
+  <defs>\
+    <style>\
+      .\31 67ae21e-3f3f-4ff1-8581-5cebbab9127a {\
+        fill: '+color+';\
+      }\
+    </style>\
+  </defs>\
+  <title>email</title>\
+  <g id="3224ea61-9361-4b1d-88b4-8879c4216a04" data-name="Layer 2">\
+    <g id="beda08fc-3783-40b2-89e0-4ec3f9c92193" data-name="Layer 1">\
+      <path class="167ae21e-3f3f-4ff1-8581-5cebbab9127a" d="M16.24,0H1.8A1.8,1.8,0,0,0,0,1.8V12.63a1.81,1.81,0,0,0,1.8,1.8H16.24a1.81,1.81,0,0,0,1.8-1.8V1.8A1.81,1.81,0,0,0,16.24,0Zm0,3.61L9,8.12,1.8,3.61V1.8L9,6.32,16.24,1.8Z"/>\
+    </g>\
+  </g>\
+</svg>\
+  ';
+  cb(url,icon);
+}
+
+function makelinkedin(id, color, cb) {
+  var url = "https://linkedin.com/in/" + id;
+  var icon = '\
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">\
+  <defs>\
+    <style>\
+      .c4adb669-3dbf-4be8-a96b-ee7975979910 {\
+        fill: #44e09c;\
+      }\
+    </style>\
+  </defs>\
+  <title>linkedin</title>\
+  <g id="dc27edf3-2ccd-4f20-8697-44f616057ec9" data-name="Layer 2">\
+    <g id="e735d495-5916-4a28-8496-1d1723aed71b" data-name="Layer 1">\
+      <path class="c4adb669-3dbf-4be8-a96b-ee7975979910" d="M16.67,0H1.33A1.31,1.31,0,0,0,0,1.3V16.7A1.31,1.31,0,0,0,1.33,18H16.67A1.32,1.32,0,0,0,18,16.7V1.3A1.32,1.32,0,0,0,16.67,0ZM5.34,15.34H2.67V6.75H5.34ZM4,5.57A1.55,1.55,0,1,1,5.55,4,1.55,1.55,0,0,1,4,5.57Zm11.33,9.76H12.67V11.16c0-1,0-2.28-1.39-2.28S9.68,10,9.68,11.09v4.25H7V6.75H9.57V7.92h0a2.8,2.8,0,0,1,2.53-1.39c2.7,0,3.2,1.78,3.2,4.09Z"/>\
+    </g>\
+  </g>\
+</svg>\
+  ';
+  cb(url,icon);
+}
+
+function makebehance(id, color, cb) {
+  var url = "https://behance.net/"+id;
+  var icon = '\
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">\
+  <defs>\
+    <style>\
+      .c4adb669-3dbf-4be8-a96b-ee7975979910 {\
+        fill: #44e09c;\
+      }\
+    </style>\
+  </defs>\
+  <title>linkedin</title>\
+  <g id="dc27edf3-2ccd-4f20-8697-44f616057ec9" data-name="Layer 2">\
+    <g id="e735d495-5916-4a28-8496-1d1723aed71b" data-name="Layer 1">\
+      <path class="c4adb669-3dbf-4be8-a96b-ee7975979910" d="M16.67,0H1.33A1.31,1.31,0,0,0,0,1.3V16.7A1.31,1.31,0,0,0,1.33,18H16.67A1.32,1.32,0,0,0,18,16.7V1.3A1.32,1.32,0,0,0,16.67,0ZM5.34,15.34H2.67V6.75H5.34ZM4,5.57A1.55,1.55,0,1,1,5.55,4,1.55,1.55,0,0,1,4,5.57Zm11.33,9.76H12.67V11.16c0-1,0-2.28-1.39-2.28S9.68,10,9.68,11.09v4.25H7V6.75H9.57V7.92h0a2.8,2.8,0,0,1,2.53-1.39c2.7,0,3.2,1.78,3.2,4.09Z"/>\
+    </g>\
+  </g>\
+</svg>\
+  ';
+  cb(url, icon);
+}
+
+function makedribbble(id, color, cb) {
+  var url = "https://dribbble.com/"+id;
+  var icon = '\
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">\
+  <defs>\
+    <style>\
+      .c4adb669-3dbf-4be8-a96b-ee7975979910 {\
+        fill: '+color+';\
+      }\
+    </style>\
+  </defs>\
+  <title>linkedin</title>\
+  <g id="dc27edf3-2ccd-4f20-8697-44f616057ec9" data-name="Layer 2">\
+    <g id="e735d495-5916-4a28-8496-1d1723aed71b" data-name="Layer 1">\
+      <path class="c4adb669-3dbf-4be8-a96b-ee7975979910" d="M16.67,0H1.33A1.31,1.31,0,0,0,0,1.3V16.7A1.31,1.31,0,0,0,1.33,18H16.67A1.32,1.32,0,0,0,18,16.7V1.3A1.32,1.32,0,0,0,16.67,0ZM5.34,15.34H2.67V6.75H5.34ZM4,5.57A1.55,1.55,0,1,1,5.55,4,1.55,1.55,0,0,1,4,5.57Zm11.33,9.76H12.67V11.16c0-1,0-2.28-1.39-2.28S9.68,10,9.68,11.09v4.25H7V6.75H9.57V7.92h0a2.8,2.8,0,0,1,2.53-1.39c2.7,0,3.2,1.78,3.2,4.09Z"/>\
+    </g>\
+  </g>\
+</svg>\
+';
+cb(url,id)
+}
+
+function getDeveloper(dev) {
+  var ret = '\
+  <div class="developer item">\
+  <div style=\"background-image:url('+developers[dev].svg+')\">\
+  ';
+  for (prop in developers[dev])
+    if(prop != "svg" && prop != "color")
+      eval('make'+prop)(developers[dev][prop],developers[dev].color,function(url,icon){
+        ret += "\
+        "; 
+      });
+  ret += '\
+      </div>\
+  </div>\
+  ';
+  return ret;
+}
+
+function launchDev() {
+  window.stopScroll();
+  var dev = launchPrimary();
+  dev.style.background = "#fff";
+  dev.innerHTML = $('#dev')[0].innerHTML;
+  initDev();
 }
 
 $(window).on("load",function(){
