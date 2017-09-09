@@ -8,14 +8,14 @@ $(window).keydown(function(e){
 
 function initMenu(){
 	// names array
-	var names = "Atheletics;Badminton;Basketball;Football;Cricket;Hockey;Tennis;Table-Tennis;Squash;Swimming;PowerLifting;Taekwondo;Volleyball;Chess;Carrom;Snooker;Rahul Subramanium;Sumit Anand;Contact Us".split(';');
+	var names = "Athletics;Badminton;Basketball;Football;Cricket;Hockey;Tennis;Table-Tennis;Squash;Swimming;PowerLifting;Taekwondo;Volleyball;Chess;Carrom;Snooker;Rahul Subramanium;Sumit Anand;Contact Us".split(';');
 	var large = ($(window).width()>800)
 	function init(){
 		//initial positioning of slider and nav line and adding text-content
 		var offset = $('.lightbox #menu_wrapper .item').width()/2;
 		if(large)
 			$('.lightbox #menu_wrapper .slider').css('left', -offset);
-		
+
 		$('.lightbox #menu_wrapper .selected_text').attr('data', names[0])
 		$('.lightbox #menu_wrapper .selected_text').text(names[0])
 		var active = $('.lightbox #menu_wrapper .active');
@@ -51,7 +51,7 @@ function initMenu(){
 		update_nav_bar();
 		e.preventDefault();
 	})
-	
+
 	window.move_by_key = function (e) {
 		var width = parseInt($('.lightbox #menu_wrapper .item').width());
 		var minLeft = -1 * parseInt($('.lightbox #menu_wrapper .slider').width());
@@ -230,7 +230,7 @@ function initMenu(){
 			return $(ele).offset().left + $(ele).width()/2 < bar;
 		}).length;
 		// console.log(n + " info");
-		
+
 		if($($('.lightbox #menu_wrapper .topics li').eq(n)[0]).text() != active.text()){
 			old = active;
 			$('.lightbox #menu_wrapper .active').attr("class", "");
